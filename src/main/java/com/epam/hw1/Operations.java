@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
  * Created by Admin on 010 10.10.17.
  */
 public class Operations {
+
     public StringBuilder read() throws IOException {
         StringBuilder sb = new StringBuilder();
         try{
@@ -19,6 +20,7 @@ public class Operations {
             return sb;
         }
     }
+
     public boolean isnum(StringBuilder num){
         try{
             Long.parseLong(num.toString());
@@ -27,6 +29,7 @@ public class Operations {
             return false;
         }
     }
+
     public int parseToInt(StringBuilder num){
         try{
             return Integer.parseInt(num.toString());

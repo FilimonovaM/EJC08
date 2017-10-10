@@ -32,6 +32,7 @@ public class CatFeeding {
             }
         }
     }
+
     public boolean eat() throws IOException {
         int catsChoose = oper.parseToInt(sb);
         boolean bol = true;
@@ -68,6 +69,4 @@ public class CatFeeding {
         }
         return bol;
     }
-
-
 }
