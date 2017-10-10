@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Operations {
-    StringBuilder sb;
+    StringBuilder stringBuilder;
     public StringBuilder read() throws IOException {
-         sb = new StringBuilder();
+        stringBuilder = new StringBuilder();
         try {
-            sb.setLength(0);
+            stringBuilder.setLength(0);
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            return  sb.append(reader.readLine());
+            return  stringBuilder.append(reader.readLine());
         } catch (IOException e) {
             e.printStackTrace();
-            return sb;
+            return stringBuilder;
         }
     }
 

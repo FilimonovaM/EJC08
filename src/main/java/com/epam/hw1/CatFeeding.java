@@ -4,7 +4,7 @@ package com.epam.hw1;
 import java.io.IOException;
 
 public class CatFeeding {
-    StringBuilder sb;
+    StringBuilder stringBuilder;
     String name;
     int amount;
     boolean relay;
@@ -12,19 +12,19 @@ public class CatFeeding {
 
     CatFeeding(boolean relay){
         this.relay = relay;
-        sb = new StringBuilder();
+        stringBuilder = new StringBuilder();
         amount = 0;
         oper = new Operations();
     }
 
     public void start() throws IOException {
         name = oper.read().toString();
-        sb.setLength(0);
+        stringBuilder.setLength(0);
         while (relay) {
             System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
                     "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
-            sb = sb.append(oper.read().toString());
-            if (!oper.isNum(sb) || !relay){
+            stringBuilder = stringBuilder.append(oper.read().toString());
+            if (!oper.isNum(stringBuilder) || !relay){
                 relay=false;
             } else {
                 relay = eat();
@@ -33,17 +33,18 @@ public class CatFeeding {
     }
 
     public boolean eat() throws IOException {
-        int catsChoose = oper.parseToInt(sb);
+        int catsChoose = oper.parseToInt(stringBuilder);
         boolean bol = true;
-        sb.setLength(0);
+        stringBuilder.setLength(0);
         if (catsChoose % 2 == 0) {
-            System.out.println("Cat don`t want to eat this  special cat`s nutrition. It want to hunt! Try to give him a mouse!");
+            System.out.println("Cat don`t want to eat this  special cat`s nutrition. It want to hunt! Try to " +
+                    "give him a mouse!");
         } else {
             System.out.println("Choose amount of the mouses & press <ENTER>");
-            sb.append(oper.read().toString());
-            if (oper.isNum(sb) & sb.length()>=0 & oper.parseToInt(sb)>=0) {
-                int num = Integer.parseInt(sb.toString());
-                amount += Integer.parseInt(sb.toString());
+            stringBuilder.append(oper.read().toString());
+            if (oper.isNum(stringBuilder) & stringBuilder.length()>=0 & oper.parseToInt(stringBuilder)>=0) {
+                int num = Integer.parseInt(stringBuilder.toString());
+                amount += Integer.parseInt(stringBuilder.toString());
                 if (amount >= 15){
                     System.out.println(name +
                             " caught 15 out of "+amount+" mice."+ "It is full.");
