@@ -8,7 +8,7 @@ public class Operations {
     StringBuilder sb;
     public StringBuilder read() throws IOException {
          sb = new StringBuilder();
-        try{
+        try {
             sb.setLength(0);
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             return  sb.append(reader.readLine());
@@ -19,18 +19,18 @@ public class Operations {
     }
 
     public boolean isnum(StringBuilder num){
-        try{
+        try {
             Long.parseLong(num.toString());
             return true;
-        }catch (NumberFormatException e){
+        }catch (NumberFormatException e) {
             return false;
         }
     }
 
     public int parseToInt(StringBuilder num){
-        try{
+        try {
             return Integer.parseInt(num.toString());
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e){
             return 0;
         }
     }
