@@ -18,7 +18,7 @@ public class Operations {
         }
     }
 
-    public boolean isnum(StringBuilder num){
+    public boolean isNum(StringBuilder num){
         try {
             Long.parseLong(num.toString());
             return true;
