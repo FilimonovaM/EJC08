@@ -24,7 +24,7 @@ public class CatFeeding {
             System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
                     "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
             sb = sb.append(oper.read().toString());
-            if (!oper.isnum(sb) || !relay){
+            if (!oper.isNum(sb) || !relay){
                 relay=false;
             } else {
                 relay = eat();
@@ -41,7 +41,7 @@ public class CatFeeding {
         } else {
             System.out.println("Choose amount of the mouses & press <ENTER>");
             sb.append(oper.read().toString());
-            if (oper.isnum(sb) & sb.length()>=0 & oper.parseToInt(sb)>=0) {
+            if (oper.isNum(sb) & sb.length()>=0 & oper.parseToInt(sb)>=0) {
                 int num = Integer.parseInt(sb.toString());
                 amount += Integer.parseInt(sb.toString());
                 if (amount >= 15){
