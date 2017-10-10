@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class CatFeeding {
     StringBuilder stringBuilder;
-    String name;
-    int amount;
-    boolean relay;
+    private String name;
+    private int amount;
+    private boolean relay;
     Operations oper;
 
     CatFeeding(boolean relay){
@@ -17,6 +17,9 @@ public class CatFeeding {
         oper = new Operations();
     }
 
+    /**
+     * uses to start cat`s loop
+     * */
     public void start() throws IOException {
         name = oper.read().toString();
         stringBuilder.setLength(0);
@@ -32,7 +35,11 @@ public class CatFeeding {
         }
     }
 
-    public boolean eat() throws IOException {
+    /**
+     * uses for saving of the dialog logic
+     * @return boolean answer to start().relay
+     * */
+    private boolean eat() throws IOException {
         int catsChoose = oper.parseToInt(stringBuilder);
         boolean bol = true;
         stringBuilder.setLength(0);

@@ -7,6 +7,9 @@ import java.io.IOException;
  */
 public class Cats {
 
+    /**
+     * uses for starting of own dialog with cat
+     * */
     public  static void main(String[] args) throws IOException {
         CatFeeding fth = new CatFeeding(true);
         System.out.println("Enter the cat`s name");

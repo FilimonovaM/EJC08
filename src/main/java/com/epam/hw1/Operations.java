@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 
 public class Operations {
     StringBuilder stringBuilder;
+/**
+ * uses for reading
+* @return readed line
+* */
     public StringBuilder read() throws IOException {
         stringBuilder = new StringBuilder();
         try {
@@ -18,19 +22,31 @@ public class Operations {
         }
     }
 
+    /**
+     * uses for understanding is the line a number or not
+     * @return boolean answer
+     * @param num is a readed line
+     * */
     public boolean isNum(StringBuilder num){
         try {
             Long.parseLong(num.toString());
             return true;
         }catch (NumberFormatException e) {
+            System.err.print(e);
             return false;
         }
     }
 
+    /**
+     * uses for parsing
+     * @return int result
+     * @param num is a readed line
+     * */
     public int parseToInt(StringBuilder num){
         try {
             return Integer.parseInt(num.toString());
         } catch (NumberFormatException e){
+            System.err.print(e);
             return 0;
         }
     }
