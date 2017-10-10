@@ -4,13 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Admin on 010 10.10.17.
- */
 public class Operations {
-
+    StringBuilder sb;
     public StringBuilder read() throws IOException {
-        StringBuilder sb = new StringBuilder();
+         sb = new StringBuilder();
         try{
             sb.setLength(0);
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

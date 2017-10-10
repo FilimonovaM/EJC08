@@ -15,15 +15,14 @@ public class CatFeeding {
         sb = new StringBuilder();
         amount = 0;
         oper = new Operations();
-
     }
 
     public void start() throws IOException {
         name = oper.read().toString();
         sb.setLength(0);
         while(relay){
-            System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition press any \n" +
-                    "even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
+            System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
+                    "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
             sb = sb.append(oper.read().toString());
             if(!oper.isnum(sb)||!relay){
                 relay=false;
@@ -61,7 +60,6 @@ public class CatFeeding {
                 }else{
                     System.out.println(name + " is in sorrow. You forgot to give him a mouse.Total eaten: amount mice");
                 }
-
             }else{
                 System.out.println("It is not a number or \n" +
                         "a negative number.");
