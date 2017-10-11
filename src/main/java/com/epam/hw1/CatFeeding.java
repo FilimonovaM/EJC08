@@ -8,26 +8,26 @@ public class CatFeeding {
     private String name;
     private int amount;
     private boolean relay;
-    Operations oper;
+    Operations operations;
 
-    CatFeeding(boolean relay){
-        this.relay = relay;
+    CatFeeding(){
+        relay = true;
         stringBuilder = new StringBuilder();
         amount = 0;
-        oper = new Operations();
+        operations = new Operations();
     }
 
     /**
      * uses to start cat`s loop
      * */
     public void start() throws IOException {
-        name = oper.read().toString();
+        name = operations.read().toString();
         stringBuilder.setLength(0);
         while (relay) {
             System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
                     "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
-            stringBuilder = stringBuilder.append(oper.read().toString());
-            if (!oper.isNum(stringBuilder) || !relay){
+            stringBuilder = stringBuilder.append(operations.read().toString());
+            if (!operations.isNum(stringBuilder) || !relay){
                 relay=false;
             } else {
                 relay = eat();
@@ -40,7 +40,7 @@ public class CatFeeding {
      * @return boolean answer to start().relay
      * */
     private boolean eat() throws IOException {
-        int catsChoose = oper.parseToInt(stringBuilder);
+        int catsChoose = operations.parseToInt(stringBuilder);
         boolean bol = true;
         stringBuilder.setLength(0);
         if (catsChoose % 2 == 0) {
@@ -48,8 +48,8 @@ public class CatFeeding {
                     "give him a mouse!");
         } else {
             System.out.println("Choose amount of the mouses & press <ENTER>");
-            stringBuilder.append(oper.read().toString());
-            if (oper.isNum(stringBuilder) & stringBuilder.length()>=0 & oper.parseToInt(stringBuilder)>=0) {
+            stringBuilder.append(operations.read().toString());
+            if (operations.isNum(stringBuilder) & stringBuilder.length()>=0 & operations.parseToInt(stringBuilder)>=0) {
                 int num = Integer.parseInt(stringBuilder.toString());
                 amount += Integer.parseInt(stringBuilder.toString());
                 if (amount >= 15){

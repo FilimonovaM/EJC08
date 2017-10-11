@@ -5,15 +5,15 @@ import java.io.IOException;
 /**
  * Created by Admin on 009 09.10.17.
  */
-public class Cats {
+public class Cat {
 
     /**
      * uses for starting of own dialog with cat
      * */
-    public  static void main(String[] args) throws IOException {
-        CatFeeding fth = new CatFeeding(true);
+    public static void main(String[] args) throws IOException {
+        CatFeeding catFeeding = new CatFeeding();
         System.out.println("Enter the cat`s name");
-        fth.start();
+        catFeeding.start();
         System.out.println("\n" +
                 "Cat is grateful. Bye!");
     }

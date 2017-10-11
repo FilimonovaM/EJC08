@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 
 public class Operations {
     StringBuilder stringBuilder;
+    Operations(){
+
+    }
 /**
  * uses for reading
 * @return readed line
