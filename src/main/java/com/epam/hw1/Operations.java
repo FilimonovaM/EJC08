@@ -43,7 +43,7 @@ public class Operations {
     /**
      * uses for parsing
      * @return int result
-     * @param num is a readed line
+     * @param num is a read line
      * */
     public int parseToInt(StringBuilder num){
         try {

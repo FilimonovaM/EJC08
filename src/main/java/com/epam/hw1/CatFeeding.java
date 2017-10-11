@@ -7,6 +7,7 @@ import java.io.IOException;
 public class CatFeeding {
     StringBuilder stringBuilder;
     private String name;
+    private int num;
     private int amount;
     private boolean relay;
     Operations operations;
@@ -37,6 +38,14 @@ public class CatFeeding {
     }
 
     /**
+     * uses to access the method answer() from the mine()
+     * @param answer is a number of the phrase that will be written
+     * */
+    public void getAnswer(int answer){
+        answer(answer);
+    }
+
+    /**
      * uses for saving of the dialog logic
      * @return boolean answer to start().relay
      * */
@@ -45,35 +54,81 @@ public class CatFeeding {
         boolean bol = true;
         stringBuilder.setLength(0);
         if (catsChoose % 2 == 0) {
-            System.out.println("Cat don`t want to eat this  special cat`s nutrition. It want to hunt! Try to " +
-                    "give him a mouse!");
+            answer(0);
         } else {
-            System.out.println("Choose amount of the mouses & press <ENTER>");
+            answer(1);
             stringBuilder.append(operations.read().toString());
             if (operations.isNum(stringBuilder) & stringBuilder.length()>=0 & operations.parseToInt(stringBuilder)>=0) {
-                int num = Integer.parseInt(stringBuilder.toString());
-                amount += Integer.parseInt(stringBuilder.toString());
+                num = operations.parseToInt(stringBuilder);
+                amount += num;
                 if (amount >= 15){
-                    System.out.println(name +
-                            " caught 15 out of "+num+" mice. Total eaten:"+ amount+" mice."+ "It is full.");
+                    answer(2);
                     bol = false;
                 } else if (amount < 15 && num > 1) {
-                    System.out.println(name + " is happy! It \n" +
-                                "caught "+num+" mice. \n" +
-                                "It needs more mice. \n" +
-                                "Total eaten:"+ amount+" mice");
+                    answer(3);
                 } else if (amount < 15 && num == 1) {
-                    System.out.println(name + " is happy! It \n" +
-                            "caught 1 mouse. "+
-                            "Total eaten:"+ amount+" mice.");
+                    answer(4);
                 } else {
-                    System.out.println(name + " is in sorrow. You forgot to give him a mouse.Total eaten: amount mice");
+                    answer(5);
                 }
             } else {
-                System.out.println("It is not a number or \n" +
-                        "a negative number.");
+                answer(6);
             }
         }
         return bol;
+    }
+
+    /**
+     * uses to choose a phrase
+     * @param answer is a number of the phrase that will be written
+     * */
+    private void answer(int answer){
+        int tell = answer;
+        switch(tell){
+            case (0) : {
+                System.out.println("Cat don`t want to eat this  special cat`s nutrition. It want to hunt! Try to " +
+                        "give him a mouse!");
+                break;
+            }
+            case (1) : {
+                System.out.println("Choose amount of the mouses & press <ENTER>");
+                break;
+            }
+            case (2) : {
+                System.out.println(name + " caught 15 out of "+num+" mice. It is full.");
+                break;
+            }
+            case (3) : {
+                System.out.println(name + " is happy! It \n" + "caught "+num+" mice. \n"
+                        + "It needs more mice. \n" + "Total eaten:"+ amount+" mice");
+                break;
+            }
+            case (4) : {
+                System.out.println(name + " is happy! It \n" + "caught 1 mouse. "+
+                        "Total eaten:"+ amount+" mice.");
+                break;
+            }
+            case (5) : {
+                System.out.println(name + " is in sorrow. You forgot to give him a mouse.Total eaten: amount mice");
+                break;
+            }
+            case (6) : {
+                System.out.println("It is not a number or \n" + "a negative number.");
+                break;
+            }
+            case (7) : {
+                System.out.println("Enter the cat`s name");
+                break;
+            }
+            case (8) : {
+                System.out.println("\n" + "Cat is grateful. Bye!");
+                break;
+            }
+            default : {
+                System.out.println("\n" + "We never will see this text");
+                break;
+            }
+        }
+
     }
 }

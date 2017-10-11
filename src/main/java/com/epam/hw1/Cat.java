@@ -15,10 +15,9 @@ public class Cat {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         CatFeeding catFeeding = new CatFeeding(reader);
-        System.out.println("Enter the cat`s name");
+        catFeeding.getAnswer(7);
         catFeeding.start();
         reader.close();
-        System.out.println("\n" +
-                "Cat is grateful. Bye!");
+        catFeeding.getAnswer(8);
     }
 }
