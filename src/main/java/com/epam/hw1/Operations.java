@@ -18,7 +18,6 @@ public class Operations {
         stringBuilder = new StringBuilder();
         try {
             stringBuilder.setLength(0);
-
             return  stringBuilder.append(reader.readLine());
         } catch (IOException e) {
             e.printStackTrace();

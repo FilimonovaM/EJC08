@@ -55,7 +55,7 @@ public class CatFeeding {
                 amount += Integer.parseInt(stringBuilder.toString());
                 if (amount >= 15){
                     System.out.println(name +
-                            " caught 15 out of "+amount+" mice."+ "It is full.");
+                            " caught 15 out of "+num+" mice. Total eaten:"+ amount+" mice."+ "It is full.");
                     bol = false;
                 } else if (amount < 15 && num > 1) {
                     System.out.println(name + " is happy! It \n" +
