@@ -6,8 +6,9 @@ import java.io.InputStreamReader;
 
 public class Operations {
     StringBuilder stringBuilder;
-    Operations(){
-
+    BufferedReader reader;
+    Operations(BufferedReader reader){
+        this.reader = reader;
     }
 /**
  * uses for reading
@@ -17,7 +18,7 @@ public class Operations {
         stringBuilder = new StringBuilder();
         try {
             stringBuilder.setLength(0);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
             return  stringBuilder.append(reader.readLine());
         } catch (IOException e) {
             e.printStackTrace();

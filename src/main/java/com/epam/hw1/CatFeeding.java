@@ -1,6 +1,7 @@
 package com.epam.hw1;
 
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class CatFeeding {
@@ -10,11 +11,11 @@ public class CatFeeding {
     private boolean relay;
     Operations operations;
 
-    CatFeeding(){
+    CatFeeding(BufferedReader reader){
         relay = true;
         stringBuilder = new StringBuilder();
         amount = 0;
-        operations = new Operations();
+        operations = new Operations(reader);
     }
 
     /**
