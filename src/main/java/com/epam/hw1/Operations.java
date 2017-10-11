@@ -12,7 +12,7 @@ public class Operations {
     }
 /**
  * uses for reading
-* @return readed line
+* @return read line
 * */
     public StringBuilder read() throws IOException {
         stringBuilder = new StringBuilder();
