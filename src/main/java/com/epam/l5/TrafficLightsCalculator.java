@@ -49,8 +49,8 @@ public class TrafficLightsCalculator {
     /**
      * uses for searching information about the color
      *
-     * @param enteredInt is the choozen second
-     * @return stringBuilder whith information about a color of TrafficLights to reader()
+     * @param enteredInt is the selected second
+     * @return stringBuilder with information about a color of TrafficLights to reader()
      */
     private StringBuilder answer(int enteredInt) {
         stringBuilder.setLength(0);
@@ -59,7 +59,6 @@ public class TrafficLightsCalculator {
         }
         if (enteredInt >= trafficLights.length) {
             enteredInt -= enteredInt / trafficLights.length * trafficLights.length;
-            ;
         }
         stringBuilder = stringBuilder.append(trafficLights[enteredInt]);
         return stringBuilder;
