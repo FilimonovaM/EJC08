@@ -11,7 +11,7 @@ public class CatFeeding {
     private boolean relay;
     Operations operations;
 
-    CatFeeding(BufferedReader reader){
+    CatFeeding(BufferedReader reader) {
         relay = true;
         stringBuilder = new StringBuilder();
         amount = 0;
@@ -40,7 +40,7 @@ public class CatFeeding {
      * uses to access the method answer() from the mine()
      * @param answer is a number of the phrase that will be written
      * */
-    public void getAnswer(int answer){
+    public void getAnswer(int answer) {
         answer(answer);
     }
 
@@ -60,7 +60,7 @@ public class CatFeeding {
             if (operations.isNumber(stringBuilder) & stringBuilder.length()>=0 & operations.parseToInt(stringBuilder)>=0) {
                 num = operations.parseToInt(stringBuilder);
                 amount += num;
-                if (amount >= 15){
+                if (amount >= 15) {
                     answer(2);
                     dialogStatus = false;
                 } else if (amount < 15 && num > 1) {
@@ -81,7 +81,7 @@ public class CatFeeding {
      * uses to choose a phrase
      * @param answer is a number of the phrase that will be written
      * */
-    private void answer(int answer){
+    private void answer(int answer) {
         int tell = answer;
         switch(tell){
             case (0) : {

@@ -30,7 +30,7 @@ public class Operations {
      * @return boolean answer
      * @param number is a read line
      * */
-    public boolean isNumber(StringBuilder number){
+    public boolean isNumber(StringBuilder number) {
         try {
             Integer.parseInt(number.toString());
             return true;
@@ -45,7 +45,7 @@ public class Operations {
      * @return int result
      * @param number is a read line
      * */
-    public int parseToInt(StringBuilder number){
+    public int parseToInt(StringBuilder number) {
         try {
             return Integer.parseInt(number.toString());
         } catch (NumberFormatException e){
