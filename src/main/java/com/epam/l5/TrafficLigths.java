@@ -4,9 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Admin on 012 12.10.17.
- */
 public class TrafficLigths {
 
     String[] trafficLights = new String[]{"RED", "RED", "YELLOW", "YELLOW", "YELLOW", "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
