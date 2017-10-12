@@ -15,6 +15,7 @@ public class Operations {
      * uses for reading
      *
      * @return read line
+     * @throws IOException
      */
     public StringBuilder read() throws IOException {
         stringBuilder = new StringBuilder();

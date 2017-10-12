@@ -48,6 +48,7 @@ public class CatFeeding {
      * uses for saving of the dialog logic
      *
      * @return boolean answer to start().relay
+     * @throws IOException
      */
     private boolean eat() throws IOException {
         int catsChoose = operations.parseToInt(stringBuilder);
