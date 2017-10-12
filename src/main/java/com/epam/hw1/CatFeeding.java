@@ -1,6 +1,5 @@
 package com.epam.hw1;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -29,7 +28,7 @@ public class CatFeeding {
             System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
                     "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
             stringBuilder = stringBuilder.append(operations.read().toString());
-            if (!operations.isNum(stringBuilder) || !relay){
+            if (!operations.isNumber(stringBuilder) || !relay){
                 relay=false;
             } else {
                 relay = eat();
@@ -51,19 +50,19 @@ public class CatFeeding {
      * */
     private boolean eat() throws IOException {
         int catsChoose = operations.parseToInt(stringBuilder);
-        boolean bol = true;
+        boolean dialogStatus = true;
         stringBuilder.setLength(0);
         if (catsChoose % 2 == 0) {
             answer(0);
         } else {
             answer(1);
             stringBuilder.append(operations.read().toString());
-            if (operations.isNum(stringBuilder) & stringBuilder.length()>=0 & operations.parseToInt(stringBuilder)>=0) {
+            if (operations.isNumber(stringBuilder) & stringBuilder.length()>=0 & operations.parseToInt(stringBuilder)>=0) {
                 num = operations.parseToInt(stringBuilder);
                 amount += num;
                 if (amount >= 15){
                     answer(2);
-                    bol = false;
+                    dialogStatus = false;
                 } else if (amount < 15 && num > 1) {
                     answer(3);
                 } else if (amount < 15 && num == 1) {
@@ -75,7 +74,7 @@ public class CatFeeding {
                 answer(6);
             }
         }
-        return bol;
+        return dialogStatus;
     }
 
     /**

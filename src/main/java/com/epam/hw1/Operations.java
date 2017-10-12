@@ -20,7 +20,7 @@ public class Operations {
             stringBuilder.setLength(0);
             return  stringBuilder.append(reader.readLine());
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e);
             return stringBuilder;
         }
     }
@@ -28,14 +28,14 @@ public class Operations {
     /**
      * uses for understanding is the line a number or not
      * @return boolean answer
-     * @param num is a readed line
+     * @param number is a read line
      * */
-    public boolean isNum(StringBuilder num){
+    public boolean isNumber(StringBuilder number){
         try {
-            Long.parseLong(num.toString());
+            Integer.parseInt(number.toString());
             return true;
         }catch (NumberFormatException e) {
-            System.err.print(e);
+            System.err.println(e);
             return false;
         }
     }
@@ -43,13 +43,13 @@ public class Operations {
     /**
      * uses for parsing
      * @return int result
-     * @param num is a read line
+     * @param number is a read line
      * */
-    public int parseToInt(StringBuilder num){
+    public int parseToInt(StringBuilder number){
         try {
-            return Integer.parseInt(num.toString());
+            return Integer.parseInt(number.toString());
         } catch (NumberFormatException e){
-            System.err.print(e);
+            System.err.println(e);
             return 0;
         }
     }

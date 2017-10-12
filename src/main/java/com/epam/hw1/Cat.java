@@ -4,9 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Admin on 009 09.10.17.
- */
 public class Cat {
 
     /**
