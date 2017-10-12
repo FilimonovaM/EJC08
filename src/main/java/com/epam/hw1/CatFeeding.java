@@ -4,15 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class CatFeeding {
-    StringBuilder stringBuilder;
-    private String name;
+    private StringBuilder stringBuilder;
+    private String catsName;
     private int numberOfMice;
-    private int amount;
-    private boolean relayOfLoop;
+    private int amountOfEatenMice;
+    private boolean isTheLoopIsMove;
     Operations operations;
 
     CatFeeding(BufferedReader reader) {
-        relayOfLoop = true;
+        isTheLoopIsMove = true;
         stringBuilder = new StringBuilder();
         operations = new Operations(reader);
     }
@@ -21,16 +21,16 @@ public class CatFeeding {
      * uses to start cat`s loop
      */
     public void start() throws IOException {
-        name = operations.read().toString();
+        catsName = operations.read().toString();
         stringBuilder.setLength(0);
-        while (relayOfLoop) {
-            System.out.println("\nLet`s feed " + name + "! If you want to give a bowl of special nutrition " +
+        while (isTheLoopIsMove) {
+            System.out.println("\nLet`s feed " + catsName + "! If you want to give a bowl of special nutrition " +
                     "press any even number. \nPress any odd number to give a mouse. \nPress another key to escape.");
             stringBuilder = stringBuilder.append(operations.read().toString());
-            if (!operations.isNumber(stringBuilder) || !relayOfLoop) {
-                relayOfLoop = false;
+            if (!operations.isNumber(stringBuilder) || !isTheLoopIsMove) {
+                isTheLoopIsMove = false;
             } else {
-                relayOfLoop = eat();
+                isTheLoopIsMove = eat();
             }
         }
     }
@@ -60,13 +60,13 @@ public class CatFeeding {
             stringBuilder.append(operations.read().toString());
             if (operations.isNumber(stringBuilder) & stringBuilder.length() >= 0 & operations.parseToInt(stringBuilder) >= 0) {
                 numberOfMice = operations.parseToInt(stringBuilder);
-                amount += numberOfMice;
-                if (amount >= 15) {
+                amountOfEatenMice += numberOfMice;
+                if (amountOfEatenMice >= 15) {
                     answer(2);
                     isEat = false;
-                } else if (amount < 15 && numberOfMice > 1) {
+                } else if (amountOfEatenMice < 15 && numberOfMice > 1) {
                     answer(3);
-                } else if (amount < 15 && numberOfMice == 1) {
+                } else if (amountOfEatenMice < 15 && numberOfMice == 1) {
                     answer(4);
                 } else {
                     answer(5);
@@ -96,21 +96,21 @@ public class CatFeeding {
                 break;
             }
             case (2): {
-                System.out.println(name + " caught 15 out of " + numberOfMice + " mice. It is full.");
+                System.out.println(catsName + " caught 15 out of " + numberOfMice + " mice. It is full.");
                 break;
             }
             case (3): {
-                System.out.println(name + " is happy! It \n" + "caught " + numberOfMice + " mice. \n"
-                        + "It needs more mice. \n" + "Total eaten:" + amount + " mice");
+                System.out.println(catsName + " is happy! It \n" + "caught " + numberOfMice + " mice. \n"
+                        + "It needs more mice. \n" + "Total eaten:" + amountOfEatenMice + " mice");
                 break;
             }
             case (4): {
-                System.out.println(name + " is happy! It \n" + "caught 1 mouse. " +
-                        "Total eaten:" + amount + " mice.");
+                System.out.println(catsName + " is happy! It \n" + "caught 1 mouse. " +
+                        "Total eaten:" + amountOfEatenMice + " mice.");
                 break;
             }
             case (5): {
-                System.out.println(name + " is in sorrow. You forgot to give him a mouse.Total eaten: amount mice");
+                System.out.println(catsName + " is in sorrow. You forgot to give him a mouse.Total eaten: amount mice");
                 break;
             }
             case (6): {
