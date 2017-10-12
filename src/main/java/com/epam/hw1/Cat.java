@@ -8,7 +8,7 @@ public class Cat {
 
     /**
      * uses for starting of own dialog with cat
-     * */
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         CatFeeding catFeeding = new CatFeeding(reader);

@@ -4,20 +4,23 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class Operations {
-    StringBuilder stringBuilder;
-    BufferedReader reader;
-    Operations(BufferedReader reader){
+    private StringBuilder stringBuilder;
+    private BufferedReader reader;
+
+    Operations(BufferedReader reader) {
         this.reader = reader;
     }
-/**
- * uses for reading
-* @return read line
-* */
+
+    /**
+     * uses for reading
+     *
+     * @return read line
+     */
     public StringBuilder read() throws IOException {
         stringBuilder = new StringBuilder();
         try {
             stringBuilder.setLength(0);
-            return  stringBuilder.append(reader.readLine());
+            return stringBuilder.append(reader.readLine());
         } catch (IOException e) {
             System.err.println(e);
             return stringBuilder;
@@ -26,14 +29,15 @@ public class Operations {
 
     /**
      * uses for understanding is the line a number or not
-     * @return boolean answer
+     *
      * @param number is a read line
-     * */
+     * @return boolean answer
+     */
     public boolean isNumber(StringBuilder number) {
         try {
             Integer.parseInt(number.toString());
             return true;
-        }catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.err.println(e);
             return false;
         }
@@ -41,13 +45,14 @@ public class Operations {
 
     /**
      * uses for parsing
-     * @return int result
+     *
      * @param number is a read line
-     * */
+     * @return int result
+     */
     public int parseToInt(StringBuilder number) {
         try {
             return Integer.parseInt(number.toString());
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.err.println(e);
             return 0;
         }
