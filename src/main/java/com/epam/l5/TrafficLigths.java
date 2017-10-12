@@ -45,7 +45,6 @@ public class TrafficLigths {
         }
     }
 
-
     /**
      * uses for searching information about the color
      *
