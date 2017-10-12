@@ -124,7 +124,7 @@ public class CatFeeding {
                 break;
             }
             default : {
-                System.out.println("\n" + "We never will see this text");
+                System.out.println("\n" + "We will never see this text. If we csn see it something broke.");
                 break;
             }
         }
