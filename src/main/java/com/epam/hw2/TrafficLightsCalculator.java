@@ -5,14 +5,16 @@ import java.io.IOException;
 
 public class TrafficLightsCalculator {
     private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
-            "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
+            "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"}; //You can change it like you need. Nothing will crashed
     int enteredInt;
-    private int minutesPerHour = 60;
+    private int minutesPerHour = 60; //If you change this param, it will happen... nothing wrong
     private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
 
     /**
      * uses for read the number of second & write the answer
+     *
+     * this method is connected with the method check(), which uses to check what the symbol was entered
      *
      * @param reader is an object of BufferedReader
      */
@@ -33,6 +35,11 @@ public class TrafficLightsCalculator {
 
     /**
      * uses for searching information about the color
+     *
+     * first "if" is uses to find the digit, that will be less that param minutesPerHour
+     *
+     * second "if" uses to find the index of the color in trafficLights[] for the
+     * enteredNumber that is more then trafficLights.length
      *
      * @param enteredInt is the selected second
      * @return information about a color of TrafficLights to reader() in String format
