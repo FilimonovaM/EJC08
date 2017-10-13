@@ -3,6 +3,7 @@ package com.epam.hw2;
 public class OperationsWithEnteredSymbols {
     private String lineWithSelectedNumber;
     private int enteredInt;
+
     /**
      * uses for checking of status of the stringBuilder object
      *
@@ -16,7 +17,7 @@ public class OperationsWithEnteredSymbols {
             enteredInt = Integer.parseInt(lineWithSelectedNumber);
             if (enteredInt < 0) {
                 System.out.println("It is a negative number");
-            }else{
+            } else {
                 System.out.println("Selected number is " + enteredInt);
             }
         } catch (NumberFormatException e) {
