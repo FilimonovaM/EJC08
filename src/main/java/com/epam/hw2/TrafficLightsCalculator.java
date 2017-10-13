@@ -17,7 +17,7 @@ public class TrafficLightsCalculator {
      *
      * @param reader is an object of BufferedReader
      */
-    void reader(BufferedReader reader) {
+    protected void reader(BufferedReader reader) {
         operationsWithEnteredSymbols = new OperationsWithEnteredSymbols();
         stringBuilder = new StringBuilder();
         System.out.println("Enter the number");
@@ -27,7 +27,7 @@ public class TrafficLightsCalculator {
             System.err.println(e);
         }
         stringBuilder.setLength(0);
-        if(enteredInt>=0) {
+        if (enteredInt >= 0) {
             System.out.println(answer(enteredInt));
         }
     }
@@ -36,7 +36,7 @@ public class TrafficLightsCalculator {
      * uses for searching information about the color
      *
      * @param enteredInt is the selected second
-     * @return stringBuilder with information about a color of TrafficLights to reader()
+     * @return information about a color of TrafficLights to reader() in String format
      */
     protected String answer(int enteredInt) {
         if (enteredInt > minuetsPerHour) {
