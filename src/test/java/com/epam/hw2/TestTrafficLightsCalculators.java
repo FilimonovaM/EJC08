@@ -8,7 +8,7 @@ public class TestTrafficLightsCalculators {
     TrafficLightsCalculator trafficLightsCalculator = new TrafficLightsCalculator();
 
     @Test
-     public void testAnswer(){
+    public void testAnswer() {
         Assert.assertEquals("RED", trafficLightsCalculator.answer(0));
         Assert.assertEquals("YELLOW", trafficLightsCalculator.answer(2));
         Assert.assertEquals("YELLOW", trafficLightsCalculator.answer(13));
