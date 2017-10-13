@@ -5,7 +5,7 @@ import java.io.IOException;
 
 
 public class TrafficLightsCalculator {
-    private String[] trafficLights = new String[]{"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
+    private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
     int enteredInt;
     private int minuetsPerHour = 60;
