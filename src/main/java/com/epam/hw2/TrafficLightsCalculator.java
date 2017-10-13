@@ -38,7 +38,7 @@ public class TrafficLightsCalculator {
      * @param enteredInt is the selected second
      * @return stringBuilder with information about a color of TrafficLights to reader()
      */
-    private String answer(int enteredInt) {
+    public String answer(int enteredInt) {
         if (enteredInt > minuetsPerHour) {
             enteredInt %= minuetsPerHour;
         }
