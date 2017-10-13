@@ -8,7 +8,7 @@ public class TrafficLightsCalculator {
     private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
     int enteredInt;
-    private int minuetsPerHour = 60;
+    private int minutesPerHour = 60;
     private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
 
@@ -39,8 +39,8 @@ public class TrafficLightsCalculator {
      * @return information about a color of TrafficLights to reader() in String format
      */
     protected String answer(int enteredInt) {
-        if (enteredInt > minuetsPerHour) {
-            enteredInt %= minuetsPerHour;
+        if (enteredInt > minutesPerHour) {
+            enteredInt %= minutesPerHour;
         }
         if (enteredInt >= trafficLights.length) {
             enteredInt %= trafficLights.length;
