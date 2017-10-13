@@ -4,7 +4,7 @@ package com.epam.hw2;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestTrafficLightsCalculators {
+public class TestTrafficLightsCalculator {
     TrafficLightsCalculator trafficLightsCalculator = new TrafficLightsCalculator();
 
     @Test
