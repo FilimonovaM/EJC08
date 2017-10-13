@@ -1,7 +1,5 @@
 package com.epam.hw2;
 
-import com.epam.hw1.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -10,9 +8,9 @@ public class TrafficLightsCalculator {
     private String[] trafficLights = new String[]{"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
     int enteredInt;
-    private int minuetsPerHoure = 60;
+    private int minuetsPerHour = 60;
     private StringBuilder stringBuilder;
-    private Operations operations;
+    private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
 
     /**
      * uses for read the number of second & write the answer
@@ -20,19 +18,18 @@ public class TrafficLightsCalculator {
      * @param reader is an object of BufferedReader
      */
     void reader(BufferedReader reader) {
-        operations = new Operations();
+        operationsWithEnteredSymbols = new OperationsWithEnteredSymbols();
         stringBuilder = new StringBuilder();
         System.out.println("Enter the number");
         try {
-            stringBuilder.setLength(0);
-            enteredInt = operations.check((stringBuilder.append(reader.readLine())).toString());
-            if(enteredInt>=0){
-                System.out.println(answer(enteredInt).toString());
-            }
+            enteredInt = operationsWithEnteredSymbols.check((stringBuilder.append(reader.readLine())).toString());
         } catch (IOException e) {
             System.err.println(e);
         }
-
+        stringBuilder.setLength(0);
+        if(enteredInt>=0) {
+            System.out.println(answer(enteredInt));
+        }
     }
 
     /**
@@ -41,15 +38,13 @@ public class TrafficLightsCalculator {
      * @param enteredInt is the selected second
      * @return stringBuilder with information about a color of TrafficLights to reader()
      */
-    private StringBuilder answer(int enteredInt) {
-        stringBuilder.setLength(0);
-        if (enteredInt > minuetsPerHoure) {
-            enteredInt -= enteredInt / minuetsPerHoure * minuetsPerHoure;
+    private String answer(int enteredInt) {
+        if (enteredInt > minuetsPerHour) {
+            enteredInt %= minuetsPerHour;
         }
         if (enteredInt >= trafficLights.length) {
-            enteredInt -= enteredInt / trafficLights.length * trafficLights.length;
+            enteredInt %= trafficLights.length;
         }
-        stringBuilder = stringBuilder.append(trafficLights[enteredInt]);
-        return stringBuilder;
+        return trafficLights[enteredInt];
     }
 }

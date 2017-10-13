@@ -1,6 +1,6 @@
 package com.epam.hw2;
 
-public class Operations {
+public class OperationsWithEnteredSymbols {
     private String lineWithSelectedNumber;
     private int enteredInt;
     /**
