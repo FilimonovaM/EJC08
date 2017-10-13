@@ -3,7 +3,6 @@ package com.epam.hw2;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-
 public class TrafficLightsCalculator {
     private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"};
