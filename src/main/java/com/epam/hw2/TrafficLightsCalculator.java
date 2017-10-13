@@ -5,9 +5,11 @@ import java.io.IOException;
 
 public class TrafficLightsCalculator {
     private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
-            "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"}; //You can change it like you need. Nothing will crashed
+            "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"}; //You can change it like you need.
+    // Nothing will crashed... without the testAnswer()
     int enteredInt;
-    private int minutesPerHour = 60; //If you change this param, it will happen... nothing wrong
+    private int minutesPerHour = 60; //If you change this param, it will happen... nothing wrong.
+    // But you need to update the testAnswer()
     private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
 
