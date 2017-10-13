@@ -14,5 +14,6 @@ public class TestOperationsWithEnteredSymbols {
         Assert.assertEquals(-100, operationsWithEnteredSymbols.check("-100"));
         Assert.assertEquals(-1, operationsWithEnteredSymbols.check("R"));
         Assert.assertEquals(-1, operationsWithEnteredSymbols.check(""));
+        Assert.assertEquals(-1, operationsWithEnteredSymbols.check(null));
     }
 }
