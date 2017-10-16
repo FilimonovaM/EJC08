@@ -20,7 +20,7 @@ public class TrafficLightsCalculator {
      *
      * @param reader is an object of BufferedReader
      */
-    protected void reader(BufferedReader reader) {
+    protected void read(BufferedReader reader) {
         operationsWithEnteredSymbols = new OperationsWithEnteredSymbols();
         stringBuilder = new StringBuilder();
         System.out.println("Enter the number");

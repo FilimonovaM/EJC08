@@ -14,7 +14,7 @@ public class TrafficLights {
     public static void main(String[] args) throws IOException {
         TrafficLightsCalculator trafficLightsCalculator = new TrafficLightsCalculator();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        trafficLightsCalculator.reader(reader);
+        trafficLightsCalculator.read(reader);
         reader.close();
     }
 }
