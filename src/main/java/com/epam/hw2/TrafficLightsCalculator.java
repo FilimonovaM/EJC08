@@ -38,10 +38,10 @@ public class TrafficLightsCalculator {
     /**
      * uses for searching information about the color
      *
-     * first "if" is uses to find the digit, that will be less that param minutesPerHour
+     * first "if" is uses to find the shorter digit, if the selected number is more than minutesPerHour
      *
      * second "if" uses to find the index of the color in trafficLights[] for the
-     * enteredNumber that is more then trafficLights.length
+     * enteredNumber that is more than trafficLights.length
      *
      * @param enteredInt is the selected second
      * @return information about a color of TrafficLights to reader() in String format
