@@ -1,7 +1,7 @@
 package com.epam.hw3;
 
-public class ToyDuck extends Duck{
-    public ToyDuck(){
+public class ToyDuck extends Duck {
+    public ToyDuck() {
         quakBehaviore = new Squeak();
         flyBehaviore = new FlyNoWay();
     }

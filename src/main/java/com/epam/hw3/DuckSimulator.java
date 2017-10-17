@@ -2,8 +2,8 @@ package com.epam.hw3;
 
 public class DuckSimulator {
 
-    public static void main(String[] args){
-        Duck duckMallard= new DuckMallard();
+    public static void main(String[] args) {
+        Duck duckMallard = new DuckMallard();
         duckMallard.display();
         duckMallard.performQuak();
         duckMallard.performFly();

@@ -1,7 +1,7 @@
 package com.epam.hw3;
 
-public class RedHetDuck extends Duck{
-    public RedHetDuck(){
+public class RedHetDuck extends Duck {
+    public RedHetDuck() {
         quakBehaviore = new Quak();
         flyBehaviore = new FlyWithWings();
     }
