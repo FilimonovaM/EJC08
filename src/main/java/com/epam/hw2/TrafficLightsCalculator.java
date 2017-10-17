@@ -15,7 +15,7 @@ public class TrafficLightsCalculator {
 
     /**
      * uses for read the number of second & write the answer
-     *
+     * <p>
      * this method is connected with the method check(), which uses to check what the symbol was entered
      *
      * @param reader is an object of BufferedReader
@@ -37,9 +37,9 @@ public class TrafficLightsCalculator {
 
     /**
      * uses for searching information about the color
-     *
+     * <p>
      * first "if" is uses to find the shorter digit, if the selected number is more than minutesPerHour
-     *
+     * <p>
      * second "if" uses to find the index of the color in trafficLights[] for the
      * enteredNumber that is more than trafficLights.length
      *
