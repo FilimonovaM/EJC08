@@ -1,0 +1,12 @@
+package com.epam.hw3.typesOfFlight;
+
+public class FlyByWetFantasies implements FlyBehavior {
+
+    /**
+     * uses for demonstration one of the types of fly behavior
+     */
+    @Override
+    public void fly() {
+        System.out.println("\tAnd yet the REAL man must be able to fly!");
+    }
+}

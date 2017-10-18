@@ -4,16 +4,16 @@ import com.epam.hw3.typesOfFlight.FlyBehavior;
 import com.epam.hw3.typesOfNoise.MakeASoundBehavior;
 import com.epam.hw3.typesOfSwimming.SwimBehavior;
 
-public abstract class Duck {
+public abstract class HomoSapience {
     FlyBehavior flyBehavior;
     MakeASoundBehavior makeASoundBehavior;
     SwimBehavior swimBehavior;
 
     /**
      * unrealized version
-     * uses for personal presentation of the classes which extends from the superclass Duck
+     * uses for personal presentation of the classes which extends from the superclass HomoSapience
      */
-    public abstract void display();
+    public abstract void presentHerself();
 
     /**
      * uses for loading connecting this class to the methods from the interface FlyBehavior
@@ -25,7 +25,7 @@ public abstract class Duck {
     /**
      * uses for loading connecting this class to the methods from the interface MakeASoundBehavior
      */
-    public void performQuak() {
+    public void performSpeak() {
         makeASoundBehavior.speak();
     }
 

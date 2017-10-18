@@ -1,0 +1,14 @@
+package com.epam.hw3.typesOfSwimming;
+
+public class SwimLikeACapriciousWoman implements SwimBehavior {
+
+    /**
+     * uses for demonstration one of the types of swim behavior
+     */
+    @Override
+    public void swim() {
+        System.out.println("\tIf you ask her to swim, she says anything like: \n \"Oh... You are so stupid! " +
+                "I can`t to swim because the water can soak & spoil my hair " +
+                "or washing off the autosunburn!\"");
+    }
+}

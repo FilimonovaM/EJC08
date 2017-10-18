@@ -1,38 +1,36 @@
 package com.epam.hw3;
 
+import com.epam.hw3.typesOfFlight.FlyByPlaneLikeACapriciousWoman;
+import com.epam.hw3.typesOfFlight.FlyByWetFantasies;
+import com.epam.hw3.typesOfFlight.FlyWithWings;
+
 public class DuckSimulator {
 
+    /**
+     * uses for loading configurations of three hypothetical ducks & start the application
+     */
     public static void main(String[] args) {
-        Duck duckMallard = new DuckMallard();
-        duckMallard.display();
-        duckMallard.performQuak();
-        duckMallard.performFly();
-        System.out.println();
-
+        //Red Hed duck`s block of code
         Duck redHetDuck = new RedHetDuck();
         redHetDuck.display();
         redHetDuck.performQuak();
         redHetDuck.performFly();
+        redHetDuck.performSwim();
         System.out.println();
-
-        Duck toyDuck = new ToyDuck();
-        toyDuck.display();
-        toyDuck.performQuak();
-        toyDuck.performFly();
-        System.out.println();
-
+        //The sculpture`s of duck block of code
         Duck duckSculpture = new DuckSculpture();
         duckSculpture.display();
         duckSculpture.performFly();
         duckSculpture.performQuak();
+        duckSculpture.performSwim();
         System.out.println();
-
-        Duck modelDuck = new ModelDuck();
-        modelDuck.display();
-        modelDuck.performFly();
-        modelDuck.setFlyBehaviore(new FlyRocketPowered());
-        modelDuck.performFly();
-        modelDuck.performQuak();
-
+        //Block of the code to load configuration of the one very strange woman
+        HomoSapience duckFaceChick = new DuckFaceChick();
+        duckFaceChick.presentHerself();
+        duckFaceChick.performFly();
+        duckFaceChick.setFlyBehavior(new FlyByWetFantasies());
+        duckFaceChick.performFly();
+        duckFaceChick.performSpeak();
+        duckFaceChick.performSwim();
     }
 }
