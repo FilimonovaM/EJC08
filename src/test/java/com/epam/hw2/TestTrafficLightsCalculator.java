@@ -14,5 +14,6 @@ public class TestTrafficLightsCalculator {
         Assert.assertEquals("YELLOW", trafficLightsCalculator.answer(13));
         Assert.assertEquals("RED", trafficLightsCalculator.answer(60));
         Assert.assertEquals("GREEN", trafficLightsCalculator.answer(66));
+        Assert.assertEquals("Wrong index of array ===> -1", trafficLightsCalculator.answer(-1));
     }
 }

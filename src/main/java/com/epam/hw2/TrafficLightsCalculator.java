@@ -58,6 +58,11 @@ public class TrafficLightsCalculator {
         if (enteredInt >= trafficLights.length) {
             enteredInt %= trafficLights.length;
         }
-        return trafficLights[enteredInt];
+        try{
+            return trafficLights[enteredInt];
+        }catch (ArrayIndexOutOfBoundsException e){
+            return ("Wrong index of array ===> "+e.getMessage());
+        }
+
     }
 }
