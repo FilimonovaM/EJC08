@@ -3,7 +3,8 @@ package com.epam.hw3.typesOfNoise;
 public class MuteQuak implements MakeASoundBehavior {
 
     /**
-     * uses for demonstration one of the types of speak behavior
+     * uses for demonstration one of the types of speak behavior.
+     *
      */
     @Override
     public void speak() {

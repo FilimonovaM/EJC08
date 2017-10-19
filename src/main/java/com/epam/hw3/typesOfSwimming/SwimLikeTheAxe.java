@@ -3,7 +3,8 @@ package com.epam.hw3.typesOfSwimming;
 public class SwimLikeTheAxe implements SwimBehavior {
 
     /**
-     * uses for demonstration one of the types of swim behavior
+     * uses for demonstration one of the types of swim behavior.
+     *
      */
     @Override
     public void swim() {

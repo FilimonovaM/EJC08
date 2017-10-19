@@ -10,7 +10,8 @@ import com.epam.hw3.typesOfSwimming.SwimLikeTheAxe;
 public class DuckSimulator {
 
     /**
-     * uses for loading configurations of three hypothetical ducks & start the application
+     * uses for loading configurations of three hypothetical ducks & start the application.
+     *
      */
     public static void main(String[] args) {
         //Red Hed duck`s block of code

@@ -10,34 +10,37 @@ public abstract class Duck {
     SwimBehavior swimBehavior;
 
     /**
-     * unrealized version
-     * uses for personal presentation of the classes which extends from the superclass Duck
+     * unrealized version - > uses for personal presentation of the classes which extends from the superclass Duck.
+     *
      */
     public abstract void display();
 
     /**
-     * uses for loading connecting this class to the methods from the interface FlyBehavior
+     * uses for loading connecting this class to the methods from the interface FlyBehavior.
+     *
      */
     public void performFly() {
         flyBehavior.fly();
     }
 
     /**
-     * uses for loading connecting this class to the methods from the interface MakeASoundBehavior
+     * uses for loading connecting this class to the methods from the interface MakeASoundBehavior.
+     *
      */
     public void performQuak() {
         makeASoundBehavior.speak();
     }
 
     /**
-     * uses for loading connecting this class to the methods from the interface SwimBehavior
+     * uses for loading connecting this class to the methods from the interface SwimBehavior.
+     *
      */
     public void performSwim() {
         swimBehavior.swim();
     }
 
     /**
-     * uses for changing of current value of preparing type of flying
+     * uses for changing of current value of preparing type of flying.
      *
      * @param flyBehavior - the new value of preparing type of behavior of object
      */
@@ -46,7 +49,7 @@ public abstract class Duck {
     }
 
     /**
-     * uses for changing of current value of preparing type of speaking
+     * uses for changing of current value of preparing type of speaking.
      *
      * @param makeASoundBehavior - the new value of preparing type of behavior of object
      */
@@ -55,7 +58,7 @@ public abstract class Duck {
     }
 
     /**
-     * uses for changing of current value of preparing type of swimming
+     * uses for changing of current value of preparing type of swimming.
      *
      * @param swimBehavior - the new value of preparing type of behavior of object
      */

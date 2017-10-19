@@ -13,7 +13,8 @@ public class DuckFaceChick extends HomoSapience {
     }
 
     /**
-     * uses for personal presentation of the classes which extends from the superclass HomoSapience
+     * uses for personal presentation of the classes which extends from the superclass HomoSapience.
+     *
      */
     @Override
     public void presentHerself() {
