@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class TrafficLights {
 
     /**
-     * uses for starting of traffic lights
+     * uses for starting of traffic lights.
      *
      * @throws IOException
      */

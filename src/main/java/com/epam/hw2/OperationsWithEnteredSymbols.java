@@ -5,7 +5,7 @@ public class OperationsWithEnteredSymbols {
     private int enteredInt;
 
     /**
-     * uses for checking of status of the stringBuilder object
+     * uses for checking of status of the stringBuilder object.
      *
      * @param lineWithSelectedNumber include any information that was entered
      * @return is returning a negative digit if lineWithSelectedNumber include a negative digit,
