@@ -7,7 +7,7 @@ public class TrafficLightsCalculator {
     private String[] trafficLights = {"RED", "RED", "YELLOW", "YELLOW", "YELLOW",
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"}; //You can change it.
     // Nothing will crashed... without the testAnswer()
-    int enteredInt;
+    private int enteredInt;
     private int minutes = 60; //If you change this param, it will happen... nothing wrong.
     // But you need to update the testAnswer()
     private StringBuilder stringBuilder;
