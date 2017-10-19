@@ -7,6 +7,6 @@ public class SwimLikeAChampion implements SwimBehavior {
      */
     @Override
     public void swim() {
-        System.out.println("\tIt swim like God! It was created for water!");
+        System.out.println("\tIt swim like a God or an Aquaman! It was created for water!");
     }
 }
