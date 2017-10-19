@@ -34,6 +34,9 @@ public class TrafficLightsCalculator {
         if (enteredInt >= 0) {
             System.out.println(answer(enteredInt));
         }
+        else{
+            System.out.println("Wrong argument");
+        }
     }
 
     /**
