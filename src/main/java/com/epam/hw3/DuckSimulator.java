@@ -1,12 +1,15 @@
 package com.epam.hw3;
 
-import com.epam.hw3.typesOfFlight.FlyByPlaneLikeACapriciousWoman;
 import com.epam.hw3.typesOfFlight.FlyByWetFantasies;
 import com.epam.hw3.typesOfFlight.FlyNoWay;
-import com.epam.hw3.typesOfFlight.FlyWithWings;
 import com.epam.hw3.typesOfNoise.MuteQuak;
 import com.epam.hw3.typesOfSwimming.SwimLikeTheAxe;
 
+/**
+ *It created to show a differences of duck`s behavior in our hypothetical farm
+ *
+ * @author  Filimonova Margarita
+ */
 public class DuckSimulator {
 
     /**
