@@ -35,7 +35,7 @@ public class TrafficLightsCalculator {
             System.out.println(answer(enteredInt));
         }
         else{
-            System.out.println("Wrong argument");
+            System.err.println("Wrong argument");
         }
     }
 
