@@ -7,6 +7,6 @@ public class Quak implements MakeASoundBehavior {
      */
     @Override
     public void speak() {
-        System.out.println("\tWhat do we hear if  if we ask it something? \n\"Quak-quak!!!\"");
+        System.out.println("\tWhat do we hear if we ask it something? \n\"Quak-quak!!!\"");
     }
 }
