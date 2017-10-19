@@ -25,7 +25,7 @@ public class TrafficLightsCalculator {
         stringBuilder = new StringBuilder();
         System.out.println("Enter the number");
         try {
-            enteredInt = operationsWithEnteredSymbols.check((stringBuilder.append(reader.readLine())).toString());
+            enteredInt = operationsWithEnteredSymbols.check(stringBuilder.append(reader.readLine()).toString());
         } catch (IOException e) {
             System.err.println(e);
         }
