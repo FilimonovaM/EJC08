@@ -17,7 +17,7 @@ public class DuckFaceChick extends HomoSapience {
      */
     @Override
     public void presentHerself() {
-        System.out.println("\tOne of the most useless women of the human population call herself name \nand " +
+        System.out.println("One of the most useless women of the human population is calling herself name \nand " +
                 "doing a duck face because she convinced that it make her more attractive");
     }
 }
