@@ -21,8 +21,7 @@ public class OperationsWithEnteredSymbols {
                 System.out.println("Selected number is " + enteredInt);
             }
         } catch (NumberFormatException e) {
-            System.out.println("It is not a number");
-            System.err.println(e);
+            System.err.println("It is not a number =====> " + e);
             enteredInt = -1;
         }
         return enteredInt;
