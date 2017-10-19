@@ -34,9 +34,6 @@ public class TrafficLightsCalculator {
         if (enteredInt >= 0) {
             System.out.println(answer(enteredInt));
         }
-        else{
-            System.err.println("Wrong argument");
-        }
     }
 
     /**
@@ -61,7 +58,7 @@ public class TrafficLightsCalculator {
         try{
             return trafficLights[enteredInt];
         }catch (ArrayIndexOutOfBoundsException e){
-            return ("Wrong index of array ===> "+e.getMessage());
+            return ("Negative argument, unacceptable index of array");
         }
 
     }
