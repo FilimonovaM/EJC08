@@ -7,6 +7,6 @@ public class FlyByPlaneLikeACapriciousWoman implements FlyBehavior {
      */
     @Override
     public void fly() {
-        System.out.println("\tOh I'm not going to fly in an economy class! Who am I in your mind?");
+        System.out.println("\tShe says about the air-vehicle: \n\"Oh I'm not going to fly in an economy class! Who am I in your mind?\"");
     }
 }

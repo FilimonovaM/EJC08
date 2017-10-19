@@ -7,6 +7,6 @@ public class FlyByWetFantasies implements FlyBehavior {
      */
     @Override
     public void fly() {
-        System.out.println("\tAnd yet the REAL man must be able to fly!");
+        System.out.println("\t\"And yet the REAL man must be able to fly!\"");
     }
 }
