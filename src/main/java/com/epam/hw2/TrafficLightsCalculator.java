@@ -8,7 +8,7 @@ public class TrafficLightsCalculator {
             "GREEN", "GREEN", "GREEN", "GREEN", "GREEN"}; //You can change it.
     // Nothing will crashed... without the testAnswer()
     int enteredInt;
-    private int minutesPerHour = 60; //If you change this param, it will happen... nothing wrong.
+    private int minutes = 60; //If you change this param, it will happen... nothing wrong.
     // But you need to update the testAnswer()
     private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
@@ -47,8 +47,8 @@ public class TrafficLightsCalculator {
      * @return information about a color of TrafficLights to reader() in String format
      */
     protected String answer(int enteredInt) {
-        if (enteredInt > minutesPerHour) {
-            enteredInt %= minutesPerHour;
+        if (enteredInt > minutes) {
+            enteredInt %= minutes;
         }
         if (enteredInt >= trafficLights.length) {
             enteredInt %= trafficLights.length;
