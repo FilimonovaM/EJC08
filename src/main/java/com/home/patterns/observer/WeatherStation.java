@@ -1,6 +1,11 @@
 package com.home.patterns.observer;
 
 public class WeatherStation {
+
+    /**
+     *uses for loading of meteorology station simulator.
+     *
+     */
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
         CurrentConditionsElement currentConditionsElement = new CurrentConditionsElement();

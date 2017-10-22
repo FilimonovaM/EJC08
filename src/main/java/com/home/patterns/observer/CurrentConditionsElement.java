@@ -4,12 +4,14 @@ public class CurrentConditionsElement implements Observer, DisplayElements {
     private float temperature;
     private float humidity;
     private float pressure;
-    private Subject weatherData;
 
-//    public CurrentConditionsElement(Subject weatherData){
-//        this.weatherData = weatherData;
-//    }
-
+    /**
+     *uses to update weather information.
+     *
+     * @param temperature - is a new temperature
+     * @param humidity - is a new humidity
+     * @param pressure - is a new pressure
+     */
     @Override
     public void update(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
@@ -18,6 +20,10 @@ public class CurrentConditionsElement implements Observer, DisplayElements {
         display();
     }
 
+    /**
+     *uses to show new values of pressure, temperature & humidity.
+     *
+     */
     @Override
     public void display() {
         System.out.println("---CURRENT CONDITIONS:---\n" + temperature + "F degrees.\n" + humidity + " percents of humidity\n"
