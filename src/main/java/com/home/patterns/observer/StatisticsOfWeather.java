@@ -48,8 +48,8 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
         int i = 0;
         minPressure = statistic.get(0)[2];
         for (float[] f : statistic) {
-            maxPressure = (statistic.get(i)[2] > maxPressure)?statistic.get(i)[2]:maxPressure;
-            minPressure = (statistic.get(i)[2] < minPressure)?statistic.get(i)[2]:minPressure;
+            maxPressure = (statistic.get(i)[2] > maxPressure) ? statistic.get(i)[2] : maxPressure;
+            minPressure = (statistic.get(i)[2] < minPressure) ? statistic.get(i)[2] : minPressure;
             i++;
         }
     }
@@ -57,7 +57,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     @Override
     public void display() {
         System.out.println("---STATISTICS:---\nMaxTemperature = " + maxTemperature + "\n" +
-                "MaxHumidity = " + maxHumidity + "\nMaxPressure = " + maxPressure+"\nMinTemperature = "
+                "MaxHumidity = " + maxHumidity + "\nMaxPressure = " + maxPressure + "\nMinTemperature = "
                 + minTemperature + "\n" + "MinHumidity = " + minHumidity + "\nMinPressure = " + minPressure);
 
     }

@@ -1,9 +1,9 @@
 package com.home.patterns.observer;
 
-public class CurrentConditionsElement implements Observer, DisplayElements{
+public class CurrentConditionsElement implements Observer, DisplayElements {
     private float temperature;
-    private  float humidity;
-    private  float pressure;
+    private float humidity;
+    private float pressure;
     private Subject weatherData;
 
 //    public CurrentConditionsElement(Subject weatherData){
@@ -20,7 +20,7 @@ public class CurrentConditionsElement implements Observer, DisplayElements{
 
     @Override
     public void display() {
-        System.out.println("---CURRENT CONDITIONS:---\n"+ temperature+"F degrees.\n"+humidity+" percents of humidity\n"
-        +pressure+" mm. of pressure");
+        System.out.println("---CURRENT CONDITIONS:---\n" + temperature + "F degrees.\n" + humidity + " percents of humidity\n"
+                + pressure + " mm. of pressure");
     }
 }
