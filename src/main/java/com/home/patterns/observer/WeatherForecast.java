@@ -1,7 +1,5 @@
 package com.home.patterns.observer;
 
-import java.util.ArrayList;
-
 public class WeatherForecast implements Observer, DisplayElements {
     float previousBarometr;
     boolean isClear;
