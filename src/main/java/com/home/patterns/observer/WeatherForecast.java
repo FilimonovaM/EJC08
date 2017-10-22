@@ -17,9 +17,9 @@ public class WeatherForecast implements Observer, DisplayElements {
     public void display() {
         System.out.println("---THE FORECAST:---");
         if (isClear) {
-            System.out.println("Tomorrow will be clear");
+            System.out.println("It will be clear");
         } else {
-            System.out.println("Tomorrow will be rainy. Don`t forget an umbrella!");
+            System.out.println("It will be rainy. Don`t forget an umbrella!");
         }
     }
 }

@@ -9,10 +9,10 @@ public class WeatherStation {
         weatherData.registerObserver(currentConditionsElement);
         weatherData.registerObserver(statisticsOfWeather);
         weatherData.registerObserver(weatherForecast);
-        weatherData.setMeasurments(10, 10, 10);
+        weatherData.setMeasurments(10F, 60F, 760F);
         System.out.println();
-        weatherData.setMeasurments(5, 15, 17);
+        weatherData.setMeasurments(5F, 92F, 762F);
         System.out.println();
-        weatherData.setMeasurments(22, 1, 7);
+        weatherData.setMeasurments(22F, 90F, 758F);
     }
 }
