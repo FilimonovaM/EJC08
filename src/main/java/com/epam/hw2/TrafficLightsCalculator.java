@@ -15,7 +15,7 @@ public class TrafficLightsCalculator {
 
     /**
      * uses for read the number of second & write the answer.
-     *
+     * <p>
      * <p>
      * this method is connected with the method check(), which uses to check what the symbol was entered </p>
      *
@@ -31,14 +31,14 @@ public class TrafficLightsCalculator {
             System.err.println(e);
         }
         stringBuilder.setLength(0);
-        if (enteredInt >= 0) {
+        if (enteredInt >= 0 && enteredInt < trafficLights.length) {
             System.out.println(answer(enteredInt));
         }
     }
 
     /**
      * uses for searching information about the color.
-     *
+     * <p>
      * <p>
      * first "if" is uses to find the shorter digit, if the selected number is more than minutesPerHour</p>
      * <p>
@@ -55,9 +55,9 @@ public class TrafficLightsCalculator {
         if (enteredInt >= trafficLights.length) {
             enteredInt %= trafficLights.length;
         }
-        try{
+        try {
             return trafficLights[enteredInt];
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             return ("Negative argument, unacceptable index of array");
         }
 
