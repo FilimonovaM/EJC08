@@ -1,7 +1,14 @@
-package com.home.patterns.observer;
+package com.home.patterns.observerTheMainRealization;
 
 public class HeatIndex {
 
+    /**
+     * uses to find heat index default meteorological formula.
+     *
+     * @param t  is a temperature
+     * @param rh is a humidity
+     * @return index founded by the very difficult meteorological formula
+     */
     protected float computeHeatIndex(float t, float rh) {
         float index = (float) ((16.923 + (0.185212 * t) + (5.37941 * rh) - (0.100254 * t * rh) +
                 (0.00941695 * (t * t)) + (0.00728898 * (rh * rh)) +

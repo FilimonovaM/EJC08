@@ -1,4 +1,4 @@
-package com.home.patterns.observer;
+package com.home.patterns.observerTheMainRealization;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ public class WeatherData implements Subject {
     /**
      *uses for registration of the new observers.
      *
-     * @param observer - added observer
+     * @param observer - added observerTheMainRealization
      */
     @Override
     public void registerObserver(Observer observer) {
@@ -26,7 +26,7 @@ public class WeatherData implements Subject {
     /**
      *uses for removing of observers.
      *
-     * @param observer - removing observer
+     * @param observer - removing observerTheMainRealization
      */
     @Override
     public void removeObserver(Observer observer) {
@@ -47,7 +47,7 @@ public class WeatherData implements Subject {
     }
 
     /**
-     *uses to call the observer`s updating.
+     *uses to call the observerTheMainRealization`s updating.
      *
      */
     public void measurmentsChanged() {

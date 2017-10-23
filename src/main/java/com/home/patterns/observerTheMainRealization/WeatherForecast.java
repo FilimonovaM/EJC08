@@ -1,4 +1,4 @@
-package com.home.patterns.observer;
+package com.home.patterns.observerTheMainRealization;
 
 public class WeatherForecast implements Observer, DisplayElements {
     float previousBarometr;
