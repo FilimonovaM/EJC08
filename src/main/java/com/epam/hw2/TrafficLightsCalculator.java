@@ -48,7 +48,8 @@ public class TrafficLightsCalculator {
             return trafficLights[(enteredInt > minutes) ? enteredInt % minutes :
                     (enteredInt >= trafficLights.length) ? enteredInt % trafficLights.length : enteredInt];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Negative argument, unacceptable index of array ===> " + e.getMessage());
+            System.err.println("Negative argument, unacceptable index of array ===> For illegal index \""
+                    + e.getMessage() + "\"");
             return (null);
         }
 
