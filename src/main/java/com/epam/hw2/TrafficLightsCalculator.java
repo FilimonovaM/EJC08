@@ -20,7 +20,7 @@ public class TrafficLightsCalculator {
      *
      * @param reader is an object of BufferedReader
      */
-    protected void read(BufferedReader reader) {
+    void read(BufferedReader reader) {
         operationsWithEnteredSymbols = new OperationsWithEnteredSymbols();
         System.out.println("Enter the number");
         try {
@@ -43,7 +43,7 @@ public class TrafficLightsCalculator {
      * @param enteredInt is the selected second
      * @return information about a color of TrafficLights to reader() in String format
      */
-    protected String answer(int enteredInt) {
+    String answer(int enteredInt) {
         try {
             return trafficLights[(enteredInt > minutes) ? enteredInt % minutes :
                     (enteredInt >= trafficLights.length) ? enteredInt % trafficLights.length : enteredInt];

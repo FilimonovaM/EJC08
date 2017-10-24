@@ -9,7 +9,7 @@ public class OperationsWithEnteredSymbols {
      * @return is returning a negative digit if lineWithSelectedNumber include a negative digit,
      * another symbol or is empty. Else it return a selected number without some changes.
      */
-    public int check(String lineWithSelectedNumber) {
+    int check(String lineWithSelectedNumber) {
         try {
             enteredInt = Integer.parseInt(lineWithSelectedNumber);
             System.out.println((enteredInt < 0) ? "It is a negative number" : "Selected number is " + enteredInt);
