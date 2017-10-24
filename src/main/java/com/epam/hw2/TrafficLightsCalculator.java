@@ -10,7 +10,7 @@ public class TrafficLightsCalculator {
     private int enteredInt;
     private int minutes = 60; //If you change this param, it will happen... nothing wrong.
     // But you need to update the testAnswer()
-    private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
+    OperationsWithEnteredSymbols operationsWithEnteredSymbols;
 
     /**
      * uses for read the number of second & write the answer.
