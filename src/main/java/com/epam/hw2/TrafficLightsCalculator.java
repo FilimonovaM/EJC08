@@ -12,6 +12,7 @@ public class TrafficLightsCalculator {
     // But you need to update the testAnswer()
     private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
+    public BufferedReader reader;
 
     /**
      * uses for read the number of second & write the answer.
