@@ -10,9 +10,7 @@ public class TrafficLightsCalculator {
     private int enteredInt;
     private int minutes = 60; //If you change this param, it will happen... nothing wrong.
     // But you need to update the testAnswer()
-    private StringBuilder stringBuilder;
     private OperationsWithEnteredSymbols operationsWithEnteredSymbols;
-    public BufferedReader reader;
 
     /**
      * uses for read the number of second & write the answer.
@@ -24,17 +22,13 @@ public class TrafficLightsCalculator {
      */
     protected void read(BufferedReader reader) {
         operationsWithEnteredSymbols = new OperationsWithEnteredSymbols();
-        stringBuilder = new StringBuilder();
         System.out.println("Enter the number");
         try {
-            enteredInt = operationsWithEnteredSymbols.check(stringBuilder.append(reader.readLine()).toString());
+            enteredInt = operationsWithEnteredSymbols.check(reader.readLine());
         } catch (IOException e) {
-            System.err.println(e);
+            System.err.println(e.getMessage());
         }
-        stringBuilder.setLength(0);
-        if (enteredInt >= 0 && enteredInt < trafficLights.length) {
-            System.out.println(answer(enteredInt));
-        }
+        System.out.println(answer(enteredInt));
     }
 
     /**
@@ -50,16 +44,11 @@ public class TrafficLightsCalculator {
      * @return information about a color of TrafficLights to reader() in String format
      */
     protected String answer(int enteredInt) {
-        if (enteredInt > minutes) {
-            enteredInt %= minutes;
-        }
-        if (enteredInt >= trafficLights.length) {
-            enteredInt %= trafficLights.length;
-        }
         try {
-            return trafficLights[enteredInt];
+            return trafficLights[(enteredInt > minutes)?enteredInt%minutes:
+                    (enteredInt>= trafficLights.length)?enteredInt%trafficLights.length:enteredInt];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.err.println("Negative argument, unacceptable index of array");
+            System.err.println("Negative argument, unacceptable index of array ===> "+e.getMessage());
             return (null);
         }
 
