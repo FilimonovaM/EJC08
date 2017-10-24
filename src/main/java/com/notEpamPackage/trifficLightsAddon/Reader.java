@@ -1,4 +1,4 @@
-package com.home.trifficLightsAddon;
+package com.notEpamPackage.trifficLightsAddon;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,4 @@
-package com.home.patterns.observerDefautlRealization;
-
-import java.util.Observable;
+package com.notEpamPackage.patterns.observerDefautlRealization;
 
 public class WeatherStation {
 

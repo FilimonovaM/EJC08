@@ -1,4 +1,4 @@
-package com.home.patterns.observerDefautlRealization;
+package com.notEpamPackage.patterns.observerTheMainRealization;
 
 public class HeatIndex {
 

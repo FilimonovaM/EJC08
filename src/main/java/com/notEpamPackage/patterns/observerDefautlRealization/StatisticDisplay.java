@@ -1,38 +1,50 @@
-package com.home.patterns.observerTheMainRealization;
+package com.notEpamPackage.patterns.observerDefautlRealization;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class StatisticsOfWeather implements Observer, DisplayElements {
+public class StatisticDisplay implements Observer, Display {
+    Observable observable;
     ArrayList<float[]> statistic;
-    float[] statisticData = new float[3];
+    float[] statisticData;
+    private float temperature;
+    private float humidity;
+    private float pressure;
     private float maxTemperature, minTemperature;
     private float maxHumidity, minHumidity;
     private float maxPressure, minPressure;
 
-    StatisticsOfWeather() {
+    public StatisticDisplay(Observable observable) {
+        this.observable = observable;
+        observable.addObserver(this);
         statistic = new ArrayList<>();
     }
 
-    /**
-     *uses to update the statistics of weather information.
-     *
-     * @param temperature - is a new temperature
-     * @param humidity - is a new humidity
-     * @param pressure - is a new pressure
-     */
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update(Observable obs, Object arg) {
+        if (obs instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData) obs;
+            this.temperature = weatherData.getTemperature();
+            this.humidity = weatherData.getHumidity();
+            this.pressure = weatherData.getPressure();
+            createStatistic();
+            display();
+        }
+
+    }
+
+    private void createStatistic(){
         statisticData = new float[]{temperature, humidity, pressure};
         statistic.add(statisticData);
         setMaxMinTemperature();
         setMaxMinHumidity();
         setMaxMinPressure();
-        display();
+
     }
 
     /**
-     *uses to calculate max & min values of temperature.
-     *
+     * uses to calculate max & min values of temperature.
      */
     private void setMaxMinTemperature() {
         int i = 0;
@@ -45,8 +57,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to calculate max & min values of humidity.
-     *
+     * uses to calculate max & min values of humidity.
      */
     private void setMaxMinHumidity() {
         int i = 0;
@@ -59,8 +70,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to calculate max & min values of pressure.
-     *
+     * uses to calculate max & min values of pressure.
      */
     private void setMaxMinPressure() {
         int i = 0;
@@ -73,8 +83,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to show new statistics of max & min values of pressure, temperature & humidity.
-     *
+     * uses to show new statistics of max & min values of pressure, temperature & humidity.
      */
     @Override
     public void display() {

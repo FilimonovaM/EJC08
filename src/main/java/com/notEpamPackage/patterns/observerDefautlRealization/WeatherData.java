@@ -1,4 +1,4 @@
-package com.home.patterns.observerDefautlRealization;
+package com.notEpamPackage.patterns.observerDefautlRealization;
 
 import java.util.Observable;
 
