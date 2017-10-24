@@ -12,7 +12,7 @@ public class OperationsWithEnteredSymbols {
     public int check(String lineWithSelectedNumber) {
         try {
             enteredInt = Integer.parseInt(lineWithSelectedNumber);
-            System.out.println((enteredInt < 0)?"It is a negative number":"Selected number is " + enteredInt);
+            System.out.println((enteredInt < 0) ? "It is a negative number" : "Selected number is " + enteredInt);
         } catch (NumberFormatException e) {
             System.err.println("It is not a number =====> " + e.getMessage());
             enteredInt = -1;
