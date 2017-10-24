@@ -4,7 +4,6 @@ public class SwimLikeAChampion implements SwimBehavior {
 
     /**
      * uses for demonstration one of the types of swim behavior.
-     *
      */
     @Override
     public void swim() {

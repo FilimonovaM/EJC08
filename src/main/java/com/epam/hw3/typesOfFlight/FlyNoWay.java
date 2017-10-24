@@ -4,7 +4,6 @@ public class FlyNoWay implements FlyBehavior {
 
     /**
      * uses for demonstration one of the types of fly behavior.
-     *
      */
     @Override
     public void fly() {

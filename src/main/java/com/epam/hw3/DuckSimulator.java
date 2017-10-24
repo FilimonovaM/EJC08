@@ -6,15 +6,14 @@ import com.epam.hw3.typesOfNoise.MuteQuak;
 import com.epam.hw3.typesOfSwimming.SwimLikeTheAxe;
 
 /**
- *It created to show a differences of duck`s behavior in our hypothetical farm
+ * It created to show a differences of duck`s behavior in our hypothetical farm
  *
- * @author  Filimonova Margarita
+ * @author Filimonova Margarita
  */
 public class DuckSimulator {
 
     /**
      * uses for loading configurations of three hypothetical ducks & start the application.
-     *
      */
     public static void main(String[] args) {
         //Red Hed duck`s block of code

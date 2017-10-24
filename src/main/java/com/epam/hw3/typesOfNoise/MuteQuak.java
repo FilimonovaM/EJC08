@@ -4,7 +4,6 @@ public class MuteQuak implements MakeASoundBehavior {
 
     /**
      * uses for demonstration one of the types of speak behavior.
-     *
      */
     @Override
     public void speak() {

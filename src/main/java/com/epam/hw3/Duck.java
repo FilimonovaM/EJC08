@@ -11,13 +11,11 @@ public abstract class Duck {
 
     /**
      * unrealized version - > uses for personal presentation of the classes which extends from the superclass Duck.
-     *
      */
     public abstract void display();
 
     /**
      * uses for loading connecting this class to the methods from the interface FlyBehavior.
-     *
      */
     public void performFly() {
         flyBehavior.fly();
@@ -25,7 +23,6 @@ public abstract class Duck {
 
     /**
      * uses for loading connecting this class to the methods from the interface MakeASoundBehavior.
-     *
      */
     public void performQuak() {
         makeASoundBehavior.speak();
@@ -33,7 +30,6 @@ public abstract class Duck {
 
     /**
      * uses for loading connecting this class to the methods from the interface SwimBehavior.
-     *
      */
     public void performSwim() {
         swimBehavior.swim();
