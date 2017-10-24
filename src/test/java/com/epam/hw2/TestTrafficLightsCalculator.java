@@ -14,6 +14,6 @@ public class TestTrafficLightsCalculator {
         Assert.assertEquals("YELLOW", trafficLightsCalculator.answer(13));
         Assert.assertEquals("RED", trafficLightsCalculator.answer(60));
         Assert.assertEquals("GREEN", trafficLightsCalculator.answer(66));
-        Assert.assertEquals("Negative argument, unacceptable index of array", trafficLightsCalculator.answer(-1));
+        Assert.assertEquals(null, trafficLightsCalculator.answer(-1));
     }
 }
