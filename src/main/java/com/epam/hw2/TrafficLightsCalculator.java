@@ -50,7 +50,7 @@ public class TrafficLightsCalculator {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("Negative argument, unacceptable index of array ===> For illegal index \""
                     + e.getMessage() + "\"");
-            return (null);
+            return " ";
         }
 
     }

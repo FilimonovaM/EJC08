@@ -6,8 +6,8 @@ public class OperationsWithEnteredSymbols {
     /**
      * uses for checking of status of the stringBuilder object.
      *
-     * @return is returning a negative digit if lineWithSelectedNumber include a negative digit,
-     * another symbol or is empty. Else it return a selected number without some changes.
+     * @return lse it return a selected number without some changes. Can returning a negative digit if lineWithSelectedNumber include a negative digit,
+     * another symbol or is empty.
      */
     int check(String lineWithSelectedNumber) {
         try {
