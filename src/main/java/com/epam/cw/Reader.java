@@ -10,7 +10,7 @@ public class Reader {
             System.out.println("Cat`s name is " + thrower(reader.readLine()));
         } catch (IOException e) {
             System.err.println(e.getMessage());
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println(e.getMessage());
         }
     }
@@ -20,6 +20,5 @@ public class Reader {
             return "Barsik";
         }
         throw new ArrayIndexOutOfBoundsException("You enter the wrong name! " + name);
-
     }
 }
