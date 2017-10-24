@@ -50,7 +50,7 @@ public class WeatherData implements Subject {
      *uses to call the observerTheMainRealization`s updating.
      *
      */
-    public void measurmentsChanged() {
+    public void measurementsChanged() {
         notifyObservers();
     }
 
@@ -65,6 +65,6 @@ public class WeatherData implements Subject {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-        measurmentsChanged();
+        measurementsChanged();
     }
 }

@@ -1,5 +1,5 @@
 package com.home.patterns.observerTheMainRealization;
 
-public interface DisplayElements {
+interface DisplayElements {
     void display();
 }
