@@ -22,14 +22,15 @@ public class DuckSimulator {
      */
     public static void main(String[] args) {
         //Red Hed duck`s block of code
-        Duck redHetDuck = new RedHetDuck(); //uses a hard relations
+        Duck redHetDuck = new RedHetDuck();
         redHetDuck.display();
         redHetDuck.performQuak();
         redHetDuck.performFly();
         redHetDuck.performSwim();
         System.out.println();
         //The sculpture`s of duck block of code
-        Duck duckSculpture = new DuckSculpture(); //uses a weak relations
+        Duck duckSculpture = new DuckSculpture();
+        //uses a setter
         duckSculpture.setSwimBehavior(new SwimLikeTheAxe());
         duckSculpture.setQuakBehavior(new MuteQuak());
         duckSculpture.setFlyBehavior(new FlyNoWay());
