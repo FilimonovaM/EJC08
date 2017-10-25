@@ -1,5 +1,10 @@
 package com.epam.hw3;
 
+import com.epam.hw3.duckyDuck.Duck;
+import com.epam.hw3.duckyDuck.DuckSculpture;
+import com.epam.hw3.duckyDuck.RedHetDuck;
+import com.epam.hw3.duckyHuman.DuckFaceChick;
+import com.epam.hw3.duckyHuman.HomoSapience;
 import com.epam.hw3.typesOfFlight.FlyByWetFantasies;
 import com.epam.hw3.typesOfFlight.FlyNoWay;
 import com.epam.hw3.typesOfNoise.MuteQuak;
