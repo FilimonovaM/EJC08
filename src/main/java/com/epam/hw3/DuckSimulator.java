@@ -5,7 +5,7 @@ import com.epam.hw3.duckyDuck.DuckSculpture;
 import com.epam.hw3.duckyDuck.RedHetDuck;
 import com.epam.hw3.duckyHuman.DuckFaceChick;
 import com.epam.hw3.duckyHuman.HomoSapience;
-import com.epam.hw3.typesOfFlight.FlyByWetFantasies;
+import com.epam.hw3.typesOfFlight.FlyByStrangeFantasies;
 import com.epam.hw3.typesOfFlight.FlyNoWay;
 import com.epam.hw3.typesOfNoise.MuteQuak;
 import com.epam.hw3.typesOfSwimming.SwimLikeTheAxe;
@@ -42,7 +42,7 @@ public class DuckSimulator {
         HomoSapience duckFaceChick = new DuckFaceChick(); //combines different types of relations
         duckFaceChick.presentHerself();
         duckFaceChick.performFly();
-        duckFaceChick.setFlyBehavior(new FlyByWetFantasies());
+        duckFaceChick.setFlyBehavior(new FlyByStrangeFantasies());
         duckFaceChick.performFly();
         duckFaceChick.performSpeak();
         duckFaceChick.performSwim();
