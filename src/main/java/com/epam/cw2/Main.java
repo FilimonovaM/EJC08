@@ -15,8 +15,5 @@ public class Main {
         for (Cat cat : catSet) {
             System.out.println(cat.toString());
         }
-
     }
-
-
 }
