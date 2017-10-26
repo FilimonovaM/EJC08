@@ -5,11 +5,11 @@ public class WeatherForecast implements Observer, DisplayElements {
     boolean isClear;
 
     /**
-     *uses to update a status of param isClear.
+     * uses to update a status of param isClear.
      *
      * @param temperature - not uses here
-     * @param humidity - not uses here
-     * @param pressure - is a new pressure, uses to create the prediction
+     * @param humidity    - not uses here
+     * @param pressure    - is a new pressure, uses to create the prediction
      */
     @Override
     public void update(float temperature, float humidity, float pressure) {
@@ -19,8 +19,7 @@ public class WeatherForecast implements Observer, DisplayElements {
     }
 
     /**
-     *uses to predict a rain & show it.
-     *
+     * uses to predict a rain & show it.
      */
     @Override
     public void display() {

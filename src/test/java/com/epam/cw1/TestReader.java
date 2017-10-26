@@ -3,9 +3,6 @@ package com.epam.cw1;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Created by Admin on 026 26.10.17.
- */
 public class TestReader {
 
     Reader reader = new Reader();

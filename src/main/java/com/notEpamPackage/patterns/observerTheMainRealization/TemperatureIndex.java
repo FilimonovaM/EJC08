@@ -5,11 +5,11 @@ public class TemperatureIndex implements Observer, DisplayElements {
     HeatIndex temperatureIndex = new HeatIndex();
 
     /**
-     *uses for updating of weather information & finding the heat index.
+     * uses for updating of weather information & finding the heat index.
      *
      * @param temperature - is a new temperature
-     * @param humidity - is a new humidity
-     * @param pressure - is not uses here
+     * @param humidity    - is a new humidity
+     * @param pressure    - is not uses here
      */
     @Override
     public void update(float temperature, float humidity, float pressure) {
@@ -18,8 +18,7 @@ public class TemperatureIndex implements Observer, DisplayElements {
     }
 
     /**
-     *uses to show a new value of heat index.
-     *
+     * uses to show a new value of heat index.
      */
     @Override
     public void display() {

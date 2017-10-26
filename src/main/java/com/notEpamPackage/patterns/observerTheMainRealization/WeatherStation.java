@@ -3,8 +3,7 @@ package com.notEpamPackage.patterns.observerTheMainRealization;
 public class WeatherStation {
 
     /**
-     *uses for loading of meteorology station simulator.
-     *
+     * uses for loading of meteorology station simulator.
      */
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();

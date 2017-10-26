@@ -13,7 +13,7 @@ public class WeatherData implements Subject {
     }
 
     /**
-     *uses for registration of the new observers.
+     * uses for registration of the new observers.
      *
      * @param observer - added observerTheMainRealization
      */
@@ -24,7 +24,7 @@ public class WeatherData implements Subject {
     }
 
     /**
-     *uses for removing of observers.
+     * uses for removing of observers.
      *
      * @param observer - removing observerTheMainRealization
      */
@@ -35,8 +35,7 @@ public class WeatherData implements Subject {
     }
 
     /**
-     *uses to update information for all observers.
-     *
+     * uses to update information for all observers.
      */
     @Override
     public void notifyObservers() {
@@ -47,19 +46,18 @@ public class WeatherData implements Subject {
     }
 
     /**
-     *uses to call the observerTheMainRealization`s updating.
-     *
+     * uses to call the observerTheMainRealization`s updating.
      */
     public void measurementsChanged() {
         notifyObservers();
     }
 
     /**
-     *uses to set a new values of temperature, humidity, pressure.
+     * uses to set a new values of temperature, humidity, pressure.
      *
-     *@param temperature - new value of temperature
-     *@param humidity - new value of humidity
-     * @param pressure -new value of pressure
+     * @param temperature - new value of temperature
+     * @param humidity    - new value of humidity
+     * @param pressure    -new value of pressure
      */
     public void setMeasurments(float temperature, float humidity, float pressure) {
         this.temperature = temperature;

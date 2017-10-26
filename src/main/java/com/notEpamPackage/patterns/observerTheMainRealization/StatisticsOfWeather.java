@@ -14,11 +14,11 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to update the statistics of weather information.
+     * uses to update the statistics of weather information.
      *
      * @param temperature - is a new temperature
-     * @param humidity - is a new humidity
-     * @param pressure - is a new pressure
+     * @param humidity    - is a new humidity
+     * @param pressure    - is a new pressure
      */
     @Override
     public void update(float temperature, float humidity, float pressure) {
@@ -31,8 +31,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to calculate max & min values of temperature.
-     *
+     * uses to calculate max & min values of temperature.
      */
     private void setMaxMinTemperature() {
         int i = 0;
@@ -45,8 +44,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to calculate max & min values of humidity.
-     *
+     * uses to calculate max & min values of humidity.
      */
     private void setMaxMinHumidity() {
         int i = 0;
@@ -59,8 +57,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to calculate max & min values of pressure.
-     *
+     * uses to calculate max & min values of pressure.
      */
     private void setMaxMinPressure() {
         int i = 0;
@@ -73,8 +70,7 @@ public class StatisticsOfWeather implements Observer, DisplayElements {
     }
 
     /**
-     *uses to show new statistics of max & min values of pressure, temperature & humidity.
-     *
+     * uses to show new statistics of max & min values of pressure, temperature & humidity.
      */
     @Override
     public void display() {

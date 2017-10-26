@@ -34,7 +34,7 @@ public class StatisticDisplay implements Observer, Display {
 
     }
 
-    private void createStatistic(){
+    private void createStatistic() {
         statisticData = new float[]{temperature, humidity, pressure};
         statistic.add(statisticData);
         setMaxMinTemperature();

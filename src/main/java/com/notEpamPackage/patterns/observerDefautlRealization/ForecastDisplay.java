@@ -9,15 +9,15 @@ public class ForecastDisplay implements Observer, Display {
     private float pressure;
     private boolean isClear;
 
-    public ForecastDisplay(Observable observable){
+    public ForecastDisplay(Observable observable) {
         this.observable = observable;
         observable.addObserver(this);
     }
 
     @Override
     public void update(Observable obs, Object arg) {
-        if(obs instanceof WeatherData){
-            WeatherData weatherData = (WeatherData)obs;
+        if (obs instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData) obs;
             this.pressure = weatherData.getPressure();
             isClear = (previousBarometr <= pressure) ? true : false;
             previousBarometr = pressure;
