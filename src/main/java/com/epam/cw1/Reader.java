@@ -20,6 +20,7 @@ public class Reader {
     }
 
     public int validator(String number) {
+        numberOfMonth = 13;
         try {
             numberOfMonth = Integer.parseInt(number);
         } catch (NumberFormatException e) {
