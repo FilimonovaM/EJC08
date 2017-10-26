@@ -9,6 +9,6 @@ public class Cat {
 
     @Override
     public String toString() {
-        return ("My name is " + name + ". & I`m a cat.");
+        return ("My name is " + name + " & I`m a cat.");
     }
 }
