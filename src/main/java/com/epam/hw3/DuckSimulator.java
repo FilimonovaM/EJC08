@@ -28,7 +28,7 @@ public class DuckSimulator {
         redHetDuck.performFly();
         redHetDuck.performSwim();
         System.out.println();
-        //The sculpture`s of duck block of code
+        //The sculpture of duck
         Duck duckSculpture = new DuckSculpture();
         //uses a setter
         duckSculpture.setSwimBehavior(new SwimLikeTheAxe());
