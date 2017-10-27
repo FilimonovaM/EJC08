@@ -10,7 +10,7 @@ public class Calendar {
             Reader reader = new Reader();
             reader.read(bufferedReader);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Oops! Anything gone wrong...");
         }
     }
 }

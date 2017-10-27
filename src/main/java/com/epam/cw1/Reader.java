@@ -6,30 +6,17 @@ import java.io.IOException;
 public class Reader {
     int numberOfMonth;
     Month month;
+    Checker checker;
 
-    public void read(BufferedReader bufferedReader) {
+    public void read(BufferedReader bufferedReader) throws IOException{
         System.out.println("Enter the number of month:");
+        checker = new Checker();
         try {
-            validator(bufferedReader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
+            checker.validator(bufferedReader.readLine());
         } catch (ArrayIndexOutOfBoundsException err) {
             System.err.println(err.getMessage());
         }
         System.out.println(currentMonth(numberOfMonth));
-    }
-
-    public int validator(String number) {
-        numberOfMonth = 13;
-        try {
-            numberOfMonth = Integer.parseInt(number);
-        } catch (NumberFormatException e) {
-            System.err.println("It is not a number ");
-        }
-        if (numberOfMonth > 0 && numberOfMonth < 13) {
-            return numberOfMonth;
-        }
-        throw new ArrayIndexOutOfBoundsException("Number is incorrect");
     }
 
     public String currentMonth(int numberOfMonth) {
