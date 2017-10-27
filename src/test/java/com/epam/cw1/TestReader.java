@@ -3,26 +3,22 @@ package com.epam.cw1;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestReader {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
+public class TestReader {
     Reader reader = new Reader();
 
-    @Test
-    public void testValidator() {
-        Assert.assertEquals(12, reader.validator("12"));
-        Assert.assertEquals(12, reader.validator("h"));
-        Assert.assertEquals(12, reader.validator(""));
-    }
-
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
-    public void testOfExceptionsValidator() {
-        reader.validator("0");
-        reader.validator("13");
-        reader.validator("-13");
+    @Test(expected = IOException.class)
+    public void testRead() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        bufferedReader.close();
+        reader.read(bufferedReader);
     }
 
     @Test
-    public void TestCurrentMonth(){
+    public void testCurrentMonth(){
         Assert.assertEquals("DECEMBER", reader.currentMonth(12));
         Assert.assertEquals("JANUARY", reader.currentMonth(1));
         Assert.assertEquals("INCORRECT", reader.currentMonth(-1000));
