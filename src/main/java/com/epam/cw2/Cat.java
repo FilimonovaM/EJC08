@@ -1,14 +1,17 @@
 package com.epam.cw2;
 
-public abstract class Cat {
-    protected String name;
+abstract class Cat {
+    private String name;
 
-    @Override
-    public String toString() {
-        return ("My name is " + name + " & I`m a cat.");
+    protected Cat(String name){
+        this.name = name;
     }
 
-    abstract void setName(String name);
-    abstract String getName();
+    protected String getName() {
+        return name;
+    }
 
+    protected void setName(String name) {
+        this.name = name;
+    }
 }
