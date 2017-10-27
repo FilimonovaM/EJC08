@@ -5,15 +5,17 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+        Main main = new Main();
+        main.callTheCat();
+    }
+    private void callTheCat(){
         Set<Cat> catSet = new HashSet<>();
-        Cat barsic = new Cat("Barsik");
-        Cat potap = new Cat("Potap");
-        Cat shura = new Cat("Shura");
+        Cat barsic = new KittyCat("Barsik");
+        Cat potap = new KittyCat("Potap");
+        Cat shura = new KittyCat("Shura");
         catSet.add(barsic);
         catSet.add(potap);
         catSet.add(shura);
-        for (Cat cat : catSet) {
-            System.out.println(cat.toString());
-        }
+        catSet.forEach(cat -> System.out.println(cat.getName()));
     }
 }
