@@ -18,7 +18,7 @@ public class DuckSculpture extends Duck {
     public void display() throws NullPointerException {
         System.out.println("This is a sculpture of the typical domestic duck.");
         if (makeASoundBehavior != null && flyBehavior != null && swimBehavior != null) {
-            System.out.println("It`s is ready to test its properties!");
+            System.out.println("It`s synthetic & it don`t care how we will testing its properties!");
         } else {
             throw new NullPointerException("Check the initialization of the objects includes types of " +
                     "duck behavior (" + this.getClass() + "). Anything of this object is empty.");
