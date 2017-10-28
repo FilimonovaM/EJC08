@@ -18,7 +18,7 @@ public class RedHetDuck extends Duck {
     public void display() {
         System.out.println("It is a RedHetDuck");
         if (makeASoundBehavior != null && flyBehavior != null && swimBehavior != null) {
-            System.out.println("It`s synthetic & it`s don`t care how we will testing its properties!");
+            System.out.println("It`s synthetic & it don`t care how we will testing its properties!");
         } else {
             throw new NullPointerException("Check the initialization of the objects includes types of " +
                     "duck behavior(Class " + this.getClass() + "). Anything of this object is empty.");
