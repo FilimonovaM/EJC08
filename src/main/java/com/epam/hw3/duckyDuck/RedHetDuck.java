@@ -5,7 +5,6 @@ import com.epam.hw3.typesOfNoise.Quak;
 import com.epam.hw3.typesOfSwimming.SwimLikeAChampion;
 
 public class RedHetDuck extends Duck {
-
     public RedHetDuck() {
         makeASoundBehavior = new Quak();
         flyBehavior = new FlyWithWings();
@@ -17,6 +16,11 @@ public class RedHetDuck extends Duck {
      */
     @Override
     public void display() {
-        System.out.println("It is a RedHetDuck");
+        if(makeASoundBehavior!=null&&flyBehavior!=null&&swimBehavior!=null){
+            System.out.println("It is a RedHetDuck");
+        }else {
+            throw new NullPointerException("Check the initialization of the objects includes types of " +
+                    "duck behavior(Class " + this.getClass() + "). Anything of this object is empty.");
+        }
     }
 }

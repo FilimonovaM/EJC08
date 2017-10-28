@@ -15,7 +15,13 @@ public class DuckSculpture extends Duck {
      * uses for personal presentation of the classes which extends from the superclass HomoSapience.
      */
     @Override
-    public void display() {
-        System.out.println("It is a sculpture of duck");
+    public void display() throws NullPointerException{
+        if(makeASoundBehavior!=null&&flyBehavior!=null&&swimBehavior!=null){
+            System.out.println("This is a sculpture of the typical domestic duck.");
+        }else {
+            throw new NullPointerException("Check the initialization of the objects includes types of " +
+                    "duck behavior(Class " + this.getClass() + "). Anything of this object is empty.");
+        }
+//
     }
 }
