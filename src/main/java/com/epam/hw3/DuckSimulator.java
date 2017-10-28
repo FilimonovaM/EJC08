@@ -30,32 +30,37 @@ public class DuckSimulator {
      */
     public void loadTheFarm(){
         //Red Hed duck`s block of code
-        Duck redHetDuck = new RedHetDuck();
-        redHetDuck.display();
-        redHetDuck.performQuak();
-        redHetDuck.performFly();
-        redHetDuck.performSwim();
-        System.out.println();
+        try{
+            Duck redHetDuck = new RedHetDuck();
+            redHetDuck.display();
+            redHetDuck.performQuak();
+            redHetDuck.performFly();
+            redHetDuck.performSwim();
+            System.out.println();
 
-        //The sculpture of duck
-        Duck duckSculpture = new DuckSculpture();
-        //change a behavior with a setters
-        duckSculpture.setSwimBehavior(new SwimLikeTheAxe());
-        duckSculpture.setQuakBehavior(new MuteQuak());
-        duckSculpture.setFlyBehavior(new FlyNoWay());
-        duckSculpture.display();
-        duckSculpture.performFly();
-        duckSculpture.performQuak();
-        duckSculpture.performSwim();
-        System.out.println();
+            //The sculpture of duck
+            Duck duckSculpture = new DuckSculpture();
+            //change a behavior with a setters
+            duckSculpture.setSwimBehavior(new SwimLikeTheAxe());
+            duckSculpture.setQuakBehavior(new MuteQuak());
+            duckSculpture.setFlyBehavior(new FlyNoWay());
+            duckSculpture.display();
+            duckSculpture.performFly();
+            duckSculpture.performQuak();
+            duckSculpture.performSwim();
+            System.out.println();
 
-        //Block of the code to load configuration of the one very strange woman
-        HomoSapience duckFaceChick = new DuckFaceChick();
-        duckFaceChick.presentHerself();
-        duckFaceChick.performFly();
-        duckFaceChick.setFlyBehavior(new FlyByStrangeFantasies());//combines different types of relations
-        duckFaceChick.performFly();
-        duckFaceChick.performSpeak();
-        duckFaceChick.performSwim();
+            //Block of the code to load configuration of the one very strange woman
+            HomoSapience duckFaceChick = new DuckFaceChick();
+            duckFaceChick.presentHerself();
+            duckFaceChick.performFly();
+            duckFaceChick.setFlyBehavior(new FlyByStrangeFantasies());//combines different types of relations
+            duckFaceChick.performFly();
+            duckFaceChick.performSpeak();
+            duckFaceChick.performSwim();
+        }catch (NullPointerException e){
+            System.err.println(e.getMessage());
+        }
+
     }
 }

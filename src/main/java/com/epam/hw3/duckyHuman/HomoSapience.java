@@ -17,22 +17,34 @@ public abstract class HomoSapience {
     /**
      * uses for loading connecting this class to the methods from the interface FlyBehavior.
      */
-    public void performFly() {
-        flyBehavior.fly();
+    public void performFly() throws NullPointerException {
+        if (flyBehavior != null) {
+            flyBehavior.fly();
+        } else {
+            throw new NullPointerException("Type of flight is not selected");
+        }
     }
 
     /**
      * uses for loading connecting this class to the methods from the interface MakeASoundBehavior.
      */
-    public void performSpeak() {
-        makeASoundBehavior.speak();
+    public void performSpeak() throws NullPointerException {
+        if (makeASoundBehavior != null) {
+            makeASoundBehavior.speak();
+        } else {
+            throw new NullPointerException("Type of quaking is not selected");
+        }
     }
 
     /**
      * uses for loading connecting this class to the methods from the interface SwimBehavior.
      */
-    public void performSwim() {
-        swimBehavior.swim();
+    public void performSwim() throws NullPointerException {
+        if (swimBehavior != null) {
+            swimBehavior.swim();
+        } else {
+            throw new NullPointerException("Type of swimming is not selected");
+        }
     }
 
     /**
@@ -40,8 +52,12 @@ public abstract class HomoSapience {
      *
      * @param flyBehavior - the new value of preparing type of behavior of object
      */
-    public void setFlyBehavior(FlyBehavior flyBehavior) {
-        this.flyBehavior = flyBehavior;
+    public void setFlyBehavior(FlyBehavior flyBehavior) throws NullPointerException {
+        if (flyBehavior != null) {
+            this.flyBehavior = flyBehavior;
+        } else {
+            throw new NullPointerException("The illegal argument is received by method setFlyBehavior");
+        }
     }
 
     /**
@@ -49,8 +65,12 @@ public abstract class HomoSapience {
      *
      * @param makeASoundBehavior - the new value of preparing type of behavior of object
      */
-    public void setQuakBehavior(MakeASoundBehavior makeASoundBehavior) {
-        this.makeASoundBehavior = makeASoundBehavior;
+    public void setQuakBehavior(MakeASoundBehavior makeASoundBehavior) throws NullPointerException {
+        if (makeASoundBehavior != null) {
+            this.makeASoundBehavior = makeASoundBehavior;
+        } else {
+            throw new NullPointerException("The illegal argument is received by method setQuakBehavior");
+        }
     }
 
     /**
@@ -58,7 +78,11 @@ public abstract class HomoSapience {
      *
      * @param swimBehavior - the new value of preparing type of behavior of object
      */
-    public void setSwimBehavior(SwimBehavior swimBehavior) {
-        this.swimBehavior = swimBehavior;
+    public void setSwimBehavior(SwimBehavior swimBehavior) throws NullPointerException {
+        if (swimBehavior != null) {
+            this.swimBehavior = swimBehavior;
+        } else {
+            throw new NullPointerException("The illegal argument is received by method setSwimBehavior");
+        }
     }
 }
