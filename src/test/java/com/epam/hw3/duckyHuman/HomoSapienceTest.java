@@ -1,6 +1,5 @@
 package com.epam.hw3.duckyHuman;
 
-import com.epam.hw3.typesOfSwimming.SwimBehavior;
 import org.junit.Test;
 
 public class HomoSapienceTest {

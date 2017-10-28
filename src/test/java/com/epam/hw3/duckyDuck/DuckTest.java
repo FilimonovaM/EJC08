@@ -1,9 +1,6 @@
 package com.epam.hw3.duckyDuck;
 
-import com.epam.hw3.typesOfSwimming.SwimBehavior;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class DuckTest {
     Duck duck = new RedHetDuck();
