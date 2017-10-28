@@ -1,5 +1,7 @@
 package com.epam.hw3.typesOfSwimming;
 
+import com.epam.hw3.interfaces.SwimBehavior;
+
 public class SwimLikeAChampion implements SwimBehavior {
 
     /**

@@ -1,4 +1,4 @@
-package com.epam.hw3.typesOfSwimming;
+package com.epam.hw3.interfaces;
 
 public interface SwimBehavior {
 

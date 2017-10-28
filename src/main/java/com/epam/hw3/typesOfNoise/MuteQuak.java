@@ -1,5 +1,7 @@
 package com.epam.hw3.typesOfNoise;
 
+import com.epam.hw3.interfaces.MakeASoundBehavior;
+
 public class MuteQuak implements MakeASoundBehavior {
 
     /**

@@ -1,8 +1,8 @@
 package com.epam.hw3.duckyHuman;
 
-import com.epam.hw3.typesOfFlight.FlyBehavior;
-import com.epam.hw3.typesOfNoise.MakeASoundBehavior;
-import com.epam.hw3.typesOfSwimming.SwimBehavior;
+import com.epam.hw3.interfaces.FlyBehavior;
+import com.epam.hw3.interfaces.MakeASoundBehavior;
+import com.epam.hw3.interfaces.SwimBehavior;
 
 public abstract class HomoSapience {
     FlyBehavior flyBehavior;
