@@ -16,9 +16,10 @@ public class RedHetDuck extends Duck {
      */
     @Override
     public void display() {
-        if(makeASoundBehavior!=null&&flyBehavior!=null&&swimBehavior!=null){
-            System.out.println("It is a RedHetDuck");
-        }else {
+        System.out.println("It is a RedHetDuck");
+        if (makeASoundBehavior != null && flyBehavior != null && swimBehavior != null) {
+            System.out.println("She is ready to test its properties!");
+        } else {
             throw new NullPointerException("Check the initialization of the objects includes types of " +
                     "duck behavior(Class " + this.getClass() + "). Anything of this object is empty.");
         }

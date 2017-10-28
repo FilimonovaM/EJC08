@@ -1,7 +1,5 @@
 package com.epam.hw3.typesOfFlight;
 
-import com.epam.hw3.typesOfFlight.FlyBehavior;
-
 public class FlyWithWings implements FlyBehavior {
 
     /**

@@ -17,12 +17,13 @@ public class DuckFaceChick extends HomoSapience {
      */
     @Override
     public void presentHerself() {
+        System.out.println("One of the most useless women of the human population is calling herself name \nand " +
+                "doing a duck face because she convinced that it make her more attractive.");
         if (makeASoundBehavior != null && flyBehavior != null && swimBehavior != null) {
-            System.out.println("One of the most useless women of the human population is calling herself name \nand " +
-                    "doing a duck face because she convinced that it make her more attractive");
+            System.out.println("She is ready to test her properties!");
         } else {
             throw new NullPointerException("Check the initialization of the objects includes types of " +
-                    "duck behavior (Class " + this.getClass() + "). Anything of this object is empty.");
+                    "duck behavior (" + this.getClass() + "). Anything of this object is empty.");
         }
     }
 }

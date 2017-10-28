@@ -7,6 +7,7 @@ public class FarmLoader {
 
     /**
      * uses for loading configurations of three hypothetical ducks & start the application.
+     *
      * @param redHetDuck
      * @param duckSculpture
      * @param duckFaceChick

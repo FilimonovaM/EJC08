@@ -7,6 +7,6 @@ public class MuteQuak implements MakeASoundBehavior {
      */
     @Override
     public void speak() {
-        System.out.println("\tWhat will be heard if we will ask something? \n \"___Silence___\"");
+        System.out.println("\tWhat will be heard when we will ask something? \n \"___Silence___\"");
     }
 }

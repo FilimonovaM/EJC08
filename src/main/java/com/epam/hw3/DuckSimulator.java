@@ -18,13 +18,12 @@ public class DuckSimulator {
      * to begin the work of application.
      */
     public static void main(String[] args) {
-        DuckSimulator duckSimulator = new DuckSimulator();
         try {
             FarmLoader farmLoader = new FarmLoader();
-            Duck redHetDuck= new RedHetDuck();
+            Duck redHetDuck = new RedHetDuck();
             Duck duckSculpture = new DuckSculpture();
-            HomoSapience duckFaceChick= new DuckFaceChick();
-            farmLoader.loadTheFarmComponents(redHetDuck , duckSculpture, duckFaceChick );
+            HomoSapience duckFaceChick = new DuckFaceChick();
+            farmLoader.loadTheFarmComponents(redHetDuck, duckSculpture, duckFaceChick);
         } catch (NullPointerException e) {
             System.err.println(e.getMessage());
         }
