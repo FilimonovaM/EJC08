@@ -3,8 +3,6 @@ package com.epam.hw3.farm.behavior.noise;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class MuteQuakTest {
     MuteQuak muteQuak = new MuteQuak();
 
