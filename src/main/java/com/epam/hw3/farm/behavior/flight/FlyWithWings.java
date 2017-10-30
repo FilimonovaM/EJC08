@@ -6,6 +6,8 @@ public class FlyWithWings implements FlyBehavior {
 
     /**
      * uses for demonstration one of the birds of fly behavior.
+     *
+     * @return String message
      */
     @Override
     public String fly() {

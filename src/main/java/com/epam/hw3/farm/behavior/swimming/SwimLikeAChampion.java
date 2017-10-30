@@ -6,6 +6,8 @@ public class SwimLikeAChampion implements SwimBehavior {
 
     /**
      * uses for demonstration one of the birds of swim behavior.
+     *
+     * @return String message
      */
     @Override
     public String swim() {

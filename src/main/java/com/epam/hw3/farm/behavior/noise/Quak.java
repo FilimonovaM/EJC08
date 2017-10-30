@@ -6,6 +6,8 @@ public class Quak implements MakeASoundBehavior {
 
     /**
      * uses for demonstration one of the birds of speak behavior.
+     *
+     * @return String message
      */
     @Override
     public String speak() {

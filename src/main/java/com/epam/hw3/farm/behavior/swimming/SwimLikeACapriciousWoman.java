@@ -5,6 +5,8 @@ import com.epam.hw3.farm.behavior.interfaces.SwimBehavior;
 public class SwimLikeACapriciousWoman implements SwimBehavior {
     /**
      * uses for demonstration one of the birds of swim behavior.
+     *
+     * @return String message
      */
     @Override
     public String swim() {
