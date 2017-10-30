@@ -1,6 +1,5 @@
-package com.epam.hw3.farm.birds.configuration;
+package com.epam.hw3.farm.configuration;
 
-import com.epam.hw3.farm.configuration.FarmLoader;
 import org.junit.Test;
 
 public class FarmLoaderTest {
