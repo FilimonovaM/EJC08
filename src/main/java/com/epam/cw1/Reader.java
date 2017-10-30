@@ -8,7 +8,7 @@ public class Reader {
     Month month;
     Checker checker;
 
-    public void read(BufferedReader bufferedReader) throws IOException{
+    public void read(BufferedReader bufferedReader) throws IOException {
         System.out.println("Enter the number of month:");
         checker = new Checker();
         try {

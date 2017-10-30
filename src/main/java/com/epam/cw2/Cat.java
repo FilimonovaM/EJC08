@@ -3,7 +3,7 @@ package com.epam.cw2;
 abstract class Cat {
     private String name;
 
-    protected Cat(String name){
+    protected Cat(String name) {
         this.name = name;
     }
 

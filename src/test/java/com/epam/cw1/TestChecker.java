@@ -12,7 +12,7 @@ public class TestChecker {
         Assert.assertEquals(12, checker.isNum("12"));
     }
 
-    @Test (expected = NumberFormatException.class)
+    @Test(expected = NumberFormatException.class)
     public void testIsNumException() {
         checker.isNum("r");
         checker.isNum("");

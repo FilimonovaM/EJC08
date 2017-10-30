@@ -18,7 +18,7 @@ public class TestReader {
     }
 
     @Test
-    public void testCurrentMonth(){
+    public void testCurrentMonth() {
         Assert.assertEquals("DECEMBER", reader.currentMonth(12));
         Assert.assertEquals("JANUARY", reader.currentMonth(1));
         Assert.assertEquals("INCORRECT", reader.currentMonth(-1000));

@@ -7,13 +7,13 @@ public class TestReader {
     Reader reader = new Reader();
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
-    public void testThrowerFail() throws ArrayIndexOutOfBoundsException{
+    public void testThrowerFail() throws ArrayIndexOutOfBoundsException {
         reader.thrower("kkk");
     }
 
     @Test
-    public void testThrower(){
-        Assert.assertEquals("Barsik",reader.thrower("Barsik"));
-        Assert.assertEquals("Barsik",reader.thrower("barsik"));
+    public void testThrower() {
+        Assert.assertEquals("Barsik", reader.thrower("Barsik"));
+        Assert.assertEquals("Barsik", reader.thrower("barsik"));
     }
 }

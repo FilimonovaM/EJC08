@@ -16,8 +16,8 @@ public class Checker {
         throw new ArrayIndexOutOfBoundsException("Number is incorrect");
     }
 
-    public int isNum(String number) throws NumberFormatException{
+    public int isNum(String number) throws NumberFormatException {
         numberOfMonth = Integer.parseInt(number);
-        return  numberOfMonth;
+        return numberOfMonth;
     }
 }

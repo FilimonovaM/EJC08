@@ -19,7 +19,7 @@ public class Main {
         catSet.add(potap);
         catSet.add(shura);
         potap = shura;
-        catSet.forEach(cat -> System.out.println("Object Cat : "+cat.getName()));
+        catSet.forEach(cat -> System.out.println("Object Cat : " + cat.getName()));
         potap.setName("Shura 2.0");
         catSet.forEach(System.out::println);
     }
