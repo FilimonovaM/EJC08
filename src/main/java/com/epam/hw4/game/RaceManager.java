@@ -18,7 +18,6 @@ public class RaceManager implements Subject {
         for (Observer observer : horse) {
             horses.add(observer);
         }
-//        winners = new Observer[horse.length];
     }
 
     @Override
