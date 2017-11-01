@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 public interface Subject {
     void addHorse(Observer... horse);
-
     String race();
-
-    String win(ArrayList winners);
+    boolean isWin();
+    String setChoozenHorse(int i);
 }

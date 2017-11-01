@@ -7,10 +7,14 @@ import java.util.ArrayList;
 public class RaceManager implements Subject {
     private ArrayList<Observer> horses;
     private ArrayList<Observer> winHorses;
+    private Observer winner;
+    private Observer choozenHorse;
 
     public RaceManager() {
         horses = new ArrayList<>();
         winHorses = new ArrayList<>();
+        choozenHorse = null;
+        winner = null;
     }
 
     @Override
@@ -24,7 +28,7 @@ public class RaceManager implements Subject {
     public String race() {
         int winScore = 0;
         int horseSpeed = 0;
-        Observer winner = null;
+
         for (Observer horse : horses) {
             horseSpeed = horse.randomizeSpeed();
             if (winScore <= horseSpeed) {
@@ -36,7 +40,13 @@ public class RaceManager implements Subject {
     }
 
     @Override
-    public String win(ArrayList winHorses) {
-        return null;
+    public boolean isWin() {
+        return (choozenHorse==winner)?true:false;
+    }
+
+    @Override
+    public String setChoozenHorse(int i) {
+        choozenHorse = horses.get(i-1);
+        return ("You choose "+choozenHorse.getName());
     }
 }

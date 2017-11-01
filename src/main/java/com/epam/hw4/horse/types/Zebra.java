@@ -24,8 +24,12 @@ public class Zebra implements Observer {
     }
 
     @Override
+    public int getResult() {
+        return result;
+    }
+
+    @Override
     public String getName() {
         return name;
     }
-
 }
