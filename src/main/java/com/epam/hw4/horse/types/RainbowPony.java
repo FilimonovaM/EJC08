@@ -5,15 +5,14 @@ import com.epam.hw4.horse.interfaces.Observer;
 import java.util.Random;
 
 public class RainbowPony implements Observer {
-    int dist = 200;//км.
-    int speed;//км.ч.
-    int result;
-    String name = "Rainbow pony";
+    private int dist = 200;//км.
+    private int result;
+    private String name = "Rainbow pony";
     Random speedRandomizer;
 
     @Override
     public int randomizeSpeed() {
-        speed = 5;
+        int speed = 5;
         result = speed;
         speedRandomizer = new Random();
         for (int i = 0; i < (dist / 10); i++) {
