@@ -2,8 +2,7 @@ package com.epam.hw4;
 
 
 public enum Phrase {
-    MEETING{
-
+    MEETING {
         public String getInfo(Object o) {
             return ("Ohhh... Don`t come back without the money!!!");
         }
@@ -15,17 +14,16 @@ public enum Phrase {
 
 
         public String getInfo() {
-             return ("Hello, my dear friend! Welcome to the our hippodrome!\n " +
-                     "Do you wont to spend some money?\n" +
-                     "If it is true, type <1> & press <Enter>.\n" +
-                     "If you want to leave our casino type another " +
-                     "symbol.");
+            return ("Hello, my dear friend! Welcome to the our hippodrome!\n " +
+                    "Do you wont to spend some money?\n" +
+                    "If it is true, type <1> & press <Enter>.\n" +
+                    "If you want to leave our casino type another " +
+                    "symbol.");
         }
     },
-    HORSES{
-
+    HORSES {
         public String getInfo(Object o) {
-            return ("So, watch out for "+ (String)o);
+            return ("So, watch out for " + (String) o);
         }
 
         public String getInfo(String s, int i) {
@@ -47,11 +45,11 @@ public enum Phrase {
     },
     BETS {
         public String getInfo(Object money) {
-            return (((Integer) money>=0)?("You win "+(Integer) money):("You lost"+((-1)*((Integer) money))));
+            return (((Integer) money >= 0) ? ("You win " + (Integer) money) : ("You lost" + ((-1) * ((Integer) money))));
         }
 
         public String getInfo(String line, int i) {
-            return (line+" balance is "+i);
+            return (line + " balance is " + i);
         }
 
         public String getInfo() {

@@ -8,6 +8,7 @@ public class ArabianHorse implements Observer {
     int dist = 200;//км.
     int speed;//км.ч.
     int result;
+    String name = "Arabian Horse";
     Random speedRandomizer;
 
     @Override
@@ -15,8 +16,8 @@ public class ArabianHorse implements Observer {
         speed = 5;
         result = speed;
         speedRandomizer = new Random();
-        for (int i = 0; i<(dist/10);i++){
-            result +=speedRandomizer.nextInt((result<=speed)?10:5);
+        for (int i = 0; i < (dist / 10); i++) {
+            result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
         }
         System.out.println("Arabian ");
         System.out.println(result);
@@ -24,12 +25,8 @@ public class ArabianHorse implements Observer {
     }
 
     @Override
-    public int updateResults() {
-        return 0;
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public int reloadList() {
-        return 0;
-    }
 }
