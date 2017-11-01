@@ -18,8 +18,7 @@ public class Plotva implements Observer {
         for (int i = 0; i < (dist / 10); i++) {
             result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
         }
-        System.out.println("Plotva ");
-        System.out.println(result);
+        System.out.println("Plotva - "+result);
         return result;
     }
 

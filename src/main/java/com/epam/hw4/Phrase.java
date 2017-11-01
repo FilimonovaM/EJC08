@@ -31,7 +31,7 @@ public enum Phrase {
         }
 
         public String getInfo() {
-            return ("We have 5 horse: " +
+            return ("We have 5 horses: " +
                     "\n1. Arabian Stallion - perfect double-quick pureblooded arabian horse." +
                     "\n2. Little gray donkey. His last name is Serenity. " +
                     "\n3. Plotva - Witcher try to make some money for his new journey!" +

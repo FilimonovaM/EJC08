@@ -18,8 +18,7 @@ public class RainbowPony implements Observer {
         for (int i = 0; i < (dist / 10); i++) {
             result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
         }
-        System.out.println("RainbowPony ");
-        System.out.println(result);
+        System.out.println("RainbowPony - "+result);
         return result;
     }
 
