@@ -4,10 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class Reader {
-    int value=0;
-    StringBuffer stringBuffer=  new StringBuffer();
+    int value = 0;
+    StringBuffer stringBuffer = new StringBuffer();
     BufferedReader bufferedReader;
-    public Reader(BufferedReader bufferedReader){
+
+    public Reader(BufferedReader bufferedReader) {
         this.bufferedReader = bufferedReader;
     }
 
@@ -15,7 +16,8 @@ public class Reader {
         stringBuffer.setLength(0);
         return value = isNum(stringBuffer.append(bufferedReader.readLine()));
     }
-    public int isNum(StringBuffer stringBuffer){
+
+    public int isNum(StringBuffer stringBuffer) throws NumberFormatException{
         int number = -1;
         number = Integer.parseInt(stringBuffer.toString());
         return number;

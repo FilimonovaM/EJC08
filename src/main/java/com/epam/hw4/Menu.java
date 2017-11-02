@@ -14,13 +14,13 @@ public class Menu {
     Wallet wallet = new Wallet();
     Reader reader;
     String write = null;
+    BufferedReader bufferedReader;
 
     String startTheMenu() {
         System.out.println(Answer.WELCOME.toString(1));
-        String s = null;
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             reader = new Reader(bufferedReader);
-            s = startTheCasinoBeginnerOfMenu();
+            return startTheCasinoBeginnerOfMenu();
         } catch (IOException e) {
             System.err.println("Buffered reader is crashed: " + e.getMessage());
         } catch (NumberFormatException e) {
@@ -28,20 +28,20 @@ public class Menu {
         } catch (SpecialMenuException e) {
             System.err.println("Something gone wrong: " + e.getMessage());
         }
-        return s;
+        return Answer.WELCOME.toString(2);
     }
 
     String startTheCasinoBeginnerOfMenu() throws IOException {
         for (; ; ) {
-            if(wallet.getPlayerBalance() != 0){
-            System.out.println(Answer.WELCOME.toString(0));
-            answer = reader.read();
-            if (answer == 0) {
-                break;
-            } else if (answer == 1) {
-                System.out.println(startTheHorseChooserOfMenu());
-            }
-        }else {
+            if (wallet.getPlayerBalance() != 0) {
+                System.out.println(Answer.WELCOME.toString(0));
+                answer = reader.read();
+                if (answer == 0) {
+                    break;
+                } else if (answer == 1) {
+                    System.out.println(startTheHorseChooserOfMenu());
+                }
+            } else {
                 break;
             }
         }
@@ -56,7 +56,7 @@ public class Menu {
                 if (answer < 1 || answer > 5) {
                     break;
                 } else if (answer > 0 && answer < 6) {
-                    System.out.println(initialTheHorses.initTheHorses(answer)+Answer.HORSES.toString(2));
+                    System.out.println(initialTheHorses.initTheHorses(answer) + Answer.HORSES.toString(2));
                     System.out.println(startTheWalletMenu());
                 }
                 write = Answer.BET.toString(3);

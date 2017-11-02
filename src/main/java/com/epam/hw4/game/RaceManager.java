@@ -28,7 +28,7 @@ public class RaceManager implements Subject {
     @Override
     public String race() {
         int winScore = 0;
-        int horseSpeed=0;
+        int horseSpeed = 0;
 
         for (Observer horse : horses) {
             horseSpeed = horse.randomizeSpeed();

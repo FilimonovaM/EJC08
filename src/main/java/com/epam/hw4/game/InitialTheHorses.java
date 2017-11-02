@@ -7,28 +7,29 @@ import com.epam.hw4.wallet.Wallet;
 public class InitialTheHorses {
     RaceManager raceManager;
     Wallet wallet;
-   public InitialTheHorses(){
+
+    public InitialTheHorses() {
         raceManager = new RaceManager();
         wallet = new Wallet();
-        raceManager.addHorse(new ArabianHorse(),new Donkey(),new Plotva(),
+        raceManager.addHorse(new ArabianHorse(), new Donkey(), new Plotva(),
                 new RainbowPony(), new Zebra());
     }
 
 
-    public String initTheHorses(int value){
+    public String initTheHorses(int value) {
         return (raceManager.setChosenHorse(value));
     }
 
-    public String runTheRace(){
+    public String runTheRace() {
         System.out.println(Answer.HORSES.toString(3));
         System.out.println(raceManager.race());
-        if(raceManager.isWin()){
-            if(raceManager.getChosenHorse().equalsIgnoreCase(" plotva")){
+        if (raceManager.isWin()) {
+            if (raceManager.getChosenHorse().equalsIgnoreCase(" plotva")) {
                 return wallet.winWithGeralt();
-            }else {
+            } else {
                 return wallet.aloneWin();
             }
-        }else{
+        } else {
             return wallet.loose();
         }
     }

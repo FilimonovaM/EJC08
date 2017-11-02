@@ -74,7 +74,8 @@ public enum Answer implements PrototypeOfAnswer {
                             "because the Heralt bets on Plotva too! \nYour balance is ";
                 case 7:
                     return "CASINO WIN - You loose!!! \nYour balance is ";
-                case 8: return "\n Winner is ";
+                case 8:
+                    return "\n Winner is ";
                 default:
                     return "Type 1 to see what the horses compete in the next race\n" +
                             "Type 2 to choose a horse\n" +
