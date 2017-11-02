@@ -4,9 +4,7 @@ import com.epam.hw4.game.InitialTheHorses;
 import com.epam.hw4.phrases.Answer;
 import com.epam.hw4.wallet.Wallet;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Menu {
     int answer;
@@ -14,21 +12,10 @@ public class Menu {
     Wallet wallet = new Wallet();
     Reader reader;
     String write = null;
-    BufferedReader bufferedReader;
 
-    String startTheMenu() {
+    String startTheMenu() throws IOException {
         System.out.println(Answer.WELCOME.toString(1));
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
-            reader = new Reader(bufferedReader);
-            return startTheCasinoBeginnerOfMenu();
-        } catch (IOException e) {
-            System.err.println("Buffered reader is crashed: " + e.getMessage());
-        } catch (NumberFormatException e) {
-            System.err.println("Error input data: " + e.getMessage());
-        } catch (SpecialMenuException e) {
-            System.err.println("Something gone wrong: " + e.getMessage());
-        }
-        return Answer.WELCOME.toString(2);
+        return startTheCasinoBeginnerOfMenu();
     }
 
     String startTheCasinoBeginnerOfMenu() throws IOException {
@@ -90,7 +77,7 @@ public class Menu {
                         bol = false;
                         break;
                     default:
-                        System.err.println("You enter something wrong! Use a digits from 1 to 4");
+                        ;
                 }
                 write = Answer.WALLET.toString(4);
             } else {
