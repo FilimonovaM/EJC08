@@ -7,7 +7,7 @@ import java.util.Random;
 public class Donkey implements Observer {
     private int dist = 200;//км.
     private int result = 0;
-    private String name = "Donkey";
+    private String name = " Donkey";
     Random speedRandomizer;
 
     @Override

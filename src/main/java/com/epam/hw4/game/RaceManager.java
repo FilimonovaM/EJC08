@@ -1,6 +1,7 @@
 package com.epam.hw4.game;
 
 import com.epam.hw4.horse.interfaces.Observer;
+import com.epam.hw4.phrases.Answer;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class RaceManager implements Subject {
     @Override
     public String race() {
         int winScore = 0;
-        int horseSpeed = 0;
+        int horseSpeed=0;
 
         for (Observer horse : horses) {
             horseSpeed = horse.randomizeSpeed();
@@ -36,17 +37,22 @@ public class RaceManager implements Subject {
                 winner = horse;
             }
         }
-        return "Winner is " + winner.getName();
+        return Answer.HORSES.toString(8) + winner.getName();
     }
 
     @Override
     public boolean isWin() {
-        return (choozenHorse==winner)?true:false;
+        return (choozenHorse == winner) ? true : false;
     }
 
     @Override
-    public String setChoozenHorse(int i) {
-        choozenHorse = horses.get(i-1);
-        return ("You choose "+choozenHorse.getName());
+    public String setChosenHorse(int i) {
+        choozenHorse = horses.get(i - 1);
+        return (choozenHorse.getName());
+    }
+
+    @Override
+    public String getChosenHorse() {
+        return choozenHorse.getName();
     }
 }

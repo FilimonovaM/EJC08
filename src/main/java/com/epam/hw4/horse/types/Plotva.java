@@ -7,7 +7,7 @@ import java.util.Random;
 public class Plotva implements Observer {
     private int dist = 200;//км.
     private int result;
-    private String name = "Plotva";
+    private String name = " Plotva";
     Random speedRandomizer;
 
     @Override

@@ -7,7 +7,7 @@ import java.util.Random;
 public class Zebra implements Observer {
     private int dist = 200;//км.
     private int result;
-    private String name = "Zebra";
+    private String name = " Zebra";
     Random speedRandomizer;
 
     @Override

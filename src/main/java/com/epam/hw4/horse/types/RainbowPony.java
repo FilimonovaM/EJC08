@@ -7,7 +7,7 @@ import java.util.Random;
 public class RainbowPony implements Observer {
     private int dist = 200;//км.
     private int result;
-    private String name = "Rainbow pony";
+    private String name = " Rainbow pony";
     Random speedRandomizer;
 
     @Override

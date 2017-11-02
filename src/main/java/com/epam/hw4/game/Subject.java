@@ -8,5 +8,6 @@ public interface Subject {
     void addHorse(Observer... horse);
     String race();
     boolean isWin();
-    String setChoozenHorse(int i);
+    String setChosenHorse(int i);
+    String getChosenHorse();
 }
