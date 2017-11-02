@@ -17,7 +17,9 @@ public class Menu {
         System.out.println(Answer.WELCOME.toString(1));
         return startTheCasinoBeginnerOfMenu();
     }
-
+    /**
+     *
+     */
     String startTheCasinoBeginnerOfMenu() throws IOException {
         for (; ; ) {
             if (wallet.getPlayerBalance() != 0) {

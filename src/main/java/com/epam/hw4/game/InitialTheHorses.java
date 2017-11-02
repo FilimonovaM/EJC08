@@ -16,6 +16,9 @@ public class InitialTheHorses {
     }
 
 
+    /**
+     *
+     */
     public String initTheHorses(int value) {
         return (raceManager.setChosenHorse(value));
     }

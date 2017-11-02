@@ -9,6 +9,9 @@ public class Reader {
     StringBuffer stringBuffer = new StringBuffer();
     BufferedReader bufferedReader;
 
+    /**
+     *
+     */
     public static int read() throws IOException {
         Reader reader = new Reader();
         try {

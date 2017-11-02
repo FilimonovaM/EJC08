@@ -10,6 +10,9 @@ public class Zebra implements Observer {
     private String name = " Zebra";
     Random speedRandomizer;
 
+    /**
+     *
+     */
     @Override
     public int randomizeSpeed() {
         int speed = 5;
@@ -19,11 +22,6 @@ public class Zebra implements Observer {
             result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
         }
         System.out.println("Zebra - " + result);
-        return result;
-    }
-
-    @Override
-    public int getResult() {
         return result;
     }
 

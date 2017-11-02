@@ -6,6 +6,9 @@ public class Wallet {
     static private int playerBalance = 100;
     static private int bet = 0;
 
+    /**
+     *
+     */
     public int getPlayerBalance() {
         return playerBalance;
     }

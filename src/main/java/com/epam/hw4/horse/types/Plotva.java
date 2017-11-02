@@ -10,6 +10,9 @@ public class Plotva implements Observer {
     private String name = " Plotva";
     Random speedRandomizer;
 
+    /**
+     *
+     */
     @Override
     public int randomizeSpeed() {
         int speed = 5;
@@ -19,11 +22,6 @@ public class Plotva implements Observer {
             result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
         }
         System.out.println("Plotva - " + result);
-        return result;
-    }
-
-    @Override
-    public int getResult() {
         return result;
     }
 

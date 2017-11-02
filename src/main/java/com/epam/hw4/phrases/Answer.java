@@ -2,6 +2,9 @@ package com.epam.hw4.phrases;
 
 public enum Answer implements PrototypeOfAnswer {
     WELCOME {
+        /**
+         *
+         */
         @Override
         public String toString(int value) {
             String s;

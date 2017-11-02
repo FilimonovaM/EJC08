@@ -11,6 +11,9 @@ public class RaceManager implements Subject {
     private Observer winner;
     private Observer choozenHorse;
 
+    /**
+     *
+     */
     public RaceManager() {
         horses = new ArrayList<>();
         winHorses = new ArrayList<>();
