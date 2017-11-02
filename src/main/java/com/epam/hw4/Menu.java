@@ -11,12 +11,13 @@ public class Menu {
     InitialTheHorses initialTheHorses = new InitialTheHorses();
     Wallet wallet = new Wallet();
     Reader reader;
-    String write = null;
+    String write;
 
     String startTheMenu() throws IOException {
         System.out.println(Answer.WELCOME.toString(1));
         return startTheCasinoBeginnerOfMenu();
     }
+
     /**
      *
      */
@@ -39,6 +40,7 @@ public class Menu {
 
     String startTheHorseChooserOfMenu() throws IOException {
         for (; ; ) {
+            write = "";
             if (wallet.getPlayerBalance() != 0) {
                 System.out.println(Answer.HORSES.toString(1));
                 answer = reader.read();
@@ -50,7 +52,6 @@ public class Menu {
                 }
                 write = Answer.BET.toString(3);
             } else {
-                write = null;
                 break;
             }
         }
@@ -61,9 +62,9 @@ public class Menu {
         boolean bol = true;
         System.out.println(Answer.WALLET.toString(2));
         while (bol) {
-            System.out.println(Answer.WALLET.toString(-1));
-            answer = reader.read();
             if (wallet.getPlayerBalance() != 0) {
+                System.out.println(Answer.WALLET.toString(-1));
+                answer = reader.read();
                 switch (answer) {
                     case 1:
                         System.out.println(Answer.WALLET.toString(1) + wallet.getPlayerBalance());
@@ -77,14 +78,11 @@ public class Menu {
                     case 4:
                         System.out.println(wallet.removeBet());
                         bol = false;
-                        break;
-                    default:
-                        ;
                 }
                 write = Answer.WALLET.toString(4);
             } else {
                 bol = false;
-                write = null;
+                write = "";
             }
         }
         return write;
@@ -93,22 +91,23 @@ public class Menu {
     String startThePlayMakeABet() throws IOException {
         boolean bol = true;
         while (bol) {
-            System.out.println(Answer.BET.toString(1));
-            answer = reader.read();
             if (wallet.getPlayerBalance() < 1) {
-                System.out.println(Answer.WALLET.toString(5));
+                write = Answer.WALLET.toString(5);
                 break;
             } else {
+                System.out.println(Answer.BET.toString(1));
+                answer = reader.read();
                 if (answer > 0 && answer <= wallet.getPlayerBalance()) {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));
                     System.out.println(initialTheHorses.runTheRace());
                 } else if (answer == 0) {
                     bol = false;
                 } else {
-                    System.out.println(Answer.BET.toString(-1));
+                    System.out.println(Answer.BET.toString(-1) + wallet.getPlayerBalance());
                 }
+                write = Answer.BET.toString(3);
             }
         }
-        return Answer.BET.toString(3);
+        return write;
     }
 }

@@ -41,7 +41,7 @@ public class TrafficLightsCalculator {
      * enteredNumber that is more than trafficLights.length</p>
      *
      * @param enteredInt is the selected second
-     * @return information about a color of TrafficLights to reader() in String format
+     * @return information about a color of TrafficLights to answer() in String format
      */
     String answer(int enteredInt) {
         try {

@@ -40,7 +40,7 @@ public class RaceManager implements Subject {
                 winner = horse;
             }
         }
-        return Answer.HORSES.toString(8) + winner.getName();
+        return Answer.HORSES.toString(4) + winner.getName();
     }
 
     @Override

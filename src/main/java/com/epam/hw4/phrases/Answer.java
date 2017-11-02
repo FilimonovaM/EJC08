@@ -12,7 +12,7 @@ public enum Answer implements PrototypeOfAnswer {
                 case 1:
                     return "Hello, my dear friend! Welcome to the hippodrome!\n ";
                 case 2:
-                    return "\nOhhh... Don`t come back without the money!!!";
+                    return "Ohhh... Don`t come back without the money!!!";
                 default:
                     return "If you want to choose a horse & make a bet, type <1> & press <Enter>.\n" +
                             "If you want to leave our casino type <0>.";
@@ -32,7 +32,7 @@ public enum Answer implements PrototypeOfAnswer {
                 case 4:
                     return "Choose a horse... again!";
                 case 5:
-                    return "You are the bancrott";
+                    return "You are a bancrott";
                 default:
                     return "\nType 1 to check your balance\nType 2 to make a bet" +
                             "\nType 3 for setting to zero your bet\nType " +
@@ -69,16 +69,14 @@ public enum Answer implements PrototypeOfAnswer {
                             "tigidik - tigidik -tigidik...\n" +
                             "tigidik - \"Yuehogo!!!!!\"-tigidik...\n";
                 case 4:
-                    return " is finished first!!!";
+                    return "\n Winner is ";
                 case 5:
-                    return "You are The WINNER!!! \nYour balance is ";
+                    return "\nYou are The WINNER!!! \nYour balance is ";
                 case 6:
-                    return "You WIN!!! \nBut, you can get only a half of the gain, " +
+                    return "\nYou WIN!!! \nBut, you can get only a half of the gain, " +
                             "because the Heralt bets on Plotva too! \nYour balance is ";
                 case 7:
-                    return "CASINO WIN - You loose!!! \nYour balance is ";
-                case 8:
-                    return "\n Winner is ";
+                    return "\nCASINO WIN - You loose!!! \nYour balance is ";
                 default:
                     return "Type 1 to see what the horses compete in the next race\n" +
                             "Type 2 to choose a horse\n" +

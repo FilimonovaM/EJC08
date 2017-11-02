@@ -11,5 +11,4 @@ public class FlyNoWayTest {
     public void flyTest() throws Exception {
         Assert.assertEquals(("\tIt can`t fly"), flyNoWay.fly());
     }
-
 }
