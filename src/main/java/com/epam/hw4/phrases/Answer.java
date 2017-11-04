@@ -10,37 +10,14 @@ public enum Answer implements PrototypeOfAnswer {
             String s;
             switch (value) {
                 case 1:
-                    return "Hello, my dear friend! Welcome to the hippodrome!\n ";
+                    return "Let`s play! Press 1 to play, press 2 to stop the game.";
                 case 2:
                     return "Ohhh... Don`t come back without the money!!!";
                 default:
-                    return "If you want to choose a horse & make a bet, type <1> & press <Enter>.\n" +
-                            "If you want to leave our casino type <0>.";
+                    return "Hello, my dear friend! Welcome to the hippodrome!";
             }
         }
-    },
-    WALLET {
-        @Override
-        public String toString(int value) {
-            switch (value) {
-                case 1:
-                    return "Your balance is: ";
-                case 2:
-                    return "\nAaaaaand....It`good time to check your ability to pay !";
-                case 3:
-                    return "Your bet is reset to zero";
-                case 4:
-                    return "Choose a horse... again!";
-                case 5:
-                    return "You are a bancrott";
-                default:
-                    return "\nType 1 to check your balance\nType 2 to make a bet" +
-                            "\nType 3 for setting to zero your bet\nType " +
-                            "4 to come back to previous level of menu";
-            }
-        }
-    },
-    HORSES {
+    }, HORSES {
         @Override
         public String toString(int value) {
             switch (value) {
@@ -54,10 +31,56 @@ public enum Answer implements PrototypeOfAnswer {
                             "\n--- 4 --- RAINBOW PONY. \nIt will spend all its physical forces & magic boosts \n" +
                             "for running...or not! " +
                             "\n--- 5 --- ZEBRA. Just a wild zebra. \nIt don`t know where is the start & stop points, \n" +
-                            "but it can run very quickly.\n";
-                case 2:
+                            "but it can run very quickly.\n"+
+                            "Type 0 to back to previous level of the menu";
+                default:
                     return "... Good choice!";
+            }
+        }
+    },
+    WALLET {
+        @Override
+        public String toString(int value) {
+            switch (value) {
+                case 1:
+                    return "Your balance is: ";
+                case 2:
+                    return "\nAaaaaand....It`good time to check your ability to pay !";
+                default:
+                    return "\nType 1 to check your balance\nType 2 to make a bet" +
+                            "\nType 0 to come back to the previous level of menu";
+            }
+        }
+    },
+    BET {
+        @Override
+        public String toString(int value) {
+            switch (value) {
+                case 1:
+                    return "\nLet`s make a bet! Remember - it`s limited by your current balance!\n" +
+                            "Type 0 to come back to the previous level";
+                case 2:
+                    return "Your bet is ";
+                default:
+                    return "\nYour bet is incorrect. Try again! Your limit is ";
+            }
+        }
+    }, RACE {
+        @Override
+        public String toString(int value) {
+            switch (value) {
+                case 1:
+                    return "\n Winner is ";
+                case 2:
+                    return "\nYou are The WINNER!!! \nYour balance is ";
                 case 3:
+                    return "\nYou WIN!!! \nBut, you can get only a half of the gain, " +
+                            "because the Heralt bets on Plotva too! \nYour balance is ";
+                case 4:
+                    return "\nCASINO WIN - You loose!!! \nYour balance is ";
+                case 5:
+                    return "You are a bancrott";
+                default:
                     return "Player Heralt make a bet too." +
                             "\n\nThe Big races are will begin through ...three...\n" +
                             "...two...\n...one...\n GO!!!!!!!" +
@@ -68,34 +91,6 @@ public enum Answer implements PrototypeOfAnswer {
                             "tigidik - tigidik - tigidik...\n" +
                             "tigidik - tigidik -tigidik...\n" +
                             "tigidik - \"Yuehogo!!!!!\"-tigidik...\n";
-                case 4:
-                    return "\n Winner is ";
-                case 5:
-                    return "\nYou are The WINNER!!! \nYour balance is ";
-                case 6:
-                    return "\nYou WIN!!! \nBut, you can get only a half of the gain, " +
-                            "because the Heralt bets on Plotva too! \nYour balance is ";
-                case 7:
-                    return "\nCASINO WIN - You loose!!! \nYour balance is ";
-                default:
-                    return "Type 1 to see what the horses compete in the next race\n" +
-                            "Type 2 to choose a horse\n" +
-                            "Type 3 to back to previous level of the menu";
-            }
-        }
-    }, BET {
-        @Override
-        public String toString(int value) {
-            switch (value) {
-                case 1:
-                    return "\nLet`s make a bet! Remember - it limited by your current balance!\n" +
-                            "Type 0 to come back to the previous level";
-                case 2:
-                    return "Your bet is ";
-                case 3:
-                    return "You are returned to the previous level of the menu";
-                default:
-                    return "\nYour bet is incorrect. Try again! Your limit is ";
             }
         }
     }

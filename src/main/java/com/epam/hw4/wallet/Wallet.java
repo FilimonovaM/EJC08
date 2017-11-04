@@ -15,7 +15,7 @@ public class Wallet {
 
     private String setPlayersBalance(int cash) {
         playerBalance += cash;
-        return "The balance is replenished";
+        return "The balance is "+playerBalance;
     }
 
     public int setBet(int bet) {
@@ -23,26 +23,18 @@ public class Wallet {
         return bet;
     }
 
-    public String removeBet() {
-        bet = 0;
-        return Answer.WALLET.toString(3);
-    }
-
     public String aloneWin() {
-        setPlayersBalance(bet * 2);
-        removeBet();
-        return Answer.HORSES.toString(5) + getPlayerBalance();
+        setPlayersBalance(bet);
+        return Answer.RACE.toString(2) + getPlayerBalance();
     }
 
     public String winWithGeralt() {
-        setPlayersBalance(bet);
-        removeBet();
-        return Answer.HORSES.toString(6) + getPlayerBalance();
+        setPlayersBalance(0);
+        return Answer.RACE.toString(3) + getPlayerBalance();
     }
 
     public String loose() {
         setPlayersBalance((-1) * bet);
-        removeBet();
-        return Answer.HORSES.toString(7) + getPlayerBalance();
+        return Answer.RACE.toString(4) + getPlayerBalance();
     }
 }

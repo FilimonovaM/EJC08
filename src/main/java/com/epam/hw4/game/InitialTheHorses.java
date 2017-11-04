@@ -24,7 +24,7 @@ public class InitialTheHorses {
     }
 
     public String runTheRace() {
-        System.out.println(Answer.HORSES.toString(3));
+        System.out.println(Answer.RACE.toString(-1));
         System.out.println(raceManager.race());
         if (raceManager.isWin()) {
             if (raceManager.getChosenHorse().equalsIgnoreCase(" plotva")) {
