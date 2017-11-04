@@ -1,7 +1,7 @@
-package com.epam.hw4.game;
+package com.epam.hw4.game.play;
 
+import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.horse.types.*;
-import com.epam.hw4.phrases.Answer;
 import com.epam.hw4.wallet.Wallet;
 
 public class InitialTheHorses {

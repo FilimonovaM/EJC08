@@ -1,4 +1,4 @@
-package com.epam.hw4.phrases;
+package com.epam.hw4.answer.interfaces;
 
 public interface PrototypeOfAnswer {
 

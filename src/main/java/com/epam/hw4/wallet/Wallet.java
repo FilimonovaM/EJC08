@@ -1,6 +1,6 @@
 package com.epam.hw4.wallet;
 
-import com.epam.hw4.phrases.Answer;
+import com.epam.hw4.answer.phrases.Answer;
 
 public class Wallet {
     static private int playerBalance = 100;
@@ -15,7 +15,7 @@ public class Wallet {
 
     private String setPlayersBalance(int cash) {
         playerBalance += cash;
-        return "The balance is "+playerBalance;
+        return "The balance is " + playerBalance;
     }
 
     public int setBet(int bet) {

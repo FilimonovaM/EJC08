@@ -1,4 +1,6 @@
-package com.epam.hw4.phrases;
+package com.epam.hw4.answer.phrases;
+
+import com.epam.hw4.answer.interfaces.PrototypeOfAnswer;
 
 public enum Answer implements PrototypeOfAnswer {
     WELCOME {
@@ -30,8 +32,8 @@ public enum Answer implements PrototypeOfAnswer {
                             "\n--- 3 --- PLOTVA.\n Witcher try to make some money for his new journey!" +
                             "\n--- 4 --- RAINBOW PONY. \nIt will spend all its physical forces & magic boosts \n" +
                             "for running...or not! " +
-                            "\n--- 5 --- ZEBRA. Just a wild zebra. \nIt don`t know where is the start & stop points, \n" +
-                            "but it can run very quickly.\n"+
+                            "\n--- 5 --- ZEBRA. Just a wild zebra. \nIt don`t know where is the load & stop points, \n" +
+                            "but it can config very quickly.\n" +
                             "Type 0 to back to previous level of the menu";
                 default:
                     return "... Good choice!";

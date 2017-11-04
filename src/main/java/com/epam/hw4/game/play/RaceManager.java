@@ -1,7 +1,8 @@
-package com.epam.hw4.game;
+package com.epam.hw4.game.play;
 
+import com.epam.hw4.answer.phrases.Answer;
+import com.epam.hw4.game.interfaces.Subject;
 import com.epam.hw4.horse.interfaces.Observer;
-import com.epam.hw4.phrases.Answer;
 
 import java.util.ArrayList;
 

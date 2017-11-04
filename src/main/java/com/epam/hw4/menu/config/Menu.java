@@ -1,19 +1,23 @@
-package com.epam.hw4.menu;
+package com.epam.hw4.menu.config;
+
+import com.epam.hw4.menu.interfaces.MenuLevel;
+import com.epam.hw4.menu.levels.EnterMenuLevel;
 
 import java.io.IOException;
 
 public class Menu {
     MenuLevel menuLevel;
     AnswerReader answerReader;
-    public Menu(){
+
+    public Menu() {
         menuLevel = new EnterMenuLevel();
         answerReader = new AnswerReader();
     }
 
     public String changeMenuLevel() throws IOException {
-        for(;;){
+        for (; ; ) {
             menuLevel = menuLevel.runner(answerReader);
-            if(menuLevel == null){
+            if (menuLevel == null) {
                 break;
             }
         }

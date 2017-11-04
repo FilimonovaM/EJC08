@@ -1,4 +1,4 @@
-package com.epam.hw4.game;
+package com.epam.hw4.game.interfaces;
 
 import com.epam.hw4.horse.interfaces.Observer;
 

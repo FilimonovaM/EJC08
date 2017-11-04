@@ -1,6 +1,6 @@
-package com.epam.hw4.menu;
+package com.epam.hw4.menu.config;
 
-import com.epam.hw4.phrases.Answer;
+import com.epam.hw4.answer.phrases.Answer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,24 +18,23 @@ public class AnswerReader {
     public char read() {
         try {
             String answer = bufferedReader.readLine();
-            aChar = (answer.length() == 1&&answer.charAt(0)>='0'&&answer.charAt(0)<='9')?
-                    answer.charAt(0):'0';
-            System.out.println(aChar);
+            aChar = (answer.length() == 1 && answer.charAt(0) >= '0' && answer.charAt(0) <= '9') ?
+                    answer.charAt(0) : '0';
         } catch (IOException e) {
             e.printStackTrace();
         }
         return aChar;
     }
 
-    public int read(int bet){
+    public int read(int bet) {
         this.bet = bet;
         try {
             String answer = bufferedReader.readLine();
             bet = Integer.parseInt(answer);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }catch (NumberFormatException e){
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println(e.getMessage());
         }
         return bet;
     }

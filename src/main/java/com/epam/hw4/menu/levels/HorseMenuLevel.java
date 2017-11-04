@@ -1,8 +1,9 @@
-package com.epam.hw4.menu;
+package com.epam.hw4.menu.levels;
 
-import com.epam.hw4.game.InitialTheHorses;
-import com.epam.hw4.phrases.Answer;
-import com.epam.hw4.wallet.Wallet;
+import com.epam.hw4.answer.phrases.Answer;
+import com.epam.hw4.game.play.InitialTheHorses;
+import com.epam.hw4.menu.config.AnswerReader;
+import com.epam.hw4.menu.interfaces.MenuLevel;
 
 public class HorseMenuLevel implements MenuLevel {
     char answer;
