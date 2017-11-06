@@ -5,10 +5,10 @@ import com.epam.hw4.game.interfaces.Subject;
 import com.epam.hw4.horse.interfaces.Observer;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RaceManager implements Subject {
-    private ArrayList<Observer> horses;
-    private ArrayList<Observer> winHorses;
+    private List<Observer> horses;
     private Observer winner;
     private  static Observer chosenHorse;
 
@@ -17,7 +17,6 @@ public class RaceManager implements Subject {
      */
     public RaceManager() {
         horses = new ArrayList<>();
-        winHorses = new ArrayList<>();
         winner = null;
     }
 
@@ -32,7 +31,6 @@ public class RaceManager implements Subject {
     public String race() {
         int winScore = 0;
         int horseSpeed = 0;
-
         for (Observer horse : horses) {
             horseSpeed = horse.randomizeSpeed();
             if (winScore <= horseSpeed) {
