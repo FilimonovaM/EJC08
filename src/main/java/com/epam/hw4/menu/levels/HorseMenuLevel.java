@@ -6,48 +6,28 @@ import com.epam.hw4.menu.config.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 
 public class HorseMenuLevel implements MenuLevel {
-    char answer;
+    int answer;
     MenuLevel newLevel;
     InitialTheHorses initialTheHorses = new InitialTheHorses();
 
     @Override
     public MenuLevel runner(AnswerReader answerReader) {
-        newLevel = new WalletMenuLevel();
-        while (answer != '0') {
+        answer = -1;
+        newLevel = new EnterMenuLevel();
+        while (answer != 0) {
             System.out.println(Answer.HORSES.toString(1));
-            answer = answerReader.read();
-            switch (answer) {
-                case '0':
-                    newLevel = new EnterMenuLevel();
-                    answer = '0';
-                    break;
-                case '1':
-                    System.out.println(initialTheHorses.initTheHorses(1)
-                            + Answer.HORSES.toString(2));
-                    answer = '0';
-                    break;
-                case '2':
-                    System.out.println(initialTheHorses.initTheHorses(2)
-                            + Answer.HORSES.toString(2));
-                    answer = '0';
-                    break;
-                case '3':
-                    System.out.println(initialTheHorses.initTheHorses(3)
-                            + Answer.HORSES.toString(2));
-                    answer = '0';
-                    break;
-                case '4':
-                    System.out.println(initialTheHorses.initTheHorses(4)
-                            + Answer.HORSES.toString(2));
-                    answer = '0';
-                    break;
-                case '5':
-                    System.out.println(initialTheHorses.initTheHorses(5)
-                            + Answer.HORSES.toString(2));
-                    answer = '0';
+            answer = Character.getNumericValue(answerReader.read());
+            if (answer > 0 && answer < 6) {
+                newLevel = new WalletMenuLevel();
+                initialTheHorses.initTheHorses(answer);
+                System.out.println(initialTheHorses.initTheHorses(answer)
+                        + Answer.HORSES.toString(2));
+                break;
             }
         }
-
         return (newLevel);
     }
 }
+
+
+

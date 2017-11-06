@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 
 public class AnswerReader {
     BufferedReader bufferedReader;
-    private char aChar = 'q';
     private int bet;
 
     AnswerReader() {
@@ -16,10 +15,11 @@ public class AnswerReader {
     }
 
     public char read() {
+        char aChar = ' ';
         try {
             String answer = bufferedReader.readLine();
             aChar = (answer.length() == 1 && answer.charAt(0) >= '0' && answer.charAt(0) <= '9') ?
-                    answer.charAt(0) : '0';
+                    answer.charAt(0) : ' ';
         } catch (IOException e) {
             e.printStackTrace();
         }
