@@ -10,6 +10,14 @@ public class HorseMenuLevel implements MenuLevel {
     MenuLevel newLevel;
     InitialTheHorses initialTheHorses = new InitialTheHorses();
 
+
+    /**
+     * uses for choosing a horse.
+     *
+     * @param answerReader - produce an access to the preparing object of BufferedReader
+     * @return newLevel - uses to change a level of the menu
+     * (to the EnterMenuLevel or to the WalletMenuLevel)
+     */
     @Override
     public MenuLevel runner(AnswerReader answerReader) {
         answer = -1;

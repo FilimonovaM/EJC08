@@ -14,6 +14,11 @@ public class Menu {
         answerReader = new AnswerReader();
     }
 
+    /**
+     * uses for switching between the menu levels.
+     *
+     * @return - phrase for saying goodbye to player
+     */
     public String changeMenuLevel() throws IOException {
         for (; ; ) {
             menuLevel = menuLevel.runner(answerReader);

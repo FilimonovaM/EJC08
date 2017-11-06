@@ -10,6 +10,13 @@ public class EnterMenuLevel implements MenuLevel {
     MenuLevel newLevel;
     Wallet wallet = new Wallet();
 
+    /**
+     * uses for starting the game or exit.
+     *
+     * @param answerReader - produce an access to the preparing object of BufferedReader
+     * @return newLevel - uses to change a level of the menu
+     * (to the HorseMenuLevel or exit)
+     */
     @Override
     public MenuLevel runner(AnswerReader answerReader) {
         newLevel = null;

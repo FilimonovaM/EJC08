@@ -12,6 +12,13 @@ public class BetMenuLevel implements MenuLevel {
     Wallet wallet = new Wallet();
     InitialTheHorses initialTheHorses;
 
+    /**
+     * uses for making a bet or exit if the player spend all his money.
+     *
+     * @param answerReader - produce an access to the preparing object of BufferedReader
+     * @return newLevel - uses to change a level of the menu
+     * (to the WalletMenuLevel or exit)
+     */
     @Override
     public MenuLevel runner(AnswerReader answerReader) {
         initialTheHorses = new InitialTheHorses();
@@ -19,7 +26,7 @@ public class BetMenuLevel implements MenuLevel {
         while (answer != 0) {
             if (wallet.getPlayerBalance() > 0) {
                 System.out.println(Answer.BET.toString(1));
-                answer = answerReader.read(-1);
+                answer = answerReader.read();
                 if (answer > 0 && answer <= wallet.getPlayerBalance()) {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));
                     System.out.println(initialTheHorses.runTheRace());

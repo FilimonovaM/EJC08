@@ -10,6 +10,13 @@ public class WalletMenuLevel implements MenuLevel {
     MenuLevel newLevel;
     Wallet wallet = new Wallet();
 
+    /**
+     * uses for checking player balance or moving to the BetMenuLevel.
+     *
+     * @param answerReader - produce an access to the preparing object of BufferedReader
+     * @return newLevel - uses to change a level of the menu
+     * (to the HorseMenuLevel or to the BetMenuLevel)
+     */
     @Override
     public MenuLevel runner(AnswerReader answerReader) {
         newLevel = new HorseMenuLevel();

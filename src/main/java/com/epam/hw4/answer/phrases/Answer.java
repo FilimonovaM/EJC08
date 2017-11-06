@@ -4,8 +4,12 @@ import com.epam.hw4.answer.interfaces.PrototypeOfAnswer;
 
 public enum Answer implements PrototypeOfAnswer {
     WELCOME {
+
         /**
+         *uses for getting string answer for thirst level of the menu.
          *
+         * @param value - number of answer
+         * @return phrase
          */
         @Override
         public String toString(int value) {
@@ -20,6 +24,13 @@ public enum Answer implements PrototypeOfAnswer {
             }
         }
     }, HORSES {
+
+        /**
+         *uses for choosing a horse.
+         *
+         * @param value - number of answer
+         * @return phrase
+         */
         @Override
         public String toString(int value) {
             switch (value) {
@@ -41,6 +52,13 @@ public enum Answer implements PrototypeOfAnswer {
         }
     },
     WALLET {
+
+        /**
+         *uses for direction of the wallet level of menu.
+         *
+         * @param value - number of answer
+         * @return phrase
+         */
         @Override
         public String toString(int value) {
             switch (value) {
@@ -55,6 +73,13 @@ public enum Answer implements PrototypeOfAnswer {
         }
     },
     BET {
+
+        /**
+         *uses for making a bet in the menu.
+         *
+         * @param value - number of answer
+         * @return phrase
+         */
         @Override
         public String toString(int value) {
             switch (value) {
@@ -68,6 +93,13 @@ public enum Answer implements PrototypeOfAnswer {
             }
         }
     }, RACE {
+
+        /**
+         *uses for sending a messages about the race result.
+         *
+         * @param value - number of answer
+         * @return phrase
+         */
         @Override
         public String toString(int value) {
             switch (value) {

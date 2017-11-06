@@ -11,7 +11,9 @@ public class RainbowPony implements Observer {
     Random speedRandomizer;
 
     /**
+     * uses for calculating a race result for horses.
      *
+     * @return result of the race
      */
     @Override
     public int randomizeSpeed() {
@@ -25,6 +27,11 @@ public class RainbowPony implements Observer {
         return result;
     }
 
+    /**
+     * uses for getting horse name.
+     *
+     * @return horse name
+     */
     @Override
     public String getName() {
         return name;

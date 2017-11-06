@@ -12,14 +12,15 @@ public class RaceManager implements Subject {
     private Observer winner;
     private  static Observer chosenHorse;
 
-    /**
-     *
-     */
     public RaceManager() {
         horses = new ArrayList<>();
         winner = null;
     }
 
+    /**
+     * uses for adding a horse.
+     *
+     */
     @Override
     public void addHorse(Observer... horse) {
         for (Observer observer : horse) {
@@ -27,6 +28,11 @@ public class RaceManager implements Subject {
         }
     }
 
+    /**
+     *uses for starting of the race.
+     *
+     *@return name of the winner(horse)
+     */
     @Override
     public String race() {
         int winScore = 0;
@@ -41,17 +47,32 @@ public class RaceManager implements Subject {
         return Answer.RACE.toString(1) + winner.getName();
     }
 
+    /**
+     * uses for to compare chosen horse and winner.
+     *
+     *@return boolean - true if player win
+     */
     @Override
     public boolean isWin() {
         return (chosenHorse.getName().equalsIgnoreCase(winner.getName()) ? true : false);
     }
 
+    /**
+     * uses for setting a chosen horse.
+     *
+     *@return name of the chosen horse
+     */
     @Override
     public String setChosenHorse(int i) {
         chosenHorse = horses.get(i - 1);
         return (chosenHorse.getName());
     }
 
+    /**
+     * uses getting a chosen horse.
+     *
+     *@return name of the chosen horse
+     */
     @Override
     public String getChosenHorse() {
         return chosenHorse.getName();

@@ -15,14 +15,20 @@ public class InitialTheHorses {
                 new RainbowPony(), new Zebra());
     }
 
-
     /**
+     * uses for sending the information about what the horse player choose.
      *
+     *@return name of the chosen horse
      */
     public String initTheHorses(int value) {
         return (raceManager.setChosenHorse(value));
     }
 
+    /**
+     * uses to start the race.
+     *
+     *@return info about the winner
+     */
     public String runTheRace() {
         System.out.println(Answer.RACE.toString(-1));
         System.out.println(raceManager.race());

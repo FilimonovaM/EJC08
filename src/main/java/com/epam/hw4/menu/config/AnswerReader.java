@@ -8,12 +8,17 @@ import java.io.InputStreamReader;
 
 public class AnswerReader {
     BufferedReader bufferedReader;
-    private int bet;
 
     AnswerReader() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     }
 
+    /**
+     * uses for reading players answers in char format.
+     *
+     * @return aChar - player answer if it is correct
+     * else empty symbol
+     */
     public char read() {
         char aChar = ' ';
         try {
@@ -26,8 +31,14 @@ public class AnswerReader {
         return aChar;
     }
 
-    public int read(int bet) {
-        this.bet = bet;
+    /**
+     * uses for reading players answers in int format.
+     *
+     * @return aChar - player answer if it is correct
+     * else a negative number
+     */
+    public int readInt() {
+        int bet = -1;
         try {
             String answer = bufferedReader.readLine();
             bet = Integer.parseInt(answer);
@@ -39,6 +50,11 @@ public class AnswerReader {
         return bet;
     }
 
+    /**
+     * uses for closing an InputStreamReader.
+     *
+     * @return a phrase which saying bye to the player
+     */
     public String closeReader() throws IOException {
         bufferedReader.close();
         return Answer.WELCOME.toString(2);
