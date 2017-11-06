@@ -46,6 +46,7 @@ public enum Answer implements PrototypeOfAnswer {
                             "\n--- 5 --- ZEBRA. Just a wild zebra. \nIt don`t know where is the start & stop points, \n" +
                             "but it can run very quickly.\n" +
                             "Type 0 to back to previous level of the menu";
+                case 2:return "The horses are ready ro race!";
                 default:
                     return "... Good choice!";
             }
@@ -116,8 +117,8 @@ public enum Answer implements PrototypeOfAnswer {
                     return "You are a bancrott";
                 default:
                     return "Player Heralt make a bet too." +
-                            "\n\nThe Big races are will begin through ...three...\n" +
-                            "...two...\n...one...\n GO!!!!!!!" +
+                            "\n\nThe Big races are will begin through \n...three...\n" +
+                            "...two...\n...one...\n !!!GO!!!" +
                             "\n\nTigidik - tigidik - tigidik...\n" +
                             "tigidik - tigidik - tigidik...\n" +
                             "tigidik - tigidik -tigidik...\n" +

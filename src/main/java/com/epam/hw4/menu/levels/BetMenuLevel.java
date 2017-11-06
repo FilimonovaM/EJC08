@@ -37,7 +37,8 @@ public class BetMenuLevel implements MenuLevel {
                 }
             } else {
                 System.out.println(Answer.RACE.toString(5));
-                return null;
+                newLevel =  null;
+                answer = 0;
             }
         }
         return newLevel;

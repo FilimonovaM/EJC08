@@ -8,7 +8,7 @@ public interface Subject {
      * uses for adding a horse.
      *
      */
-    void addHorse(Observer... horse);
+    String addHorse(Observer... horse);
 
     /**
      * uses for starting of the race.

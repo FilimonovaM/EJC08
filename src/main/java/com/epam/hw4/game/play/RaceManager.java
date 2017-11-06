@@ -22,10 +22,11 @@ public class RaceManager implements Subject {
      *
      */
     @Override
-    public void addHorse(Observer... horse) {
+    public String addHorse(Observer... horse) {
         for (Observer observer : horse) {
             horses.add(observer);
         }
+        return(Answer.HORSES.toString(2));
     }
 
     /**

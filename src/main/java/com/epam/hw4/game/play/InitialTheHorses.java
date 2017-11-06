@@ -11,8 +11,6 @@ public class InitialTheHorses {
     public InitialTheHorses() {
         raceManager = new RaceManager();
         wallet = new Wallet();
-        raceManager.addHorse(new ArabianHorse(), new Donkey(), new Plotva(),
-                new RainbowPony(), new Zebra());
     }
 
     /**
@@ -21,6 +19,8 @@ public class InitialTheHorses {
      *@return name of the chosen horse
      */
     public String initTheHorses(int value) {
+        System.out.println(raceManager.addHorse(new ArabianHorse(), new Donkey(), new Plotva(),
+                new RainbowPony(), new Zebra()));
         return (raceManager.setChosenHorse(value));
     }
 
