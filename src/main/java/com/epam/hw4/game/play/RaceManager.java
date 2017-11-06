@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RaceManager implements Subject {
-    private List<Observer> horses;
+    private static List<Observer> horses;
     private Observer winner;
-    private  static Observer chosenHorse;
+    private static Observer chosenHorse;
 
     public RaceManager() {
         horses = new ArrayList<>();
@@ -19,20 +19,19 @@ public class RaceManager implements Subject {
 
     /**
      * uses for adding a horse.
-     *
      */
     @Override
     public String addHorse(Observer... horse) {
         for (Observer observer : horse) {
             horses.add(observer);
         }
-        return(Answer.HORSES.toString(2));
+        return (Answer.HORSES.toString(2));
     }
 
     /**
-     *uses for starting of the race.
+     * uses for starting of the race.
      *
-     *@return name of the winner(horse)
+     * @return name of the winner(horse)
      */
     @Override
     public String race() {
@@ -51,7 +50,7 @@ public class RaceManager implements Subject {
     /**
      * uses for to compare chosen horse and winner.
      *
-     *@return boolean - true if player win
+     * @return boolean - true if player win
      */
     @Override
     public boolean isWin() {
@@ -61,7 +60,7 @@ public class RaceManager implements Subject {
     /**
      * uses for setting a chosen horse.
      *
-     *@return name of the chosen horse
+     * @return name of the chosen horse
      */
     @Override
     public String setChosenHorse(int i) {
@@ -72,7 +71,7 @@ public class RaceManager implements Subject {
     /**
      * uses getting a chosen horse.
      *
-     *@return name of the chosen horse
+     * @return name of the chosen horse
      */
     @Override
     public String getChosenHorse() {

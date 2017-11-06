@@ -40,8 +40,7 @@ public class AnswerReader {
     public int readInt() {
         int bet = -1;
         try {
-            String answer = bufferedReader.readLine();
-            bet = Integer.parseInt(answer);
+            bet = Integer.parseInt(bufferedReader.readLine());
         } catch (IOException e) {
             System.err.println(e.getMessage());
         } catch (NumberFormatException e) {

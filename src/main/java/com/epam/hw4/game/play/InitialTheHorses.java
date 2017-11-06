@@ -11,23 +11,23 @@ public class InitialTheHorses {
     public InitialTheHorses() {
         raceManager = new RaceManager();
         wallet = new Wallet();
+        raceManager.addHorse(new ArabianHorse(), new Donkey(), new Plotva(),
+                new RainbowPony(), new Zebra());
     }
 
     /**
      * uses for sending the information about what the horse player choose.
      *
-     *@return name of the chosen horse
+     * @return name of the chosen horse
      */
     public String initTheHorses(int value) {
-        System.out.println(raceManager.addHorse(new ArabianHorse(), new Donkey(), new Plotva(),
-                new RainbowPony(), new Zebra()));
         return (raceManager.setChosenHorse(value));
     }
 
     /**
      * uses to start the race.
      *
-     *@return info about the winner
+     * @return info about the winner
      */
     public String runTheRace() {
         System.out.println(Answer.RACE.toString(-1));

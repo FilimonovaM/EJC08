@@ -4,7 +4,6 @@ import com.epam.hw4.answer.interfaces.PrototypeOfAnswer;
 
 public enum Answer implements PrototypeOfAnswer {
     WELCOME {
-
         /**
          *uses for getting string answer for thirst level of the menu.
          *
@@ -24,7 +23,6 @@ public enum Answer implements PrototypeOfAnswer {
             }
         }
     }, HORSES {
-
         /**
          *uses for choosing a horse.
          *
@@ -46,14 +44,14 @@ public enum Answer implements PrototypeOfAnswer {
                             "\n--- 5 --- ZEBRA. Just a wild zebra. \nIt don`t know where is the start & stop points, \n" +
                             "but it can run very quickly.\n" +
                             "Type 0 to back to previous level of the menu";
-                case 2:return "The horses are ready ro race!";
+                case 2:
+                    return "The horses are ready ro race!";
                 default:
                     return "... Good choice!";
             }
         }
     },
     WALLET {
-
         /**
          *uses for direction of the wallet level of menu.
          *
@@ -74,7 +72,6 @@ public enum Answer implements PrototypeOfAnswer {
         }
     },
     BET {
-
         /**
          *uses for making a bet in the menu.
          *
@@ -94,7 +91,6 @@ public enum Answer implements PrototypeOfAnswer {
             }
         }
     }, RACE {
-
         /**
          *uses for sending a messages about the race result.
          *
@@ -117,7 +113,7 @@ public enum Answer implements PrototypeOfAnswer {
                     return "You are a bancrott";
                 default:
                     return "Player Heralt make a bet too." +
-                            "\n\nThe Big races are will begin through \n...three...\n" +
+                            "\n\nThe Big races will begin through \n...three...\n" +
                             "...two...\n...one...\n !!!GO!!!" +
                             "\n\nTigidik - tigidik - tigidik...\n" +
                             "tigidik - tigidik - tigidik...\n" +

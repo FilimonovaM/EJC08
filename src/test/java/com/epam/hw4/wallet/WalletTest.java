@@ -1,7 +1,6 @@
 package com.epam.hw4.wallet;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class WalletTest {
@@ -14,7 +13,7 @@ public class WalletTest {
 
     @Test
     public void setPlayerBalanceTest() throws Exception {
-        Assert.assertEquals("Your balance is: "+110, wallet.setPlayersBalance(10));
+        Assert.assertEquals("Your balance is: " + 110, wallet.setPlayersBalance(10));
     }
 
     @Test

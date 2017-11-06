@@ -1,7 +1,6 @@
 package com.epam.hw4.game.play;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class RaceManagerTest {
@@ -37,6 +36,6 @@ public class RaceManagerTest {
     public void getChosenHorseTest() throws Exception {
         raceManager.addHorse(new HorseTest());
         raceManager.setChosenHorse(1);
-        Assert.assertEquals("Knopka",raceManager.getChosenHorse());
+        Assert.assertEquals("Knopka", raceManager.getChosenHorse());
     }
 }

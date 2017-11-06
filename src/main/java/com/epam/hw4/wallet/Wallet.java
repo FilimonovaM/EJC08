@@ -9,7 +9,7 @@ public class Wallet {
     /**
      * uses for getting the player balance.
      *
-     *@return the player balance
+     * @return the player balance
      */
     public int getPlayerBalance() {
         return playerBalance;
@@ -18,7 +18,7 @@ public class Wallet {
     /**
      * uses for setting changes to the the player balance.
      *
-     *@return the player balance
+     * @return the player balance
      */
     protected String setPlayersBalance(int cash) {
         playerBalance += cash;
@@ -28,7 +28,7 @@ public class Wallet {
     /**
      * uses for making a bet.
      *
-     *@return the player bet
+     * @return the player bet
      */
     public int setBet(int bet) {
         this.bet = bet;
@@ -38,7 +38,7 @@ public class Wallet {
     /**
      * uses for processing the information about the alone win.
      *
-     *@return our congratulations & the player balance
+     * @return our congratulations & the player balance
      */
     public String aloneWin() {
         setPlayersBalance(bet);
@@ -48,17 +48,17 @@ public class Wallet {
     /**
      * uses for processing the information about the player win, when the Geralt win too.
      *
-     *@return our congratulations & the player balance
+     * @return our congratulations & the player balance
      */
     public String winWithGeralt() {
-        setPlayersBalance(bet/2);
+        setPlayersBalance(bet / 2);
         return Answer.RACE.toString(3) + getPlayerBalance();
     }
 
     /**
      * uses for processing the information about the casino win.
      *
-     *@return our condolences & the player balance
+     * @return our condolences & the player balance
      */
     public String loose() {
         setPlayersBalance((-1) * bet);
