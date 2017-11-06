@@ -1,4 +1,4 @@
-package com.epam.hw4.game.load;
+package com.epam.hw4.game.play;
 
 import com.epam.hw4.menu.config.Menu;
 

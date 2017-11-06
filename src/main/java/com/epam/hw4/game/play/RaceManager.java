@@ -10,7 +10,7 @@ public class RaceManager implements Subject {
     private ArrayList<Observer> horses;
     private ArrayList<Observer> winHorses;
     private Observer winner;
-    private Observer choozenHorse;
+    private  static Observer chosenHorse;
 
     /**
      *
@@ -18,7 +18,6 @@ public class RaceManager implements Subject {
     public RaceManager() {
         horses = new ArrayList<>();
         winHorses = new ArrayList<>();
-        choozenHorse = null;
         winner = null;
     }
 
@@ -46,17 +45,17 @@ public class RaceManager implements Subject {
 
     @Override
     public boolean isWin() {
-        return (choozenHorse == winner) ? true : false;
+        return (chosenHorse.getName().equalsIgnoreCase(winner.getName()) ? true : false);
     }
 
     @Override
     public String setChosenHorse(int i) {
-        choozenHorse = horses.get(i - 1);
-        return (choozenHorse.getName());
+        chosenHorse = horses.get(i - 1);
+        return (chosenHorse.getName());
     }
 
     @Override
     public String getChosenHorse() {
-        return choozenHorse.getName();
+        return chosenHorse.getName();
     }
 }
