@@ -1,4 +1,4 @@
-package com.notEpamPackage.patterns.observerDefautlRealization;
+package com.epam.notEpamPackage.patterns.observerDefautlRealization;
 
 public class WeatherStation {
 

@@ -11,4 +11,8 @@ public class HorseTest implements Observer {
     public String getName() {
         return "Knopka";
     }
+
+    public int getResult() {
+        return 50;
+    }
 }

@@ -14,7 +14,7 @@ public class RaceManagerTest {
     @Test
     public void raceTest() throws Exception {
         raceManager.addHorse(new HorseTest());
-        Assert.assertEquals("\n Winner is Knopka", raceManager.race());
+        Assert.assertEquals(null, raceManager.race());
     }
 
     @Test

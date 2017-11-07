@@ -8,6 +8,6 @@ public class RainbowPonyTest {
 
     @Test
     public void getName() throws Exception {
-        Assert.assertEquals(" Rainbow pony", rainbowPony.getName());
+        Assert.assertEquals("Rainbow pony", rainbowPony.getName());
     }
 }

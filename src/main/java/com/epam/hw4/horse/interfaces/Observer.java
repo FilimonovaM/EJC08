@@ -11,4 +11,6 @@ public interface Observer {
      * uses for getting horse name.
      */
     String getName();
+
+    int getResult();
 }

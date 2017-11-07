@@ -3,27 +3,30 @@ package com.epam.hw4.game.play;
 import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.game.interfaces.Subject;
 import com.epam.hw4.horse.interfaces.Observer;
+import com.epam.hw4.wallet.Wallet;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class RaceManager implements Subject {
-    private List<Observer> horses;
-    private Observer winner;
-    private static Observer chosenHorse;
+    ArrayList <Observer> mounts;
+    ArrayList <Observer> winners;
+    static Observer chosenHorse;
+    Wallet wallet;
 
     public RaceManager() {
-        horses = new ArrayList<>();
-        winner = null;
+        mounts = new ArrayList<>();
     }
 
     /**
      * uses for adding a horse.
      */
     @Override
-    public String addHorse(Observer... horse) {
-        for (Observer observer : horse) {
-            horses.add(observer);
+    public String addHorse(Observer... horses) {
+        for (Observer horse : horses) {
+            mounts.add(horse);
         }
         return (Answer.HORSES.toString(2));
     }
@@ -35,16 +38,25 @@ public class RaceManager implements Subject {
      */
     @Override
     public String race() {
-        int winScore = 0;
-        int horseSpeed = 0;
-        for (Observer horse : horses) {
-            horseSpeed = horse.randomizeSpeed();
-            if (winScore <= horseSpeed) {
-                winScore = horseSpeed;
-                winner = horse;
+        mounts.forEach((list)->list.randomizeSpeed());
+        Collections.sort(mounts, new Comparator<Observer>() {
+            @Override
+            public int compare(Observer o1, Observer o2) {
+                return o2.getResult()-o1.getResult();
+            }
+        });
+        winners = new ArrayList<>();
+        int win = 0;
+        for(Observer horse:mounts){
+            if(horse.getResult()>=win){
+                win = horse.getResult();
+                winners.add(horse);
+            }else {
+                break;
             }
         }
-        return Answer.RACE.toString(1) + winner.getName();
+        winners.forEach((list)->System.out.println(Answer.RACE.toString(1)+" "+list.getName()));
+        return null;
     }
 
     /**
@@ -54,7 +66,12 @@ public class RaceManager implements Subject {
      */
     @Override
     public boolean isWin() {
-        return (chosenHorse.getName().equalsIgnoreCase(winner.getName()) ? true : false);
+        for(Observer winner:winners){
+            if(winner.getName().equals(chosenHorse.getName())){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -64,8 +81,8 @@ public class RaceManager implements Subject {
      */
     @Override
     public String setChosenHorse(int i) {
-        chosenHorse = horses.get(i - 1);
-        return (chosenHorse.getName());
+        chosenHorse = mounts.get(i-1);
+        return chosenHorse.getName();
     }
 
     /**

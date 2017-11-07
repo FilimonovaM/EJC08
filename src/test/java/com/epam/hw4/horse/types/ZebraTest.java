@@ -8,7 +8,6 @@ public class ZebraTest {
 
     @Test
     public void getName() throws Exception {
-        Assert.assertEquals(" Zebra", zebra.getName());
+        Assert.assertEquals("Zebra", zebra.getName());
     }
-
 }

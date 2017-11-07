@@ -41,32 +41,30 @@ public class Wallet {
     }
 
     /**
-     * uses for processing the information about the alone win.
+     * uses for processing the information about the types of the win or loose.
      *
+     * @param winnersSize     - is amount of the horses-winners
+     * @param isWin           - true if player win
+     * @param chosenHorseName - name of the chosen horse
      * @return our congratulations & the player balance
      */
-    public String aloneWin() {
-        setPlayersBalance(bet);
-        return Answer.RACE.toString(2) + getPlayerBalance();
-    }
+    public String calculateWinnersGain(int winnersSize, boolean isWin, String chosenHorseName) {
+        int value;
+        int gain = bet;
+        if (isWin) {
+            if (chosenHorseName.equalsIgnoreCase("Plotva")) {
+                value = 3;
+                gain /= 2 * winnersSize;
+            } else {
+                value = 2;
+                gain /= winnersSize;
+            }
 
-    /**
-     * uses for processing the information about the player win, when the Geralt win too.
-     *
-     * @return our congratulations & the player balance
-     */
-    public String winWithGeralt() {
-        setPlayersBalance(bet / 2);
-        return Answer.RACE.toString(3) + getPlayerBalance();
-    }
-
-    /**
-     * uses for processing the information about the casino win.
-     *
-     * @return our condolences & the player balance
-     */
-    public String loose() {
-        setPlayersBalance((-1) * bet);
-        return Answer.RACE.toString(4) + getPlayerBalance();
+        } else {
+            value = 4;
+            gain *= (-1);
+        }
+        bet = 0;
+        return Answer.RACE.toString(value) + setPlayersBalance(gain);
     }
 }

@@ -8,6 +8,6 @@ public class PlotvaTest {
 
     @Test
     public void getName() throws Exception {
-        Assert.assertEquals(" Plotva", plotva.getName());
+        Assert.assertEquals("Plotva", plotva.getName());
     }
 }

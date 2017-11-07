@@ -31,15 +31,7 @@ public class InitialTheHorses {
      */
     public String runTheRace() {
         System.out.println(Answer.RACE.toString(-1));
-        System.out.println(raceManager.race());
-        if (raceManager.isWin()) {
-            if (raceManager.getChosenHorse().equalsIgnoreCase(" plotva")) {
-                return wallet.winWithGeralt();
-            } else {
-                return wallet.aloneWin();
-            }
-        } else {
-            return wallet.loose();
-        }
+        raceManager.race();
+        return (wallet.calculateWinnersGain(raceManager.winners.size(),raceManager.isWin(),raceManager.getChosenHorse()));
     }
 }

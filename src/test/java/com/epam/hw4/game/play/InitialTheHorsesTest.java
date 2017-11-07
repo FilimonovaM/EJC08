@@ -8,6 +8,6 @@ public class InitialTheHorsesTest {
 
     @Test
     public void initTheHorsesTest() throws Exception {
-        Assert.assertEquals(" Plotva", initialTheHorses.initTheHorses(3));
+        Assert.assertEquals("Plotva", initialTheHorses.initTheHorses(3));
     }
 }

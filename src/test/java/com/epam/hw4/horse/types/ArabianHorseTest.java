@@ -8,6 +8,6 @@ public class ArabianHorseTest {
 
     @Test
     public void getName() throws Exception {
-        Assert.assertEquals(" Arabian Horse", arabianHorse.getName());
+        Assert.assertEquals("Arabian Horse", arabianHorse.getName());
     }
 }

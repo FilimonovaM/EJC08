@@ -5,10 +5,9 @@ import com.epam.hw4.horse.interfaces.Observer;
 import java.util.Random;
 
 public class Zebra implements Observer {
-    private int dist = 200;//км.
+    private String name = "Zebra";
     private int result;
-    private String name = " Zebra";
-    Random speedRandomizer;
+    Random random;
 
     /**
      * uses for calculating a race result for horses.
@@ -19,11 +18,12 @@ public class Zebra implements Observer {
     public int randomizeSpeed() {
         int speed = 5;
         result = speed;
-        speedRandomizer = new Random();
-        for (int i = 0; i < (dist / 10); i++) {
-            result += speedRandomizer.nextInt((result <= speed) ? 10 : 5);
+        random = new Random();
+        for (int i = 0; i < (10); i++) {
+            speed = random.nextInt((speed<=5) ? 10 : 5)+1;
+            result +=speed;
         }
-        System.out.println("Zebra - " + result);
+        System.out.println(name+ " - " + result);
         return result;
     }
 
@@ -35,5 +35,10 @@ public class Zebra implements Observer {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int getResult() {
+        return result;
     }
 }

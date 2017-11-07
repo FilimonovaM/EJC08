@@ -1,4 +1,4 @@
-package com.notEpamPackage.patterns.observerTheMainRealization;
+package com.epam.notEpamPackage.patterns.observerTheMainRealization;
 
 public interface Subject {
     void registerObserver(Observer observer);

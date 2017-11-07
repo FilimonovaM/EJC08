@@ -1,33 +1,46 @@
-package com.notEpamPackage.patterns.observerTheMainRealization;
+package com.epam.notEpamPackage.patterns.observerDefautlRealization;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
-public class StatisticsOfWeather implements Observer, DisplayElements {
+public class StatisticDisplay implements Observer, Display {
+    Observable observable;
     ArrayList<float[]> statistic;
-    float[] statisticData = new float[3];
+    float[] statisticData;
+    private float temperature;
+    private float humidity;
+    private float pressure;
     private float maxTemperature, minTemperature;
     private float maxHumidity, minHumidity;
     private float maxPressure, minPressure;
 
-    StatisticsOfWeather() {
+    public StatisticDisplay(Observable observable) {
+        this.observable = observable;
+        observable.addObserver(this);
         statistic = new ArrayList<>();
     }
 
-    /**
-     * uses to update the statistics of weather information.
-     *
-     * @param temperature - is a new temperature
-     * @param humidity    - is a new humidity
-     * @param pressure    - is a new pressure
-     */
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update(Observable obs, Object arg) {
+        if (obs instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData) obs;
+            this.temperature = weatherData.getTemperature();
+            this.humidity = weatherData.getHumidity();
+            this.pressure = weatherData.getPressure();
+            createStatistic();
+            display();
+        }
+
+    }
+
+    private void createStatistic() {
         statisticData = new float[]{temperature, humidity, pressure};
         statistic.add(statisticData);
         setMaxMinTemperature();
         setMaxMinHumidity();
         setMaxMinPressure();
-        display();
+
     }
 
     /**
