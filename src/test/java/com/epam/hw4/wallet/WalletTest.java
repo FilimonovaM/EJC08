@@ -1,6 +1,5 @@
 package com.epam.hw4.wallet;
 
-import com.epam.hw4.answer.phrases.Answer;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,7 +20,7 @@ public class WalletTest {
     @Test
     public void setPlayerBalanceTest() throws Exception {
         wallet.setNewPlayersBalance(100);
-        Assert.assertEquals("Your balance is: " + 110, wallet.setPlayersBalance(10));
+        Assert.assertEquals(110, wallet.setPlayersBalance(10));
     }
 
     @Test
@@ -34,9 +33,9 @@ public class WalletTest {
     public void calculateWinnersGainTest() {
         wallet.setBet(10);
         Assert.assertEquals("\nYou WIN!!! \n" +
-                "But, you can get only a half of the gain, because the Heralt bets on Plotva " +
-                        "too! \nYour balance is Your balance is: 105",
-                wallet.calculateWinnersGain(1,true,"Plotva"));
+                        "But, you can get only a half of the gain, because the Heralt bets on Plotva " +
+                        "too! \nYour balance is 105",
+                wallet.calculateWinnersGain(1, true, "Plotva"));
         wallet.setBet(0);
         wallet.setNewPlayersBalance(100);
     }

@@ -25,9 +25,9 @@ public class Wallet {
         return playerBalance;
     }
 
-    public String setPlayersBalance(int cash) {
+    public int setPlayersBalance(int cash) {
         playerBalance += cash;
-        return Answer.WALLET.toString(1) + playerBalance;
+        return playerBalance;
     }
 
     /**

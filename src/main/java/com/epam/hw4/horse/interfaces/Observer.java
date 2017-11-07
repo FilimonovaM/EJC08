@@ -8,9 +8,12 @@ public interface Observer {
     int randomizeSpeed();
 
     /**
-     * uses for getting horse name.
+     * uses for getting horses name.
      */
     String getName();
 
+    /**
+     * uses for getting horses result.
+     */
     int getResult();
 }

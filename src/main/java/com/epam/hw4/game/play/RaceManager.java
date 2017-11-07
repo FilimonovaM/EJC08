@@ -8,11 +8,10 @@ import com.epam.hw4.wallet.Wallet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class RaceManager implements Subject {
-    ArrayList <Observer> mounts;
-    ArrayList <Observer> winners;
+    ArrayList<Observer> mounts;
+    ArrayList<Observer> winners;
     static Observer chosenHorse;
     Wallet wallet;
 
@@ -38,24 +37,24 @@ public class RaceManager implements Subject {
      */
     @Override
     public String race() {
-        mounts.forEach((list)->list.randomizeSpeed());
+        mounts.forEach((list) -> list.randomizeSpeed());
         Collections.sort(mounts, new Comparator<Observer>() {
             @Override
             public int compare(Observer o1, Observer o2) {
-                return o2.getResult()-o1.getResult();
+                return o2.getResult() - o1.getResult();
             }
         });
         winners = new ArrayList<>();
         int win = 0;
-        for(Observer horse:mounts){
-            if(horse.getResult()>=win){
+        for (Observer horse : mounts) {
+            if (horse.getResult() >= win) {
                 win = horse.getResult();
                 winners.add(horse);
-            }else {
+            } else {
                 break;
             }
         }
-        winners.forEach((list)->System.out.println(Answer.RACE.toString(1)+" "+list.getName()));
+        winners.forEach((list) -> System.out.println(Answer.RACE.toString(1) + " " + list.getName()));
         return null;
     }
 
@@ -66,8 +65,8 @@ public class RaceManager implements Subject {
      */
     @Override
     public boolean isWin() {
-        for(Observer winner:winners){
-            if(winner.getName().equals(chosenHorse.getName())){
+        for (Observer winner : winners) {
+            if (winner.getName().equals(chosenHorse.getName())) {
                 return true;
             }
         }
@@ -81,7 +80,7 @@ public class RaceManager implements Subject {
      */
     @Override
     public String setChosenHorse(int i) {
-        chosenHorse = mounts.get(i-1);
+        chosenHorse = mounts.get(i - 1);
         return chosenHorse.getName();
     }
 

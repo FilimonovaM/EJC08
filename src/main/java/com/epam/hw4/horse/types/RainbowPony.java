@@ -20,10 +20,10 @@ public class RainbowPony implements Observer {
         result = speed;
         random = new Random();
         for (int i = 0; i < (10); i++) {
-            speed = random.nextInt((speed<=5) ? 10 : 5)+1;
-            result +=speed;
+            speed = random.nextInt((speed <= 5) ? 10 : 5) + 1;
+            result += speed;
         }
-        System.out.println(name+ " - " + result);
+        System.out.println(name + " - " + result);
         return result;
     }
 
@@ -37,6 +37,11 @@ public class RainbowPony implements Observer {
         return name;
     }
 
+    /**
+     * uses for getting horse result.
+     *
+     * @return horse result
+     */
     @Override
     public int getResult() {
         return result;

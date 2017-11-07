@@ -5,6 +5,7 @@ import com.epam.hw4.menu.config.Menu;
 import java.io.IOException;
 
 public class JoyCasino {
+
     /**
      * uses for loading an application.
      */
