@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RaceManager implements Subject {
-    private static List<Observer> horses;
+    private List<Observer> horses;
     private Observer winner;
     private static Observer chosenHorse;
 

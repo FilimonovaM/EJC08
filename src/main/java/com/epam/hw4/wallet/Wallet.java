@@ -20,7 +20,12 @@ public class Wallet {
      *
      * @return the player balance
      */
-    protected String setPlayersBalance(int cash) {
+    public int setNewPlayersBalance(int cash) {
+        playerBalance = cash;
+        return playerBalance;
+    }
+
+    public String setPlayersBalance(int cash) {
         playerBalance += cash;
         return Answer.WALLET.toString(1) + playerBalance;
     }

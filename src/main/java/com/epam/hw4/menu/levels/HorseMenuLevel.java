@@ -27,9 +27,8 @@ public class HorseMenuLevel implements MenuLevel {
             answer = Character.getNumericValue(answerReader.read());
             if (answer > 0 && answer < 6) {
                 newLevel = new WalletMenuLevel();
-                initialTheHorses.initTheHorses(answer);
                 System.out.println(initialTheHorses.initTheHorses(answer)
-                        + Answer.HORSES.toString(2));
+                        + Answer.HORSES.toString(3));
                 break;
             }
         }
