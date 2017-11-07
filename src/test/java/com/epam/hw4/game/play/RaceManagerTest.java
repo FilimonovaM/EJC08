@@ -4,7 +4,41 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RaceManagerTest {
+
     RaceManager raceManager = new RaceManager();
+
+    @Test(expected = NullPointerException.class)
+    public void addHorseNullPointerExceptionTest() throws Exception {
+        raceManager.mounts = null;
+        raceManager.addHorse(new HorseTest());
+        raceManager.addHorse(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void raceExceptionTest() throws Exception {
+        raceManager.mounts = null;
+        raceManager.race();
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void isWinException() throws Exception {
+        raceManager.winners = null;
+        raceManager.mounts = null;
+        raceManager.isWin();
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void setChosenHorseException() throws Exception {
+        raceManager.mounts = null;
+        raceManager.setChosenHorse(0);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getChosenHorseException() throws Exception {
+        raceManager.mounts = null;
+        raceManager.setChosenHorse(-1);
+        raceManager.getChosenHorse();
+    }
 
     @Test
     public void addTest() throws Exception {

@@ -8,6 +8,7 @@ import com.epam.hw4.wallet.Wallet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class RaceManager implements Subject {
     ArrayList<Observer> mounts;
