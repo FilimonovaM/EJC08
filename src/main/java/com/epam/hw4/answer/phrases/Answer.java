@@ -67,7 +67,28 @@ public enum Answer implements PrototypeOfAnswer {
                     return "\nAaaaaand....It`good time to check your ability to pay !";
                 default:
                     return "\nType 1 to check your balance\nType 2 to make a bet" +
+                            "\nType 3 to replenish your balance" +
                             "\nType 0 to come back to the previous level of menu";
+            }
+        }
+    },
+    REPLENISH {
+        /**
+         *uses for replenishing a balance.
+         *
+         * @param value - number of answer
+         * @return phrase
+         */
+        @Override
+        public String toString(int value) {
+            switch (value) {
+                case 1:
+                    return "\nEnter the amount to replenish your balance\n" +
+                            "Type 0 to come back to the previous level";
+                case 2:
+                    return "\nHey! Slow down! You ain`t so rich!";
+                default:
+                    return "\nAmount is incorrect. Try again!";
             }
         }
     },
@@ -90,7 +111,8 @@ public enum Answer implements PrototypeOfAnswer {
                     return "\nYour bet is incorrect. Try again! Your limit is ";
             }
         }
-    }, RACE {
+    },
+    RACE {
         /**
          *uses for sending a messages about the race result.
          *

@@ -28,6 +28,9 @@ public class WalletMenuLevel implements MenuLevel {
                 System.out.println(Answer.WALLET.toString(1) + wallet.getPlayerBalance());
             } else if (answer == '2') {
                 return new BetMenuLevel();
+            } else if (answer == '3') {
+                newLevel = new ReplenishBalanceMenuLevel();
+                break;
             }
         }
         return newLevel;
