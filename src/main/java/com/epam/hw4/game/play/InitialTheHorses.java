@@ -1,7 +1,7 @@
 package com.epam.hw4.game.play;
 
 import com.epam.hw4.answer.phrases.Answer;
-import com.epam.hw4.horse.types.*;
+import com.epam.hw4.horses.types.*;
 import com.epam.hw4.wallet.Wallet;
 
 public class InitialTheHorses {
@@ -16,9 +16,9 @@ public class InitialTheHorses {
     }
 
     /**
-     * uses for sending the information about what the horse player choose.
+     * uses for sending the information about what the horses player choose.
      *
-     * @return name of the chosen horse
+     * @return name of the chosen horses
      */
     public String initTheHorses(int value) {
         return (raceManager.setChosenHorse(value));

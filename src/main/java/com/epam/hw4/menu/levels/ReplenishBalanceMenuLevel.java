@@ -1,7 +1,7 @@
 package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
-import com.epam.hw4.menu.config.AnswerReader;
+import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
 
@@ -18,7 +18,7 @@ public class ReplenishBalanceMenuLevel implements MenuLevel {
      * (to the HorseMenuLevel or to the BetMenuLevel)
      */
     @Override
-    public MenuLevel runner(AnswerReader answerReader) {
+    public MenuLevel run(AnswerReader answerReader) {
         newLevel = new WalletMenuLevel();
         while (answer != 0) {
             System.out.println(Answer.REPLENISH.toString(1));

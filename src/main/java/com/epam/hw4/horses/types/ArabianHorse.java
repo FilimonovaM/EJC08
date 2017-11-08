@@ -1,11 +1,11 @@
-package com.epam.hw4.horse.types;
+package com.epam.hw4.horses.types;
 
-import com.epam.hw4.horse.interfaces.Observer;
+import com.epam.hw4.horses.interfaces.Observer;
 
 import java.util.Random;
 
-public class RainbowPony implements Observer {
-    private String name = "Rainbow pony";
+public class ArabianHorse implements Observer {
+    private String name = "Arabian Horse";
     private int result;
     Random random;
 
@@ -28,9 +28,9 @@ public class RainbowPony implements Observer {
     }
 
     /**
-     * uses for getting horse name.
+     * uses for getting horses name.
      *
-     * @return horse name
+     * @return horses name
      */
     @Override
     public String getName() {
@@ -38,9 +38,9 @@ public class RainbowPony implements Observer {
     }
 
     /**
-     * uses for getting horse result.
+     * uses for getting horses result.
      *
-     * @return horse result
+     * @return horses result
      */
     @Override
     public int getResult() {

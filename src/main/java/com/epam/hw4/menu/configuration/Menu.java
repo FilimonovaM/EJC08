@@ -1,4 +1,4 @@
-package com.epam.hw4.menu.config;
+package com.epam.hw4.menu.configuration;
 
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.menu.levels.EnterMenuLevel;
@@ -21,7 +21,7 @@ public class Menu {
      */
     public String changeMenuLevel() throws IOException {
         for (; ; ) {
-            menuLevel = menuLevel.runner(answerReader);
+            menuLevel = menuLevel.run(answerReader);
             if (menuLevel == null) {
                 break;
             }

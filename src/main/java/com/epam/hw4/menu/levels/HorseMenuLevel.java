@@ -2,7 +2,7 @@ package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.game.play.InitialTheHorses;
-import com.epam.hw4.menu.config.AnswerReader;
+import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 
 public class HorseMenuLevel implements MenuLevel {
@@ -12,14 +12,14 @@ public class HorseMenuLevel implements MenuLevel {
 
 
     /**
-     * uses for choosing a horse.
+     * uses for choosing a horses.
      *
      * @param answerReader - produce an access to the preparing object of BufferedReader
      * @return newLevel - uses to change a level of the menu
      * (to the EnterMenuLevel or to the WalletMenuLevel)
      */
     @Override
-    public MenuLevel runner(AnswerReader answerReader) {
+    public MenuLevel run(AnswerReader answerReader) {
         answer = -1;
         newLevel = new EnterMenuLevel();
         while (answer != 0) {

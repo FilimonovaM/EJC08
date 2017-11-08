@@ -2,13 +2,12 @@ package com.epam.hw4.game.play;
 
 import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.game.interfaces.Subject;
-import com.epam.hw4.horse.interfaces.Observer;
+import com.epam.hw4.horses.interfaces.Observer;
 import com.epam.hw4.wallet.Wallet;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class RaceManager implements Subject {
     ArrayList<Observer> mounts;
@@ -21,7 +20,7 @@ public class RaceManager implements Subject {
     }
 
     /**
-     * uses for adding a horse.
+     * uses for adding a horses.
      */
     @Override
     public String addHorse(Observer... horses) {
@@ -34,7 +33,7 @@ public class RaceManager implements Subject {
     /**
      * uses for starting of the race.
      *
-     * @return name of the winner(horse)
+     * @return name of the winner(horses)
      */
     @Override
     public String race() {
@@ -60,7 +59,7 @@ public class RaceManager implements Subject {
     }
 
     /**
-     * uses for to compare chosen horse and winner.
+     * uses for to compare chosen horses and winner.
      *
      * @return boolean - true if player win
      */
@@ -75,9 +74,9 @@ public class RaceManager implements Subject {
     }
 
     /**
-     * uses for setting a chosen horse.
+     * uses for setting a chosen horses.
      *
-     * @return name of the chosen horse
+     * @return name of the chosen horses
      */
     @Override
     public String setChosenHorse(int i) {
@@ -86,9 +85,9 @@ public class RaceManager implements Subject {
     }
 
     /**
-     * uses getting a chosen horse.
+     * uses getting a chosen horses.
      *
-     * @return name of the chosen horse
+     * @return name of the chosen horses
      */
     @Override
     public String getChosenHorse() {

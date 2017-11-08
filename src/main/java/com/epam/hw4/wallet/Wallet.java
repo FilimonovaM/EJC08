@@ -45,7 +45,7 @@ public class Wallet {
      *
      * @param winnersSize     - is amount of the horses-winners
      * @param isWin           - true if player win
-     * @param chosenHorseName - name of the chosen horse
+     * @param chosenHorseName - name of the chosen horses
      * @return our congratulations & the player balance
      */
     public String calculateWinnersGain(int winnersSize, boolean isWin, String chosenHorseName) {

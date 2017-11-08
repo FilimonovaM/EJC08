@@ -1,6 +1,6 @@
 package com.epam.hw4.game.play;
 
-import com.epam.hw4.menu.config.Menu;
+import com.epam.hw4.menu.configuration.Menu;
 
 import java.io.IOException;
 

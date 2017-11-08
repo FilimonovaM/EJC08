@@ -1,4 +1,4 @@
-package com.epam.hw4.horse.interfaces;
+package com.epam.hw4.horses.interfaces;
 
 public interface Observer {
 

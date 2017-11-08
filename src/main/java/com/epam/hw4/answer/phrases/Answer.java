@@ -24,7 +24,7 @@ public enum Answer implements PrototypeOfAnswer {
         }
     }, HORSES {
         /**
-         *uses for choosing a horse.
+         *uses for choosing a horses.
          *
          * @param value - number of answer
          * @return phrase
@@ -33,10 +33,10 @@ public enum Answer implements PrototypeOfAnswer {
         public String toString(int value) {
             switch (value) {
                 case 1:
-                    return "\nEnter the number to choose a horse! " +
+                    return "\nEnter the number to choose a horses! " +
                             "\nRemember! You can type another symbol to come back to the general menu.\n" +
                             "\nWe have 5 horses:\n " +
-                            "\n--- 1 --- ARABIAN STALLION. \nIt is a perfect double-quick pureblooded arabian horse." +
+                            "\n--- 1 --- ARABIAN STALLION. \nIt is a perfect double-quick pureblooded arabian horses." +
                             "\n--- 2 --- LITTLE GRAY DONKEY. \nHis last name is Serenity. " +
                             "\n--- 3 --- PLOTVA.\n Witcher try to make some money for his new journey!" +
                             "\n--- 4 --- RAINBOW PONY. \nIt will spend all its physical forces & magic boosts \n" +

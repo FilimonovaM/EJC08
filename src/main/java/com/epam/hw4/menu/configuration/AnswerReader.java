@@ -1,4 +1,4 @@
-package com.epam.hw4.menu.config;
+package com.epam.hw4.menu.configuration;
 
 import com.epam.hw4.answer.phrases.Answer;
 

@@ -2,7 +2,7 @@ package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.game.play.InitialTheHorses;
-import com.epam.hw4.menu.config.AnswerReader;
+import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
 
@@ -20,7 +20,7 @@ public class BetMenuLevel implements MenuLevel {
      * (to the WalletMenuLevel or exit)
      */
     @Override
-    public MenuLevel runner(AnswerReader answerReader) {
+    public MenuLevel run(AnswerReader answerReader) {
         initialTheHorses = new InitialTheHorses();
         while (answer != 0) {
             answer = -1;
