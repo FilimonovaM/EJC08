@@ -5,8 +5,10 @@ import com.epam.hw4.game.play.InitialTheHorses;
 import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 
+import java.io.IOException;
+
 public class HorseMenuLevel implements MenuLevel {
-    int answer;
+    int answer = -1;
     MenuLevel newLevel;
     InitialTheHorses initialTheHorses = new InitialTheHorses();
 
@@ -20,11 +22,16 @@ public class HorseMenuLevel implements MenuLevel {
      */
     @Override
     public MenuLevel run(AnswerReader answerReader) {
-        answer = -1;
         newLevel = new EnterMenuLevel();
         while (answer != 0) {
             System.out.println(Answer.HORSES.toString(1));
-            answer = Character.getNumericValue(answerReader.read());
+            try {
+                answer = answerReader.readInt();
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
+            }
             if (answer > 0 && answer < 6) {
                 newLevel = new WalletMenuLevel();
                 System.out.println(initialTheHorses.initTheHorses(answer)

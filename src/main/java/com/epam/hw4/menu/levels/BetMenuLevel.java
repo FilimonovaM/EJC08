@@ -6,6 +6,8 @@ import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
 
+import java.io.IOException;
+
 public class BetMenuLevel implements MenuLevel {
     int answer = -1;
     MenuLevel newLevel;
@@ -23,10 +25,15 @@ public class BetMenuLevel implements MenuLevel {
     public MenuLevel run(AnswerReader answerReader) {
         initialTheHorses = new InitialTheHorses();
         while (answer != 0) {
-            answer = -1;
             if (wallet.getPlayerBalance() > 0) {
                 System.out.println(Answer.BET.toString(1));
-                answer = answerReader.readInt();
+                try {
+                    answer = answerReader.readInt();
+                } catch (IOException e) {
+                    System.err.println(e.getMessage());
+                } catch (NumberFormatException e) {
+                    System.err.println(e.getMessage());
+                }
                 if (answer > 0 && answer <= wallet.getPlayerBalance()) {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));
                     System.out.println(initialTheHorses.runTheRace());

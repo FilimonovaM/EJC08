@@ -5,6 +5,8 @@ import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
 
+import java.io.IOException;
+
 public class ReplenishBalanceMenuLevel implements MenuLevel {
     int answer = -1;
     MenuLevel newLevel;
@@ -22,8 +24,14 @@ public class ReplenishBalanceMenuLevel implements MenuLevel {
         newLevel = new WalletMenuLevel();
         while (answer != 0) {
             System.out.println(Answer.REPLENISH.toString(1));
-            answer = answerReader.readInt();
-            if (answer > 0 && answer <= 100) {
+            try {
+                answer = answerReader.readInt();
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
+            }
+            if (answer > 0 && answer <= 99) {
                 System.out.println(Answer.WALLET.toString(1) + wallet.setPlayersBalance(answer));
                 break;
             } else if (answer > 100) {

@@ -1,4 +1,4 @@
-package com.epam.hw4.horse.types;
+package com.epam.hw4.horses.types;
 
 import org.junit.Assert;
 import org.junit.Test;

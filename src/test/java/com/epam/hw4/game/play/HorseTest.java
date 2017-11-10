@@ -1,6 +1,6 @@
 package com.epam.hw4.game.play;
 
-import com.epam.hw4.horse.interfaces.Observer;
+import com.epam.hw4.horses.interfaces.Observer;
 
 public class HorseTest implements Observer {
 

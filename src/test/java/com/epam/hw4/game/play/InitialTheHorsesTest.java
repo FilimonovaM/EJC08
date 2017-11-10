@@ -6,6 +6,7 @@ import org.junit.Test;
 public class InitialTheHorsesTest {
 
     InitialTheHorses initialTheHorses = new InitialTheHorses();
+
     @Test(expected = NullPointerException.class)
     public void runTheRace() throws Exception {
         initialTheHorses.raceManager = null;

@@ -5,8 +5,10 @@ import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
 
+import java.io.IOException;
+
 public class WalletMenuLevel implements MenuLevel {
-    char answer;
+    int answer = -1;
     MenuLevel newLevel;
     Wallet wallet = new Wallet();
 
@@ -21,14 +23,21 @@ public class WalletMenuLevel implements MenuLevel {
     public MenuLevel run(AnswerReader answerReader) {
         newLevel = new HorseMenuLevel();
         System.out.println(Answer.WALLET.toString(2));
-        while (answer != '0') {
+        while (answer != 0) {
             System.out.println(Answer.WALLET.toString(-1));
-            answer = answerReader.read();
-            if (answer == '1') {
+            try {
+                answer = answerReader.readInt();
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
+            }
+            if (answer == 1) {
                 System.out.println(Answer.WALLET.toString(1) + wallet.getPlayerBalance());
-            } else if (answer == '2') {
-                return new BetMenuLevel();
-            } else if (answer == '3') {
+            } else if (answer == 2) {
+                newLevel = new BetMenuLevel();
+                break;
+            } else if (answer == 3) {
                 newLevel = new ReplenishBalanceMenuLevel();
                 break;
             }
