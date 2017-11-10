@@ -24,7 +24,7 @@ public class Log {
 
     public void logTheEvent(String message) throws IOException {
         gregorianCalendar = new GregorianCalendar();
-        stringBuffer.append(gregorianCalendar.getTime() + " " + message + "\n");
+        stringBuffer.append(gregorianCalendar.getTime() + " | " + message + "\n");
     }
 
     public void closeTheLog() throws IOException {
