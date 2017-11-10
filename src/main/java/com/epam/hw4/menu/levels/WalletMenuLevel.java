@@ -10,7 +10,7 @@ import java.io.IOException;
 public class WalletMenuLevel implements MenuLevel {
     int answer = -1;
     MenuLevel newLevel;
-    Wallet wallet = new Wallet();
+    Wallet wallet = Wallet.getOurInstance();
 
     /**
      * uses for checking player balance or moving to the BetMenuLevel.

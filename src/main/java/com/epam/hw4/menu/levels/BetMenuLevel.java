@@ -2,6 +2,7 @@ package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.game.play.InitialTheHorses;
+import com.epam.hw4.game.play.Log;
 import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
@@ -13,6 +14,7 @@ public class BetMenuLevel implements MenuLevel {
     MenuLevel newLevel;
     Wallet wallet = new Wallet();
     InitialTheHorses initialTheHorses;
+    Log log = Log.getInstance();
 
     /**
      * uses for making a bet or exit if the player spend all his money.
@@ -22,7 +24,7 @@ public class BetMenuLevel implements MenuLevel {
      * (to the WalletMenuLevel or exit)
      */
     @Override
-    public MenuLevel run(AnswerReader answerReader) {
+    public MenuLevel run(AnswerReader answerReader) throws IOException {
         initialTheHorses = new InitialTheHorses();
         while (answer != 0) {
             if (wallet.getPlayerBalance() > 0) {
@@ -38,7 +40,8 @@ public class BetMenuLevel implements MenuLevel {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));
                     System.out.println(initialTheHorses.runTheRace());
                 } else if (answer == 0) {
-                    return new WalletMenuLevel();
+                    newLevel= new WalletMenuLevel();
+                    break;
                 } else {
                     System.out.println(Answer.BET.toString(3) + wallet.getPlayerBalance());
                 }

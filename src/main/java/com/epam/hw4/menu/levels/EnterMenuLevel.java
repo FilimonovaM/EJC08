@@ -10,7 +10,7 @@ import java.io.IOException;
 public class EnterMenuLevel implements MenuLevel {
     int answer;
     MenuLevel newLevel;
-    Wallet wallet = new Wallet();
+    Wallet wallet = Wallet.getOurInstance();
 
     /**
      * uses for starting the game or exit.

@@ -4,6 +4,8 @@ import com.epam.hw4.answer.phrases.Answer;
 import com.epam.hw4.horses.types.*;
 import com.epam.hw4.wallet.Wallet;
 
+import java.io.IOException;
+
 public class InitialTheHorses {
     RaceManager raceManager;
     Wallet wallet;
@@ -29,7 +31,7 @@ public class InitialTheHorses {
      *
      * @return info about the winner
      */
-    public String runTheRace() {
+    public String runTheRace() throws IOException {
         System.out.println(Answer.RACE.toString(-1));
         System.out.println(raceManager.race());
         return (wallet.calculateWinnersGain(raceManager.winners.size(), raceManager.isWin(),

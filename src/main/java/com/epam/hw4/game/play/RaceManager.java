@@ -13,7 +13,7 @@ public class RaceManager implements Subject {
     ArrayList<Observer> mounts;
     ArrayList<Observer> winners;
     static Observer chosenHorse;
-    Wallet wallet;
+    Wallet wallet = Wallet.getOurInstance();
 
     public RaceManager() {
         mounts = new ArrayList<>();

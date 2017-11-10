@@ -1,10 +1,19 @@
 package com.epam.hw4.wallet;
 
 import com.epam.hw4.answer.phrases.Answer;
+import com.epam.hw4.game.play.Log;
+
+import java.io.IOException;
 
 public class Wallet {
     static private int playerBalance = 100;
     static private int bet = 0;
+    private static final Wallet walletInstance = new Wallet();
+    Log log = Log.getInstance();
+
+    public static Wallet getOurInstance(){
+        return walletInstance;
+    }
 
     /**
      * uses for getting the player balance.
@@ -20,13 +29,15 @@ public class Wallet {
      *
      * @return the player balance
      */
-    public int setNewPlayersBalance(int cash) {
+    public int setNewPlayersBalance(int cash) throws IOException {
         playerBalance = cash;
+        log.logTheEvent("We have a new Balance: "+cash);
         return playerBalance;
     }
 
-    public int setPlayersBalance(int cash) {
+    public int setPlayersBalance(int cash) throws IOException {
         playerBalance += cash;
+        log.logTheEvent("Balance was changed: "+cash);
         return playerBalance;
     }
 
@@ -35,8 +46,9 @@ public class Wallet {
      *
      * @return the player bet
      */
-    public int setBet(int bet) {
+    public int setBet(int bet) throws IOException {
         this.bet = bet;
+        log.logTheEvent("Player make a bet: "+bet);
         return bet;
     }
 
@@ -48,7 +60,7 @@ public class Wallet {
      * @param chosenHorseName - name of the chosen horses
      * @return our congratulations & the player balance
      */
-    public String calculateWinnersGain(int winnersSize, boolean isWin, String chosenHorseName) {
+    public String calculateWinnersGain(int winnersSize, boolean isWin, String chosenHorseName) throws IOException {
         int value;
         int gain = bet;
         if (isWin) {
