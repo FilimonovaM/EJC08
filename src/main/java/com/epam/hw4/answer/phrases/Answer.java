@@ -133,6 +133,8 @@ public enum Answer implements PrototypeOfAnswer {
                     return "\nCASINO WIN - You loose!!! \nYour balance is ";
                 case 5:
                     return "You are a bancrott";
+                case 6:
+                    return "The race is done";
                 default:
                     return "Player Heralt make a bet too." +
                             "\n\nThe Big races will begin through \n...three...\n" +

@@ -48,7 +48,7 @@ public class RaceManagerTest {
     @Test
     public void raceTest() throws Exception {
         raceManager.addHorse(new HorseTest());
-        Assert.assertEquals(null, raceManager.race());
+        Assert.assertEquals("The race is done", raceManager.race());
     }
 
     @Test

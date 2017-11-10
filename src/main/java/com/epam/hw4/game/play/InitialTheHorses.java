@@ -31,7 +31,7 @@ public class InitialTheHorses {
      */
     public String runTheRace() {
         System.out.println(Answer.RACE.toString(-1));
-        raceManager.race();
+        System.out.println(raceManager.race());
         return (wallet.calculateWinnersGain(raceManager.winners.size(), raceManager.isWin(),
                 raceManager.getChosenHorse()));
     }

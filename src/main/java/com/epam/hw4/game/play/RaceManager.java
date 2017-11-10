@@ -55,7 +55,7 @@ public class RaceManager implements Subject {
             }
         }
         winners.forEach((list) -> System.out.println(Answer.RACE.toString(1) + " " + list.getName()));
-        return null;
+        return Answer.RACE.toString(6);
     }
 
     /**
