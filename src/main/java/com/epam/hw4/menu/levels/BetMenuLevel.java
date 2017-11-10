@@ -14,7 +14,6 @@ public class BetMenuLevel implements MenuLevel {
     MenuLevel newLevel;
     Wallet wallet = new Wallet();
     InitialTheHorses initialTheHorses;
-    Log log = Log.getInstance();
 
     /**
      * uses for making a bet or exit if the player spend all his money.
@@ -33,8 +32,10 @@ public class BetMenuLevel implements MenuLevel {
                     answer = answerReader.readInt();
                 } catch (IOException e) {
                     System.err.println(e.getMessage());
+                    Log.getInstance().logTheEvent("Buffered reader is crashed " + e.getMessage());
                 } catch (NumberFormatException e) {
                     System.err.println(e.getMessage());
+                    Log.getInstance().logTheEvent("NumberFormatExceptions " + e.getMessage());
                 }
                 if (answer > 0 && answer <= wallet.getPlayerBalance()) {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));

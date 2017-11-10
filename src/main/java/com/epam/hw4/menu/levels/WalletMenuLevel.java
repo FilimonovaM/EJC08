@@ -1,6 +1,7 @@
 package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
+import com.epam.hw4.game.play.Log;
 import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;
@@ -20,7 +21,7 @@ public class WalletMenuLevel implements MenuLevel {
      * (to the HorseMenuLevel or to the BetMenuLevel)
      */
     @Override
-    public MenuLevel run(AnswerReader answerReader) {
+    public MenuLevel run(AnswerReader answerReader) throws IOException {
         newLevel = new HorseMenuLevel();
         System.out.println(Answer.WALLET.toString(2));
         while (answer != 0) {
@@ -29,8 +30,10 @@ public class WalletMenuLevel implements MenuLevel {
                 answer = answerReader.readInt();
             } catch (IOException e) {
                 System.err.println(e.getMessage());
+                Log.getInstance().logTheEvent("Buffered reader is crashed " + e.getMessage());
             } catch (NumberFormatException e) {
                 System.err.println(e.getMessage());
+                Log.getInstance().logTheEvent("NumberFormatExceptions " + e.getMessage());
             }
             if (answer == 1) {
                 System.out.println(Answer.WALLET.toString(1) + wallet.getPlayerBalance());

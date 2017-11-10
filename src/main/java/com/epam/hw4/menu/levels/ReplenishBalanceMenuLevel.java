@@ -12,7 +12,6 @@ public class ReplenishBalanceMenuLevel implements MenuLevel {
     int answer = -1;
     MenuLevel newLevel;
     Wallet wallet = Wallet.getOurInstance();
-    Log log = Log.getInstance();
 
     /**
      * uses for replenishing player balance WalletMenuLevel.
@@ -30,8 +29,10 @@ public class ReplenishBalanceMenuLevel implements MenuLevel {
                 answer = answerReader.readInt();
             } catch (IOException e) {
                 System.err.println(e.getMessage());
+                Log.getInstance().logTheEvent("Buffered reader is crashed " + e.getMessage());
             } catch (NumberFormatException e) {
                 System.err.println(e.getMessage());
+                Log.getInstance().logTheEvent("NumberFormatExceptions " + e.getMessage());
             }
             if (answer > 0 && answer <= 99) {
                 System.out.println(Answer.WALLET.toString(1) + wallet.setPlayersBalance(answer));
