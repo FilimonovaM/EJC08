@@ -26,20 +26,32 @@ public class Log {
 
     private static final Log ourInstance = new Log();
 
+    /**
+     * uses for getting the instance of this class.
+     *
+     * @return instance
+     */
     public static Log getInstance() {
         return ourInstance;
     }
 
+    /**
+     * uses for buffering of the logs.
+     *
+     * @param message - message about the events(some exceptions, player`s moving, balance changes)
+     */
     public void logTheEvent(String message) throws IOException {
         gregorianCalendar = new GregorianCalendar();
         date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd'-'MM'-'yyyy':'hh'-'mm");
-        formatter.format("%s-%s;\n",simpleDateFormat.format(date).toString(),message);
-//        stringBuffer.append(gregorianCalendar.getTime() + " | " + message + "\n");
+        formatter.format("%s-%s;\n", simpleDateFormat.format(date).toString(), message);
     }
 
+    /**
+     * uses for writing the logs to the file casinoLog.txt in the root folder.
+     */
     public void closeTheLog() throws IOException {
-        try (FileWriter fileWriter = new FileWriter(file)){
+        try (FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write(stringBuffer.toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
