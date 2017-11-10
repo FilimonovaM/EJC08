@@ -4,16 +4,24 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Formatter;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class Log {
     GregorianCalendar gregorianCalendar;
     File file;
     StringBuffer stringBuffer;
+    Formatter formatter;
+    Date date;
 
     private Log() {
         stringBuffer = new StringBuffer();
+        formatter = new Formatter(stringBuffer, Locale.US);
         file = new File(".casinoLog.txt");
+
     }
 
     private static final Log ourInstance = new Log();
@@ -24,7 +32,10 @@ public class Log {
 
     public void logTheEvent(String message) throws IOException {
         gregorianCalendar = new GregorianCalendar();
-        stringBuffer.append(gregorianCalendar.getTime() + " | " + message + "\n");
+        date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd'-'MM'-'yyyy':'hh'-'mm");
+        formatter.format("%s-%s;\n",simpleDateFormat.format(date).toString(),message);
+//        stringBuffer.append(gregorianCalendar.getTime() + " | " + message + "\n");
     }
 
     public void closeTheLog() throws IOException {
