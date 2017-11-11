@@ -19,7 +19,6 @@ public class Log {
         stringBuffer = new StringBuffer();
         formatter = new Formatter(stringBuffer, Locale.US);
         file = new File(".casinoLog.txt");
-
     }
 
     private static final Log ourInstance = new Log();
