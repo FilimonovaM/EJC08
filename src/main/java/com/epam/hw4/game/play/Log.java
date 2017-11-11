@@ -7,11 +7,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Formatter;
-import java.util.GregorianCalendar;
 import java.util.Locale;
 
 public class Log {
-    GregorianCalendar gregorianCalendar;
     File file;
     StringBuffer stringBuffer;
     Formatter formatter;
@@ -41,7 +39,6 @@ public class Log {
      * @param message - message about the events(some exceptions, player`s moving, balance changes)
      */
     public void logTheEvent(String message) throws IOException {
-        gregorianCalendar = new GregorianCalendar();
         date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd'-'MM'-'yyyy':'hh'-'mm");
         formatter.format("%s-%s;\n", simpleDateFormat.format(date).toString(), message);
