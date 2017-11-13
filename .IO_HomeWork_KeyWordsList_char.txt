@@ -1,0 +1,10 @@
+import = 24
+public = 8
+class = 1
+implements = 1
+private = 4
+int = 3
+static = 4
+new = 3
+void = 4
+for = 1
