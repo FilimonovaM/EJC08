@@ -1,6 +1,6 @@
 package com.epam.io;
 
-import java.io.*;
+import java.io.FileNotFoundException;
 
 public class CodeReader {
 
@@ -8,6 +8,6 @@ public class CodeReader {
         ReaderWriterByte readerWriterByte = new ReaderWriterByte();
         ReaderWriterChar readerWriterChar = new ReaderWriterChar();
         readerWriterByte.read();
-//        readerWriterChar.read();
+        readerWriterChar.read();
     }
 }

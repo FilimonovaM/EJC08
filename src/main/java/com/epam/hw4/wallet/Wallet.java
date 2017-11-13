@@ -11,7 +11,7 @@ public class Wallet {
     private static final Wallet walletInstance = new Wallet();
     Log log = Log.getInstance();
 
-    public static Wallet getOurInstance(){
+    public static Wallet getOurInstance() {
         return walletInstance;
     }
 
@@ -31,13 +31,13 @@ public class Wallet {
      */
     public int setNewPlayersBalance(int cash) throws IOException {
         playerBalance = cash;
-        log.logTheEvent("We have a new Balance: "+cash);
+        log.logTheEvent("We have a new Balance: " + cash);
         return playerBalance;
     }
 
     public int setPlayersBalance(int cash) throws IOException {
         playerBalance += cash;
-        log.logTheEvent("Balance was changed: "+cash);
+        log.logTheEvent("Balance was changed: " + cash);
         return playerBalance;
     }
 
@@ -48,7 +48,7 @@ public class Wallet {
      */
     public int setBet(int bet) throws IOException {
         this.bet = bet;
-        log.logTheEvent("Player make a bet: "+bet);
+        log.logTheEvent("Player make a bet: " + bet);
         return bet;
     }
 

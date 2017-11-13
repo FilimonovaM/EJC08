@@ -1,14 +1,15 @@
 package com.epam.io;
 
+import java.util.LinkedHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.epam.io.ReaderWriterByte.keyWordsMap;
-
 public class CheckKeyWords {
-    int i=1;
+    int i = 1;
+    LinkedHashMap<String, Integer> keyWordsMap;
 
-    public void compareWords(String word) {
+    public void compareWords(String word, LinkedHashMap<String, Integer> keyWordsMap) {
+        this.keyWordsMap = keyWordsMap;
         if (isKeyWord(word)) {
             if (keyWordsMap.containsKey(word)) {
                 keyWordsMap.put(word, keyWordsMap.get(word) + 1);

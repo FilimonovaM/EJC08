@@ -41,7 +41,7 @@ public class BetMenuLevel implements MenuLevel {
                     System.out.println(Answer.BET.toString(2) + wallet.setBet(answer));
                     System.out.println(initialTheHorses.runTheRace());
                 } else if (answer == 0) {
-                    newLevel= new WalletMenuLevel();
+                    newLevel = new WalletMenuLevel();
                     break;
                 } else {
                     System.out.println(Answer.BET.toString(3) + wallet.getPlayerBalance());

@@ -4,17 +4,17 @@ import java.io.*;
 import java.util.LinkedHashMap;
 
 public class ReaderWriterByte {
-    File readFile = new File(".IO_HomeWork_javaCodeForReading.txt");
-    File writeFile = new File(".IO_HomeWork_KeyWordsList_byte.txt");
-    StringBuffer stringBuffer = new StringBuffer();
-    static LinkedHashMap<String, Integer> keyWordsMap = new LinkedHashMap<>();
+    File readFile;
+    File writeFile;
+    StringBuffer stringBuffer;
+    LinkedHashMap<String, Integer> keyWordsMapByByte;
     CheckKeyWords checkKeyWords;
 
     ReaderWriterByte() {
         readFile = new File(".IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File(".IO_HomeWork_KeyWordsList_char.txt");
+        writeFile = new File(".IO_HomeWork_KeyWordsList_byte.txt");
         stringBuffer = new StringBuffer();
-        keyWordsMap = new LinkedHashMap<>();
+        keyWordsMapByByte = new LinkedHashMap<>();
     }
 
     public void read() throws FileNotFoundException {
@@ -27,7 +27,7 @@ public class ReaderWriterByte {
                     stringBuffer.append((char) i);
                 } else {
                     if (stringBuffer != null) {
-                        checkKeyWords.compareWords(stringBuffer.toString());
+                        checkKeyWords.compareWords(stringBuffer.toString(), keyWordsMapByByte);
                         stringBuffer.setLength(0);
                     }
                 }
@@ -35,19 +35,18 @@ public class ReaderWriterByte {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(keyWordsMap!=null){
-            System.out.println("byte : "+keyWordsMap.toString());
+        if (keyWordsMapByByte != null) {
+            System.out.println("byte : " + keyWordsMapByByte.toString());
             write();
         }
     }
 
     public void write() throws FileNotFoundException {
-        keyWordsMap.forEach((keyword, amount) -> {
+        keyWordsMapByByte.forEach((keyword, amount) -> {
             stringBuffer.append(keyword + " = " + amount + "\n");
         });
         try (FileOutputStream fileOutputStream = new FileOutputStream(writeFile)) {
             fileOutputStream.write(stringBuffer.toString().getBytes());
-            fileOutputStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }

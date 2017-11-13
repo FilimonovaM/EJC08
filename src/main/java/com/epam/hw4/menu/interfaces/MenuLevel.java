@@ -2,7 +2,6 @@ package com.epam.hw4.menu.interfaces;
 
 import com.epam.hw4.menu.configuration.AnswerReader;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface MenuLevel {

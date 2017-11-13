@@ -14,7 +14,7 @@ public class AnswerReader {
     }
 
     /**
-     * uses for reading players answers in int format.
+     * uses for reading players questions in int format.
      *
      * @return aChar - player answer if it is correct
      * else a negative number
