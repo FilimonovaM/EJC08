@@ -11,8 +11,8 @@ public class ReaderWriterByte {
     CheckKeyWords checkKeyWords;
 
     ReaderWriterByte() {
-        readFile = new File(".IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File(".IO_HomeWork_KeyWordsList_byte.txt");
+        readFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_javaCodeForReading.txt");
+        writeFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_KeyWordsList_byte.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByByte = new LinkedHashMap<>();
     }

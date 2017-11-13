@@ -11,8 +11,8 @@ public class ReaderWriterChar {
     CheckKeyWords checkKeyWords;
 
     ReaderWriterChar() {
-        readFile = new File(".IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File(".IO_HomeWork_KeyWordsList_char.txt");
+        readFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_javaCodeForReading.txt");
+        writeFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_KeyWordsList_char.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByChar = new LinkedHashMap<>();
     }
