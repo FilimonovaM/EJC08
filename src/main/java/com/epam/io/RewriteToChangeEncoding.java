@@ -4,14 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 
 public class RewriteToChangeEncoding {
     File fileUTF8;
     File fileUTF16;
     StringBuffer stringBuffer;
     RandomAccessFile writer;
-    ArrayList arrayList;
 
     protected RewriteToChangeEncoding() {
         fileUTF8 = new File("src/main/java/com/epam/io/files/", "textUTF-8.txt");
