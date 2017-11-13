@@ -19,7 +19,7 @@ public class ReaderWriterByte {
 
     public void read() throws FileNotFoundException {
         try (FileInputStream fileInputStream = new FileInputStream(readFile)) {
-            int i = 1;
+            int i = 0;
             checkKeyWords = new CheckKeyWords();
             while (i != -1) {
                 i = fileInputStream.read();

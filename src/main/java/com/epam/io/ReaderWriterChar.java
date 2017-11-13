@@ -1,7 +1,6 @@
 package com.epam.io;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.util.LinkedHashMap;
 
 public class ReaderWriterChar {
@@ -10,22 +9,18 @@ public class ReaderWriterChar {
     StringBuffer stringBuffer;
     LinkedHashMap<String, Integer> keyWordsMapByChar;
     CheckKeyWords checkKeyWords;
-    public static Charset UTF;
 
     ReaderWriterChar() {
         readFile = new File(".IO_HomeWork_javaCodeForReading.txt");
         writeFile = new File(".IO_HomeWork_KeyWordsList_char.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByChar = new LinkedHashMap<>();
-
     }
 
     public void read() throws FileNotFoundException {
-        UTF = Charset.forName("UTF-8");
-
         try (BufferedReader reader = new BufferedReader(new InputStreamReader
-                (new FileInputStream(readFile), UTF))) {
-            int ch = (char) reader.read();
+                (new FileInputStream(readFile), "UTF-8"))) {
+            int ch = 0;
             checkKeyWords = new CheckKeyWords();
             while (ch != -1) {
                 ch = reader.read();
@@ -49,12 +44,11 @@ public class ReaderWriterChar {
     }
 
     public void write() throws FileNotFoundException {
-        UTF = Charset.forName("UTF-16");
         keyWordsMapByChar.forEach((keyword, amount) -> {
             stringBuffer.append(keyword + " = " + amount + "\n");
         });
         try (BufferedWriter fileWriter = new BufferedWriter
-                (new OutputStreamWriter(new FileOutputStream(writeFile), UTF))) {
+                (new OutputStreamWriter(new FileOutputStream(writeFile), "UTF-16"))) {
             fileWriter.write(stringBuffer.toString());
         } catch (IOException e) {
             e.printStackTrace();
