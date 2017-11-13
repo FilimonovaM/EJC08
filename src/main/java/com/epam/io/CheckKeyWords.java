@@ -8,6 +8,9 @@ public class CheckKeyWords {
     int i = 1;
     LinkedHashMap<String, Integer> keyWordsMap;
 
+    /**
+     * uses for adding key words & calculating amounts of its repeats.
+     */
     public void compareWords(String word, LinkedHashMap<String, Integer> keyWordsMap) {
         this.keyWordsMap = keyWordsMap;
         if (isKeyWord(word)) {
@@ -19,6 +22,9 @@ public class CheckKeyWords {
         }
     }
 
+    /**
+     * uses for validation of the key words.
+     */
     public boolean isKeyWord(String keyword) {
         Pattern pattern = Pattern.compile("^byte|short|int|long|char|float|double|boolean|if|else|" +
                 "switch|case|default|while|do|break|continue|for|try|catch|finally|throw|throws|" +

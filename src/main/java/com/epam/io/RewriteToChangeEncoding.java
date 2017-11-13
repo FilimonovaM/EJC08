@@ -17,6 +17,9 @@ public class RewriteToChangeEncoding {
         stringBuffer = new StringBuffer();
     }
 
+    /**
+     * uses for reading file in charset - UTF-8.
+     */
     public void readUTF8() throws IOException {
         try (RandomAccessFile randomAccessFile = new RandomAccessFile(fileUTF8, "r")) {
             while (randomAccessFile.getFilePointer() < randomAccessFile.length() - 1) {
@@ -32,12 +35,17 @@ public class RewriteToChangeEncoding {
         }
     }
 
+    /**
+     * uses for writing to another file in charset - UTF-16.
+     *
+     * @param text - StringBuffer object includes a text in the charset UTF-8
+     */
     public void writeUTF16(StringBuffer text) throws UnsupportedEncodingException {
         try {
             writer = new RandomAccessFile(fileUTF16, "rw");
             byte bytes[] = text.toString().getBytes("UTF-16");
             for (int i : bytes) {
-                writer.write((char)i);
+                writer.write((char) i);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());

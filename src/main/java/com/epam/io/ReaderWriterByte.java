@@ -11,12 +11,15 @@ public class ReaderWriterByte {
     CheckKeyWords checkKeyWords;
 
     ReaderWriterByte() {
-        readFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_KeyWordsList_byte.txt");
+        readFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_javaCodeForReading.txt");
+        writeFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_KeyWordsList_byte.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByByte = new LinkedHashMap<>();
     }
 
+    /**
+     * uses for reading from the file(byte stream).
+     */
     public void read() throws FileNotFoundException {
         try (FileInputStream fileInputStream = new FileInputStream(readFile)) {
             int i = 0;
@@ -41,6 +44,9 @@ public class ReaderWriterByte {
         }
     }
 
+    /**
+     * uses for writing key words & some information to another file.
+     */
     public void write() throws FileNotFoundException {
         keyWordsMapByByte.forEach((keyword, amount) -> {
             stringBuffer.append(keyword + " = " + amount + "\n");

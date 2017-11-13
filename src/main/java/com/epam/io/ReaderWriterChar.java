@@ -11,12 +11,15 @@ public class ReaderWriterChar {
     CheckKeyWords checkKeyWords;
 
     ReaderWriterChar() {
-        readFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File("src/main/java/com/epam/io/files/","IO_HomeWork_KeyWordsList_char.txt");
+        readFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_javaCodeForReading.txt");
+        writeFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_KeyWordsList_char.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByChar = new LinkedHashMap<>();
     }
 
+    /**
+     * uses for reading in charset - UTF-8.
+     */
     public void read() throws FileNotFoundException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader
                 (new FileInputStream(readFile), "UTF-8"))) {
@@ -43,6 +46,9 @@ public class ReaderWriterChar {
         }
     }
 
+    /**
+     * uses for writing key words & some information to another file in charset - UTF-16.
+     */
     public void write() throws FileNotFoundException {
         keyWordsMapByChar.forEach((keyword, amount) -> {
             stringBuffer.append(keyword + " = " + amount + "\n");
