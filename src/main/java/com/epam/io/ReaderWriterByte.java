@@ -3,7 +3,7 @@ package com.epam.io;
 import java.io.*;
 import java.util.LinkedHashMap;
 
-public class ReaderWriterByte {
+public class ReaderWriterByte implements ReaderWriter {
     File readFile;
     File writeFile;
     StringBuffer stringBuffer;
@@ -20,6 +20,7 @@ public class ReaderWriterByte {
     /**
      * uses for reading from the file(byte stream).
      */
+    @Override
     public void read() throws FileNotFoundException {
         try (FileInputStream fileInputStream = new FileInputStream(readFile)) {
             int i = 0;
@@ -47,6 +48,7 @@ public class ReaderWriterByte {
     /**
      * uses for writing key words & some information to another file.
      */
+    @Override
     public void write() throws FileNotFoundException {
         keyWordsMapByByte.forEach((keyword, amount) -> {
             stringBuffer.append(keyword + " = " + amount + "\n");

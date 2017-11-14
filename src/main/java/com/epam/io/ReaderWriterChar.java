@@ -3,7 +3,7 @@ package com.epam.io;
 import java.io.*;
 import java.util.LinkedHashMap;
 
-public class ReaderWriterChar {
+public class ReaderWriterChar implements ReaderWriter{
     File readFile;
     File writeFile;
     StringBuffer stringBuffer;
