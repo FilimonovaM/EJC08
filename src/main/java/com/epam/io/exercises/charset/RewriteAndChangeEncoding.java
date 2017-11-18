@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
 
-public class RewriteToChangeEncoding {
+public class RewriteAndChangeEncoding {
     File fileUTF8;
     File fileUTF16;
     StringBuffer stringBuffer;
     RandomAccessFile writer;
 
-    public RewriteToChangeEncoding() {
+    public RewriteAndChangeEncoding() {
         fileUTF8 = new File("src/main/java/com/epam/io/files/", "textUTF-8.txt");
         fileUTF16 = new File("src/main/java/com/epam/io/files/", "textUTF-16.txt");
         stringBuffer = new StringBuffer();

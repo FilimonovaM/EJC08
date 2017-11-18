@@ -2,7 +2,7 @@ package com.epam.io;
 
 import com.epam.io.exercises.keywords.first.ReaderWriterByte;
 import com.epam.io.exercises.keywords.second.ReaderWriterChar;
-import com.epam.io.exercises.charset.RewriteToChangeEncoding;
+import com.epam.io.exercises.charset.RewriteAndChangeEncoding;
 import com.epam.io.exercises.keywords.interfaces.ReaderWriter;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class IOExerciseLoader {
         ReaderWriter readerWriterChar = new ReaderWriterChar();
         readerWriterChar.read();
         //3 exercise
-        RewriteToChangeEncoding rewriteToChangeEncoding = new RewriteToChangeEncoding();
+        RewriteAndChangeEncoding rewriteToChangeEncoding = new RewriteAndChangeEncoding();
         rewriteToChangeEncoding.readUTF8();
         //4 exercise
 
