@@ -1,7 +1,7 @@
 package com.epam.hw4.menu.levels;
 
 import com.epam.hw4.answer.phrases.Answer;
-import com.epam.hw4.game.play.Log;
+import com.epam.hw4.game.play.log.Log;
 import com.epam.hw4.menu.configuration.AnswerReader;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.wallet.Wallet;

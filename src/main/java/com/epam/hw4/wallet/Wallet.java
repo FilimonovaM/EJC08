@@ -1,7 +1,7 @@
 package com.epam.hw4.wallet;
 
 import com.epam.hw4.answer.phrases.Answer;
-import com.epam.hw4.game.play.Log;
+import com.epam.hw4.game.play.log.Log;
 
 import java.io.IOException;
 

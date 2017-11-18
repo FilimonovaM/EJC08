@@ -1,4 +1,4 @@
-package com.epam.hw4.game.play;
+package com.epam.hw4.game.play.log;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,7 +18,7 @@ public class Log {
     private Log() {
         stringBuffer = new StringBuffer();
         formatter = new Formatter(stringBuffer, Locale.US);
-        file = new File(".casinoLog.txt");
+        file = new File("src/main/java/com/epam/hw4/game/play/log/","casinoLog.txt");
     }
 
     private static final Log ourInstance = new Log();
@@ -39,7 +39,7 @@ public class Log {
      */
     public void logTheEvent(String message) throws IOException {
         date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd'-'MM'-'yyyy':'hh'-'mm");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd'-'MM'-'yyyy':'hh'-'mm'-'ss");
         formatter.format("%s-%s;\n", simpleDateFormat.format(date).toString(), message);
     }
 

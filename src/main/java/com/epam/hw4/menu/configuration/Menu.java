@@ -1,6 +1,6 @@
 package com.epam.hw4.menu.configuration;
 
-import com.epam.hw4.game.play.Log;
+import com.epam.hw4.game.play.log.Log;
 import com.epam.hw4.menu.interfaces.MenuLevel;
 import com.epam.hw4.menu.levels.EnterMenuLevel;
 
