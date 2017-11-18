@@ -1,10 +1,7 @@
-package com.epam.io;
+package com.epam.io.exercises.keywords.interfaces;
 
 import java.io.FileNotFoundException;
 
-/**
- * Created by Admin on 014 14.11.17.
- */
 public interface ReaderWriter {
     void read() throws FileNotFoundException;
 

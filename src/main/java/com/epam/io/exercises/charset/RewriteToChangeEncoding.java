@@ -1,4 +1,4 @@
-package com.epam.io;
+package com.epam.io.exercises.charset;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class RewriteToChangeEncoding {
     StringBuffer stringBuffer;
     RandomAccessFile writer;
 
-    protected RewriteToChangeEncoding() {
+    public RewriteToChangeEncoding() {
         fileUTF8 = new File("src/main/java/com/epam/io/files/", "textUTF-8.txt");
         fileUTF16 = new File("src/main/java/com/epam/io/files/", "textUTF-16.txt");
         stringBuffer = new StringBuffer();

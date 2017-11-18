@@ -1,4 +1,7 @@
-package com.epam.io;
+package com.epam.io.exercises.keywords.first;
+
+import com.epam.io.exercises.keywords.CheckKeyWords;
+import com.epam.io.exercises.keywords.interfaces.ReaderWriter;
 
 import java.io.*;
 import java.util.LinkedHashMap;
@@ -10,7 +13,7 @@ public class ReaderWriterByte implements ReaderWriter {
     LinkedHashMap<String, Integer> keyWordsMapByByte;
     CheckKeyWords checkKeyWords;
 
-    ReaderWriterByte() {
+    public ReaderWriterByte() {
         readFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_javaCodeForReading.txt");
         writeFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_KeyWordsList_byte.txt");
         stringBuffer = new StringBuffer();

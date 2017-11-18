@@ -1,8 +1,13 @@
 package com.epam.io;
 
+import com.epam.io.exercises.keywords.first.ReaderWriterByte;
+import com.epam.io.exercises.keywords.second.ReaderWriterChar;
+import com.epam.io.exercises.charset.RewriteToChangeEncoding;
+import com.epam.io.exercises.keywords.interfaces.ReaderWriter;
+
 import java.io.IOException;
 
-public class CodeReader {
+public class IOExerciseLoader {
 
     /*
     * uses for loading application.
@@ -17,5 +22,7 @@ public class CodeReader {
         //3 exercise
         RewriteToChangeEncoding rewriteToChangeEncoding = new RewriteToChangeEncoding();
         rewriteToChangeEncoding.readUTF8();
+        //4 exercise
+
     }
 }

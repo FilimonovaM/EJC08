@@ -1,4 +1,4 @@
-package com.epam.io;
+package com.epam.io.exercises.keywords;
 
 import java.util.LinkedHashMap;
 import java.util.regex.Matcher;
