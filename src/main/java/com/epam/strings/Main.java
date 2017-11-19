@@ -3,7 +3,7 @@ package com.epam.strings;
 import com.epam.strings.enigmas.First;
 import com.epam.strings.enigmas.Second;
 import com.epam.strings.enigmas.Third;
-import com.epam.strings.operarions.Runner;
+import com.epam.strings.operations.Runner;
 
 import java.io.UnsupportedEncodingException;
 

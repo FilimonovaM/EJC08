@@ -1,4 +1,4 @@
-package com.epam.strings.operarions;
+package com.epam.strings.operations;
 
 import com.epam.strings.interfases.Enigma;
 
