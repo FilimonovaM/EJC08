@@ -10,7 +10,7 @@ import java.io.UnsupportedEncodingException;
 public class Main {
 
     /**
-     * uses for loading of application.
+     * uses for loading application.
      */
     public static void main(String[] args) throws UnsupportedEncodingException {
         Runner runner = new Runner(new First(), new Second(), new Third());
