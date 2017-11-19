@@ -12,6 +12,12 @@ public class Third implements Enigma {
     ResourceBundle resourceBundle;
     Locale locale;
 
+    /**
+     * uses for asking the enigmas.
+     *
+     * @param locale - is an object of text localization from something "text.properties".
+     * @return an object of text localization from something "text.properties".
+     */
     @Override
     public Locale ask(Locale locale) {
         this.locale = locale;

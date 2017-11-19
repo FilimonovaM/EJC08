@@ -9,7 +9,9 @@ import java.io.UnsupportedEncodingException;
 
 public class Main {
 
-//TODO: to fix a problem with russian language
+    /**
+     * uses for loading of application.
+     */
     public static void main(String[] args) throws UnsupportedEncodingException {
         Runner runner = new Runner(new First(), new Second(), new Third());
         runner.run();

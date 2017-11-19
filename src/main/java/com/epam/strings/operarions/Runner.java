@@ -17,6 +17,9 @@ public class Runner {
         currentLocale = Enigma.ENG;
     }
 
+    /**
+     * uses for loading of the enigmas objects from the ArrayList.
+     */
     public void run() {
         for (Enigma enigma : enigmaList) {
             currentLocale = enigma.ask(currentLocale);
