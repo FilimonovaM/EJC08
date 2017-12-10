@@ -1,0 +1,64 @@
+import java.awt.Cursor;
+import java.awt.Dialog;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.table.AbstractTableModel;
+
+@SuppressWarnings("serial")
+public class User implements Serializable
+{
+    private String name;
+    private String login;
+    private String email;
+    private int access;
+
+    public static String[] type_of_access=new String[1000];
+    public static int n=0,k=1;
+    public static void beginWork()
+    {
+        User.type_of_access[0]="Гость";
+        for(int i=1;i<1000;++i)
+        {
+            type_of_access[i]="Неопределен вид доступа";
+        }
+    }
+    public void startWork()
+    {
+        BasicFrame programm = new BasicFrame();
+        programm.startWork();
+    }
+    public static void main(String[] args)
+    {
+        new User().startWork();
+    }
+    public User()
+    {
+        name = "Неизвестно";
+        login = "Неизвестно";
+        email = "Неизвестно";
+        access = 0;
+    }
+    public void setName(String name)
+    {
+
+    }

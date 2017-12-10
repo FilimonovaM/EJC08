@@ -1,0 +1,5 @@
+package com.epam.vol1.cw1;
+
+public enum Month {
+    JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER, INCORRECT;
+}
