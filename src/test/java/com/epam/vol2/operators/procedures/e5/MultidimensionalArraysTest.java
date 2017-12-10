@@ -11,6 +11,6 @@ public class MultidimensionalArraysTest {
                 "0 1 0 1 0 \n" +
                 "0 0 1 0 0 \n" +
                 "0 1 0 1 0 \n" +
-                "1 0 0 0 1 ", multidimensionalArrays.show(5));
+                "1 0 0 0 1 \n", multidimensionalArrays.show(5));
     }
 }

@@ -7,12 +7,14 @@ public class NoteBookTest {
 
     @Test
     public void writeTheLetter() throws Exception {
+        NoteBook.getInstance().deleteTheLetter(1);
         Assert.assertEquals("New note created! Index of note is 1",
                 NoteBook.getInstance().writeTheLetter("kkk"));
     }
 
     @Test
     public void readTheLetter() throws Exception {
+        NoteBook.getInstance().deleteTheLetter(1);
         Assert.assertEquals("Nothing to read!",
                 NoteBook.getInstance().readTheLetter(1));
         NoteBook.getInstance().writeTheLetter("kkk");
@@ -41,6 +43,7 @@ public class NoteBookTest {
 
     @Test
     public void showAll() throws Exception {
+        NoteBook.getInstance().deleteTheLetter(1);
         Assert.assertEquals("",
                 NoteBook.getInstance().showAll());
         NoteBook.getInstance().writeTheLetter("kkk");
