@@ -1,4 +1,0 @@
-19-11-2017:12-31-54	-	Player moved to: com.epam.hw4.menu.levels.EnterMenuLevel;
-19-11-2017:12-31-55	-	Player moved to: com.epam.hw4.menu.levels.HorseMenuLevel;
-19-11-2017:12-31-57	-	Player moved to: com.epam.hw4.menu.levels.EnterMenuLevel;
-19-11-2017:12-31-58	-	Player leave the menu;
