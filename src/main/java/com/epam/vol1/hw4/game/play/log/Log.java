@@ -53,6 +53,7 @@ public class Log {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 }
