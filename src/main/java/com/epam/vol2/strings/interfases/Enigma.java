@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public interface Enigma {
-    //TODO: to fix a problem with russian language
+
     static final Locale RUS = new Locale("RU");
     static final Locale ENG = new Locale("eng");
 
@@ -25,7 +25,6 @@ public interface Enigma {
      */
     default String translate(ResourceBundle resourceBundle, String key)
             throws UnsupportedEncodingException {
-        return new String(resourceBundle.getString(key).getBytes("ISO-8859-1"),
-                "UTF-8");
+        return resourceBundle.getString(key);
     }
 }
