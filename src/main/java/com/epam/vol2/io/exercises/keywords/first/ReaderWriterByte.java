@@ -14,8 +14,8 @@ public class ReaderWriterByte implements ReaderWriter {
     CheckKeyWords checkKeyWords;
 
     public ReaderWriterByte() {
-        readFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_javaCodeForReading.txt");
-        writeFile = new File("src/main/java/com/epam/io/files/", "IO_HomeWork_KeyWordsList_byte.txt");
+        readFile = new File("src/main/java/com/epam/vol2/io/files/", "IO_HomeWork_javaCodeForReading.txt");
+        writeFile = new File("src/main/java/com/epam/vol2/io/files/", "IO_HomeWork_KeyWordsList_byte.txt");
         stringBuffer = new StringBuffer();
         keyWordsMapByByte = new LinkedHashMap<>();
     }

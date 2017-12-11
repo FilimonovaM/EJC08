@@ -12,7 +12,7 @@ public class FilmConfig implements Serializable {
     File file;
     String actorName;
     StringBuffer stringBuffer;
-    static final String PATH = "src/main/java/com/epam/io/exercises/serialization/saved";
+    static final String PATH = "src/main/java/com/epam/vol2/io/exercises/serialization/saved";
 
     public FilmConfig(Film... films) {
         for (Film s : films) {

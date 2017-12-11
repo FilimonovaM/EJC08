@@ -12,8 +12,8 @@ public class RewriteAndChangeEncoding {
     RandomAccessFile writer;
 
     public RewriteAndChangeEncoding() {
-        fileUTF8 = new File("src/main/java/com/epam/io/files/", "textUTF-8.txt");
-        fileUTF16 = new File("src/main/java/com/epam/io/files/", "textUTF-16.txt");
+        fileUTF8 = new File("src/main/java/com/epam/vol2/io/files/", "textUTF-8.txt");
+        fileUTF16 = new File("src/main/java/com/epam/vol2/io/files/", "textUTF-16.txt");
         stringBuffer = new StringBuffer();
     }
 

@@ -24,12 +24,14 @@ public class Reader {
      */
     public String read() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String s = null;
         try {
-            return bufferedReader.readLine();
+            s = bufferedReader.readLine();
+            return s;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return s;
     }
 
     /**
