@@ -15,28 +15,33 @@ public class OOP {
 
     /**
      * uses to start the app
-     *
      */
     public void start() {
         Pen pen = new Pen("red");
-        System.out.println(pen.hashCode());
-        System.out.println(pen.equals(new Pen("blue")));
-        System.out.println(pen.toString());
+        System.out.println("EX1:");
+        System.out.println("hash code: " + pen.hashCode());
+        System.out.println("equals blue pen: " + pen.equals(new Pen("blue")));
+        System.out.println("pen toString: " + pen.toString());
 
         Antony antony = new Antony();
+        System.out.println("\nEX2:");
         System.out.println(antony.calculateCost());
 
         NewDude newDude = new NewDude();
+        System.out.println("\nEX3:");
         System.out.println(newDude.getStartSet());
 
+        System.out.println("\nEX4:");
         SortedStationery sortedStationery = new SortedStationery(newDude);
-        System.out.println(sortedStationery.sortByAlphabet());
-        System.out.println(sortedStationery.costSort());
-        System.out.println(sortedStationery.multiSort());
+        System.out.println("List sorted by alphabet:\n" + sortedStationery.sortByAlphabet());
+        System.out.println("List sorted by cost:\n" + sortedStationery.costSort());
+        System.out.println("List sorted by alphabet & cost:\n" + sortedStationery.multiSort());
 
+        System.out.println("\nEX5:");
         Schedule schedule = new Schedule();
-        System.out.println("\n-----"+schedule.checkGroup()+"-----");
+        System.out.println("\n-----" + schedule.checkGroup() + "-----");
 
+        System.out.println("\nEX6-7:");
         Submarine submarine = new Submarine();
         System.out.println(submarine.prepareSubmarine());
     }
