@@ -15,8 +15,8 @@ public class PropertyLoader {
                 "logging.properties";
         PropertyReader propertyReader = new PropertyReader();
         try {
-            System.out.println(propertyReader.read("ffff",".level"));
-        } catch (NullPointerException e){
+            System.out.println(propertyReader.read(PATH, ".level"));
+        } catch (NullPointerException e) {
             System.err.println(e.getMessage());
         }
 

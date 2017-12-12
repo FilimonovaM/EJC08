@@ -25,4 +25,8 @@ public class PropertyReaderTest {
     public void read2() throws Exception {
         propertyReader.read(PATH, "");
     }
+    @Test(expected = NullPointerException.class)
+    public void read3() throws Exception {
+        propertyReader.read(null, null);
+    }
 }
