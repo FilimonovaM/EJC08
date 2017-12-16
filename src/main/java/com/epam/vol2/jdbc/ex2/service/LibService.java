@@ -2,13 +2,13 @@ package com.epam.vol2.jdbc.ex2.service;
 
 import com.epam.vol2.jdbc.ex2.dao.LibDao;
 import com.epam.vol2.jdbc.ex2.entity.Lib;
-import com.epam.vol2.jdbc.ex2.procedures.Util;
+import com.epam.vol2.jdbc.ex2.procedures.PrimitiveConnectionPool;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibService extends Util implements LibDao {
+public class LibService extends PrimitiveConnectionPool implements LibDao {
 
     Connection connection = null;
 
@@ -38,6 +38,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -70,6 +71,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -115,6 +117,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -159,6 +162,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -191,6 +195,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -220,6 +225,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -249,6 +255,7 @@ public class LibService extends Util implements LibDao {
             if (connection != null) {
                 try {
                     connection.close();
+                    setConnectionCount();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
