@@ -20,7 +20,8 @@ public class PrimitiveConnectionPool {
     }
 
     //Было интересно, можно ли запилить простой, но все же работающий,
-    // механизм без многопоточной модели. Тем более официально мы ее не прошли.
+    // механизм без многопоточной модели. Тем более официально мы ее все равно
+    // не прохоидили.
     /**
      * uses for getting  connections to DB.
      * <p>
@@ -45,7 +46,7 @@ public class PrimitiveConnectionPool {
                         return null;
                     }
                 }
-            } while (connectionCount < 6);
+            } while (connectionCount <= 6);
         } catch (SQLException e) {
             System.err.println("Connection ERROR:\n\t" + e.getMessage() + "\n\t");
             e.printStackTrace();
