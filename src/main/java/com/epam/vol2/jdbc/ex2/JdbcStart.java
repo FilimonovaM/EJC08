@@ -4,8 +4,18 @@ import com.epam.vol2.jdbc.ex2.procedures.DBOptions;
 
 public class JdbcStart {
 
-
+    /**
+     * used to start the app.
+     */
     public static void main(String[] args) {
+        JdbcStart jdbcStart = new JdbcStart();
+        jdbcStart.load();
+    }
+
+    /**
+     * used to load the app.
+     */
+    public void load() {
         DBOptions dbOptions = new DBOptions();
         System.out.println(dbOptions.createDB());
         dbOptions.addNewLine(1, "Oliver Twist", "Charles Dickens");
@@ -20,6 +30,5 @@ public class JdbcStart {
         dbOptions.showByIndex(3);
         dbOptions.removeLine(4);
         dbOptions.delete();
-
     }
 }

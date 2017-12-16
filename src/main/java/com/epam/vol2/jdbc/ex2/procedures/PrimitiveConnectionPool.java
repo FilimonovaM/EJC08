@@ -11,21 +11,34 @@ public class PrimitiveConnectionPool {
     private static String DB_PASSWORD = "";
     private static int connectionCount = 0;
 
-    public Connection getConnection(){
+    /**
+     * uses for getting  connections to DB.
+     * <p>
+     * maximal value of pool => 6 connections.
+     *
+     * @return new connection or null(if timed out).
+     */
+    public synchronized Connection getConnection() {
         Connection connection = null;
+        int count = 0;
         try {
             do {
-                if(connectionCount<6){
+                if (connectionCount <= 6) {
                     Class.forName(DB_DRIVER);
                     connection = DriverManager.getConnection
                             (DB_URL, DB_USERNAME, DB_PASSWORD);
                     return connection;
                 } else {
-                    wait(300);
+                    wait(100);
+                    count++;
+                    if (count > 10) {
+                        System.out.println("Timed out. Connection is not available now.");
+                        return null;
+                    }
                 }
-            }while (connectionCount<6);
+            } while (connectionCount < 6);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Connection ERROR:\n\t"+e.getMessage() +"\n\t");
+            System.err.println("Connection ERROR:\n\t" + e.getMessage() + "\n\t");
             e.printStackTrace();
             System.out.println();
         } catch (InterruptedException e) {
@@ -33,7 +46,11 @@ public class PrimitiveConnectionPool {
         }
         return null;
     }
-    public void setConnectionCount(){
+
+    /**
+     * used to calculate active connections.
+     */
+    public void setConnectionCount() {
         connectionCount--;
     }
 }

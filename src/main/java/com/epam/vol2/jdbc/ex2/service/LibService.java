@@ -12,6 +12,11 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
 
     Connection connection = null;
 
+    /**
+     * used for creating a new table in DB.
+     *
+     * @return message about a status of generation.
+     */
     @Override
     public String createTable() {
         connection = getConnection();
@@ -47,6 +52,11 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         return answer;
     }
 
+    /**
+     * used for adding a new line to DB.
+     *
+     * @param lib - exemplar of the entity Lib
+     */
     @Override
     public void add(Lib lib) {
         connection = getConnection();
@@ -79,6 +89,11 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         }
     }
 
+    /**
+     * used to show the list of DB lines.
+     *
+     * @return List of exemplars of entity Lib.
+     */
     @Override
     public List<Lib> getAll() {
         connection = getConnection();
@@ -100,7 +115,7 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            if ( resultSet!= null) {
+            if (resultSet != null) {
                 try {
                     resultSet.close();
                 } catch (SQLException e) {
@@ -126,17 +141,23 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         return libList;
     }
 
+    /**
+     * uses to find & show line by its id.
+     *
+     * @param index - the index of line that we need.
+     * @return lib - exemplar of the entity Lib.
+     */
     @Override
     public Lib getById(int index) {
         connection = getConnection();
         ResultSet resultSet = null;
         Statement statement = null;
-        String sql = "SELECT * FROM LIB WHERE ID="+index;
+        String sql = "SELECT * FROM LIB WHERE ID=" + index;
         Lib lib = new Lib();
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 lib.setId(resultSet.getInt("ID"));
                 lib.setTitle(resultSet.getString("TITLE"));
                 lib.setAuthor(resultSet.getString("AUTHOR"));
@@ -145,7 +166,7 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            if ( resultSet!= null) {
+            if (resultSet != null) {
                 try {
                     resultSet.close();
                 } catch (SQLException e) {
@@ -171,6 +192,13 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         return lib;
     }
 
+    /**
+     * used to update line by its id.
+     *
+     * @param lib - exemplar of the entity Lib contains the new
+     *            value of columns TITLE & AUTHOR in DB.
+     * @return lib - exemplar of the entity Lib.
+     */
     @Override
     public void update(Lib lib) {
         connection = getConnection();
@@ -203,6 +231,11 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         }
     }
 
+    /**
+     * used to remove line by its id.
+     *
+     * @param lib - exemplar of the entity Lib with info about the line for deleting.
+     */
     @Override
     public void remove(Lib lib) {
         connection = getConnection();
@@ -233,6 +266,9 @@ public class LibService extends PrimitiveConnectionPool implements LibDao {
         }
     }
 
+    /**
+     * used to delete table "LIB".
+     */
     @Override
     public void deleteTable() {
         connection = getConnection();

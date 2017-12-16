@@ -1,11 +1,14 @@
 package com.epam.vol2.jdbc.ex2.entity;
 
+/**
+ * Class uses to store field values
+ */
 public class Lib {
     private int id;
     private String title;
     private String author;
 
-    public Lib(){
+    public Lib() {
     }
 
     public int getId() {
