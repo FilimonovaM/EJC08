@@ -11,6 +11,16 @@ public class PrimitiveConnectionPool {
     private static String DB_PASSWORD = "";
     private static int connectionCount = 0;
 
+    static {
+        try {
+            Class.forName(DB_DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Было интересно, можно ли запилить простой, но все же работающий,
+    // механизм без многопоточной модели. Тем более официально мы ее не прошли.
     /**
      * uses for getting  connections to DB.
      * <p>
@@ -18,13 +28,12 @@ public class PrimitiveConnectionPool {
      *
      * @return new connection or null(if timed out).
      */
-    public synchronized Connection getConnection() {
+    public Connection getConnection() {
         Connection connection = null;
         int count = 0;
         try {
             do {
                 if (connectionCount <= 6) {
-                    Class.forName(DB_DRIVER);
                     connection = DriverManager.getConnection
                             (DB_URL, DB_USERNAME, DB_PASSWORD);
                     return connection;
@@ -37,7 +46,7 @@ public class PrimitiveConnectionPool {
                     }
                 }
             } while (connectionCount < 6);
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             System.err.println("Connection ERROR:\n\t" + e.getMessage() + "\n\t");
             e.printStackTrace();
             System.out.println();
