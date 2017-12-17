@@ -9,7 +9,7 @@ import java.util.Queue;
 
 
 //TODO: It isn`t connect to DB. It is experimental code, so it is not done & includes bags
-//SEE PRIMITIVE CONNECTION POOL, IT WORKS!
+//LOOK AT CLASS LIB SERVICE, IT WORKS!
 public class CustomConnectionPool {
     private static String DB_DRIVER = "org.h2.Driver";
     private static String DB_URL = "jdbc:h2:tcp://localhost:9092/nio:~/source/db/database/db;AUTO_SERVER=TRUE";

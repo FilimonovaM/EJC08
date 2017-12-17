@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //TODO: It isn`t connect to DB. It is experimental code, so it is not done & includes bags
-//SEE LIB SERVICE, IT WORKS!
+//LOOK AT CLASS LIB SERVICE, IT WORKS!
 public class LibServiceVol2 extends CustomConnectionPool implements LibDao {
 
     Connection connection = null;
