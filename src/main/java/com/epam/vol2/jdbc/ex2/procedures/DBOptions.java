@@ -33,6 +33,7 @@ public class DBOptions {
         lib.setAuthor(author);
         libDao.add(lib);
     }
+
     /**
      * uses for updating info in DB.
      *
@@ -60,7 +61,7 @@ public class DBOptions {
     /**
      * uses for showing someone line from DB.
      *
-     * @param index  - value for column INDEX of DB.
+     * @param index - value for column INDEX of DB.
      */
     public void showByIndex(int index) {
         lib = libDao.getById(index);
@@ -70,13 +71,14 @@ public class DBOptions {
     /**
      * uses for removing some line from DB.
      *
-     * @param id  - value for column INDEX of DB.
+     * @param id - value for column INDEX of DB.
      */
     public void removeLine(int id) {
         lib = new Lib();
         lib.setId(id);
         libDao.remove(lib);
     }
+
     /**
      * uses for deleting table.
      */
