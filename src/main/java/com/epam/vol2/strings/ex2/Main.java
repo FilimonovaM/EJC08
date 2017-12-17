@@ -1,9 +1,9 @@
-package com.epam.vol2.strings;
+package com.epam.vol2.strings.ex2;
 
-import com.epam.vol2.strings.enigmas.First;
-import com.epam.vol2.strings.enigmas.Second;
-import com.epam.vol2.strings.enigmas.Third;
-import com.epam.vol2.strings.operations.Runner;
+import com.epam.vol2.strings.ex2.enigmas.First;
+import com.epam.vol2.strings.ex2.enigmas.Second;
+import com.epam.vol2.strings.ex2.enigmas.Third;
+import com.epam.vol2.strings.ex2.operations.Runner;
 
 import java.io.UnsupportedEncodingException;
 

@@ -1,4 +1,4 @@
-package com.epam.vol2.strings.operations;
+package com.epam.vol2.strings.ex2.operations;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.epam.vol2.strings.interfases;
+package com.epam.vol2.strings.ex2.interfases;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;

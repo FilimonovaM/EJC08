@@ -1,6 +1,6 @@
-package com.epam.vol2.strings.operations;
+package com.epam.vol2.strings.ex2.operations;
 
-import com.epam.vol2.strings.interfases.Enigma;
+import com.epam.vol2.strings.ex2.interfases.Enigma;
 
 import java.util.ArrayList;
 import java.util.List;

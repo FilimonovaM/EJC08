@@ -1,7 +1,7 @@
-package com.epam.vol2.strings.enigmas;
+package com.epam.vol2.strings.ex2.enigmas;
 
-import com.epam.vol2.strings.interfases.Enigma;
-import com.epam.vol2.strings.operations.Reader;
+import com.epam.vol2.strings.ex2.interfases.Enigma;
+import com.epam.vol2.strings.ex2.operations.Reader;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;

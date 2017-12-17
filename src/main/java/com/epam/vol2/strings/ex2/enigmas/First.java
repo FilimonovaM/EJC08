@@ -1,13 +1,13 @@
-package com.epam.vol2.strings.enigmas;
+package com.epam.vol2.strings.ex2.enigmas;
 
-import com.epam.vol2.strings.interfases.Enigma;
-import com.epam.vol2.strings.operations.Reader;
+import com.epam.vol2.strings.ex2.interfases.Enigma;
+import com.epam.vol2.strings.ex2.operations.Reader;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class Third implements Enigma {
+public class First implements Enigma {
     String answer;
     ResourceBundle resourceBundle;
     Locale locale;
@@ -27,7 +27,7 @@ public class Third implements Enigma {
                 System.out.printf("%s%n%s%n%n%s%n",
                         translate(resourceBundle, "str01"),
                         translate(resourceBundle, "str02"),
-                        translate(resourceBundle, "str31"));
+                        translate(resourceBundle, "str11"));
                 answer = Reader.getInstance().read();
                 if (answer.equals("1")) {
                     locale = (locale.getLanguage().equals(ENG.getLanguage())) ? RUS : ENG;
@@ -35,9 +35,9 @@ public class Third implements Enigma {
                 } else if (answer.equals("2")) {
                     System.out.printf("%n%s%n%s%n%n",
                             translate(resourceBundle, "str07"),
-                            translate(resourceBundle, "str32"));
+                            translate(resourceBundle, "str12"));
                     break;
-                } else if (answer.equalsIgnoreCase(translate(resourceBundle, "str32"))) {
+                } else if (answer.equalsIgnoreCase(translate(resourceBundle, "str12"))) {
                     Reader.getInstance().setScore();
                     System.out.printf("%s%n",
                             translate(resourceBundle, "str06"));
@@ -46,14 +46,10 @@ public class Third implements Enigma {
                     System.out.printf("%s%s%n%s%s%n%n",
                             translate(resourceBundle, "str05"), answer,
                             translate(resourceBundle, "str07"),
-                            translate(resourceBundle, "str32"));
+                            translate(resourceBundle, "str12"));
                     break;
                 }
             }
-            System.out.printf("%s %d%n%s%n",
-                    translate(resourceBundle, "str03"),
-                    Reader.getInstance().getScore(),
-                    translate(resourceBundle, "str04"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
