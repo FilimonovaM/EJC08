@@ -18,8 +18,10 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:+',
             'edu.washington.cs.types.checker:checker-framework:+'
     runtime 'com.h2database:h2:+'
-    compile 'com.h2database:h2:1.4.191',
-            'org.mockito:mockito-core:2.13.0',
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.196'
+
+    compile 'org.mockito:mockito-core:2.13.0',
             'org.apache.logging.log4j:lig4j-core:+',
             'io.vavr:vavr:+'
 

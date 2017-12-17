@@ -1,4 +1,4 @@
-package com.epam.vol2.strings.operations;
+package com.epam.vol2.strings.ex2.operations;
 
 import org.junit.Assert;
 import org.junit.Test;
