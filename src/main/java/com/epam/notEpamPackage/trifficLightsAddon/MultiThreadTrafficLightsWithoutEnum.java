@@ -3,6 +3,8 @@ package com.epam.notEpamPackage.trifficLightsAddon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 
 public class MultiThreadTrafficLightsWithoutEnum extends Throwable {
     int timecode[] = {2, 3, 5};
@@ -14,6 +16,13 @@ public class MultiThreadTrafficLightsWithoutEnum extends Throwable {
     public static void main(String[] args) throws InterruptedException, IOException {
         MultiThreadTrafficLightsWithoutEnum multiThreadTrafficLightsWithoutEnum =
                 new MultiThreadTrafficLightsWithoutEnum();
+        Reader reader = new Reader();
+        Logger logger = Logger.getLogger(MultiThreadTrafficLightsWithoutEnum.class.getName());
+        try {
+            logger.addHandler(new FileHandler("file.log", 1000000, 10, true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         multiThreadTrafficLightsWithoutEnum.runTheTrafficLights(bufferedReader);
         bufferedReader.close();
